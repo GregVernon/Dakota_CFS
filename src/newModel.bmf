@@ -1,0 +1,42 @@
+<gov.sandia.bmf.BMF>
+  <version>6.11</version>
+  <name>newModel</name>
+  <rootVariableGroup>
+    <uuid>e69879ff-b4d1-4ea6-841d-c5ce34925c01</uuid>
+    <name>Variables</name>
+    <value></value>
+    <children>
+      <gov.sandia.bmf.type.VariableComplex>
+        <uuid>3dbfaab2-2df4-423f-a8b7-85fee41b3d54</uuid>
+        <name>coord</name>
+        <value>0</value>
+        <parent class="gov.sandia.bb.commons.node.NodeGroup" reference="../../.."/>
+        <description>x-coord</description>
+        <dataType>FLOAT</dataType>
+        <enumerated>false</enumerated>
+      </gov.sandia.bmf.type.VariableComplex>
+    </children>
+  </rootVariableGroup>
+  <rootResponseGroup>
+    <uuid>1fedf434-d8c1-43de-9990-169ac61cf92b</uuid>
+    <name>Responses</name>
+    <value></value>
+    <children>
+      <gov.sandia.bmf.type.ResponseComplex>
+        <uuid>1a03386c-c1c3-4b8e-bd04-b14457cc09cf</uuid>
+        <name>frequency</name>
+        <value>1000</value>
+        <parent class="gov.sandia.bb.commons.node.NodeGroup" reference="../../.."/>
+        <description>Max Frequency</description>
+        <dataType>NONE</dataType>
+        <enumerated>false</enumerated>
+        <unit>
+          <unitShort>unk</unitShort>
+          <description>Hz</description>
+          <category>Unknown</category>
+          <subCategory>Unknown</subCategory>
+        </unit>
+      </gov.sandia.bmf.type.ResponseComplex>
+    </children>
+  </rootResponseGroup>
+</gov.sandia.bmf.BMF>

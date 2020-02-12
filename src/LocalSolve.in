@@ -1,0 +1,48 @@
+environment
+	tabular_data
+		tabular_data_file "tabular.data"
+	output_file "dakota.out"
+	error_file "dakota.err"
+	write_restart "dakota.rst"
+
+method
+	id_method "method1"
+	optpp_q_newton
+		model_pointer "model1"
+
+model
+	id_model "model1"
+	single
+		interface_pointer "interface1"
+	variables_pointer "variables1"
+	responses_pointer "responses1"
+
+variables
+	id_variables "variables1"
+	continuous_design 1
+		initial_point 0.78619246
+		descriptors "coord"
+
+interface
+	id_interface "interface1"
+	analysis_drivers "python -m optim"
+		fork
+			parameters_file "params.in"
+			results_file "results.out"
+			work_directory
+				named "workdir/run"
+				directory_tag
+				directory_save
+				copy_files "runCFS.py" "myTemplate.template" "qoi.py" "optim.py"
+	asynchronous
+		evaluation_concurrency 2
+
+responses
+	id_responses "responses1"
+	descriptors "frequency"
+	objective_functions = 1
+	numerical_gradients
+		method_source dakota
+		interval_type central
+		fd_step_size = 1.e-4
+	no_hessians
