@@ -8,7 +8,8 @@
     <string>C:\Users\gregj\dakota_gui_workspace\Dakota_CFS\optim.py</string>
   </requiredFiles>
   <supportedVariableLabels>
-    <string>coord</string>
+    <string>x1</string>
+    <string>y1</string>
   </supportedVariableLabels>
   <supportedResponseLabels>
     <string>frequency</string>
