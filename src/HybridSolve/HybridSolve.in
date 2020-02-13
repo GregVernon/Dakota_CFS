@@ -1,0 +1,82 @@
+environment
+	top_method_pointer = "methodHybrid"
+	tabular_data
+		tabular_data_file "tabular.data"
+	output_file "dakota.out"
+	error_file "dakota.err"
+	write_restart "dakota.rst"
+	
+
+method
+	id_method = "methodHybrid"
+	hybrid sequential
+	method_pointer_list = "methodGlobal" "methodLocal"
+
+method
+	id_method "methodGlobal"
+	soga
+		model_pointer "modelGlobal"
+		population_size=5
+		max_function_evaluations=50
+		max_iterations=10
+		final_solutions=4
+		
+
+method
+	id_method "methodLocal"
+	optpp_q_newton
+		model_pointer "modelLocal"
+		
+model
+	id_model "modelGlobal"
+	single
+		interface_pointer "interface"
+	variables_pointer "variables"
+	responses_pointer "responsesGlobal"
+	
+model
+	id_model "modelLocal"
+	single
+		interface_pointer "interface"
+	variables_pointer "variables"
+	responses_pointer "responsesLocal"
+
+
+variables
+	id_variables "variables"
+	continuous_design 2
+		initial_point 5.0 5.0
+		lower_bounds -10.0 -10.0
+		upper_bounds 10.0 10.0
+		descriptors "x1" "y1"
+
+interface
+	id_interface "interface"
+	analysis_drivers "python -m optim"
+		fork
+			parameters_file "params.in"
+			results_file "results.out"
+			work_directory
+				named "workdir/run"
+				directory_tag
+				directory_save
+				copy_files "runCFS.py" "myTemplate.template" "qoi.py" "optim.py"
+	asynchronous
+		evaluation_concurrency 2
+
+responses
+	id_responses "responsesGlobal"
+	objective_functions=1
+	descriptors "frequency"
+	no_gradients
+	no_hessians
+
+responses
+	id_responses "responsesLocal"
+	descriptors "frequency"
+	objective_functions = 1
+	numerical_gradients
+		method_source dakota
+		interval_type central
+		fd_step_size = 1.e-4
+	no_hessians
