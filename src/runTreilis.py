@@ -48,7 +48,7 @@ def readParamFile(paramFile):
 
 def makeGeometry(x,y):
     cubit.cmd("reset")
-    cubit.cmd('open "circleGeom.trelis"')
+    cubit.cmd('open "../data/circleGeom.trelis"')
     
     for i in range(0,len(x)):
         cubit.cmd("create vertex " + str(x[i]) + " " + str(y[i]) + " 0 on surface 1")
