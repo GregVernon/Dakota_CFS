@@ -80,23 +80,24 @@ def makeGeometry(x,y):
 def buildUSpline(degree, continuity, method):
     if method == 1:
         try:
-        cubit.cmd("imprint mesh onto body all ")
-        cubit.cmd("stitch body all")
-        cubit.cmd("compress")
-        cubit.cmd('build uspline body all p ' + str(degree) + ' c ' + str(continuity) + ' domain "solid"')
-        cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
-        status = 1
-        else:
-            cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
+            cubit.cmd("imprint mesh onto body all ")
+            cubit.cmd("stitch body all")
+            cubit.cmd("compress")
+            cubit.cmd('build uspline body all p ' + str(degree) + ' c ' + str(continuity) + ' domain "solid"')
+            status = 1
+        except:
             status = 0
+        finally:
+            cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
     elif method == 2:
         try:
             cubit.cmd('build uspline from mesh p ' + str(degree) + ' c ' + str(continuity) + ' domain "solid"')
             cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
             status = 0
-        else:
-            cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
+        except:
             status = 1
+        finally:
+            cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
     elif method == 3:
         cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
         pathToCFT = "/home/christopher/cf/master/b_codes_with_debug/bin"
