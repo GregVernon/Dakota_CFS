@@ -1,6 +1,7 @@
 #!python
 import os
 import sys
+import subprocess
 import numpy
 from math import *
 
@@ -30,6 +31,7 @@ cubit.init(['cubit', '-nojournal', '-noecho','-nobanner','-nographics'])
 def main(paramFile):
     x,y = readParamFile(paramFile)
     makeGeometry(x,y)
+    buildUSpline(2,1,3)
 
 def readParamFile(paramFile):
     f = open(paramFile,'r')
@@ -71,20 +73,37 @@ def makeGeometry(x,y):
             cubit.cmd("sideset " + str(ssID) + " add Edge " + str(nodeEdges[e]))
             cubit.cmd("cf_crease_entities add Edge " + str(nodeEdges[e]))
         cubit.cmd("sideset " + str(ssID) + ' name "node_' + str(N) + '_edges"')
-    buildUSpline(2,1,2)
-    cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
 
 
 
 
 def buildUSpline(degree, continuity, method):
     if method == 1:
+        try:
         cubit.cmd("imprint mesh onto body all ")
         cubit.cmd("stitch body all")
         cubit.cmd("compress")
         cubit.cmd('build uspline body all p ' + str(degree) + ' c ' + str(continuity) + ' domain "solid"')
+        cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
+        status = 1
+        else:
+            cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
+            status = 0
     elif method == 2:
-        cubit.cmd('build uspline from mesh p ' + str(degree) + ' c ' + str(continuity) + ' domain "solid"')
+        try:
+            cubit.cmd('build uspline from mesh p ' + str(degree) + ' c ' + str(continuity) + ' domain "solid"')
+            cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
+            status = 0
+        else:
+            cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
+            status = 1
+    elif method == 3:
+        cubit.cmd('save trelis ' + '"mesh.trelis"' + " overwrite")
+        pathToCFT = "/home/christopher/cf/master/b_codes_with_debug/bin"
+        CFT_command = pathToCFT + "/cft" + " --degree " + str(degree) + " --continuity " + str(continuity)
+        status = subprocess.check_call(CFT_command,shell=True)
+    return status
+
 
 if __name__ == "__main__":
     print(sys.argv)
