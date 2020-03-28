@@ -29,18 +29,14 @@ def extractPeids( subdomain_elems ):
 
 
 
-xSecN = len( Kapton ) + len( Adhesive ) + len( Copper )
 deg_l = 2
 cont_l = deg_l - 1
 max_cont_x = 1
-endtime = 8 * np.pi
 thickness = 1
 
-psi_to_metric = 6894.76
 
-
-elem_l_vec = [ 10, 20, 30, 40, 50 ]
-#elem_l_vec = [ 5 ]
+#elem_l_vec = [ 10, 20, 30, 40, 50 ]
+elem_l_vec = [ 1 ]
 
 for elem_l in elem_l_vec:
 
@@ -163,7 +159,7 @@ for elem_l in elem_l_vec:
     #copperPeids = extractPeids( Copper )
     #allPeids = kaptonPeids + adhesivePeids + copperPeids
 
-    #FIXME
+    #Subdomain1
     json_data.append({
           "name": "subdomain_elems",
           "desc": "kapton",
@@ -175,13 +171,13 @@ for elem_l in elem_l_vec:
     json_data.append({
           "uuid": "da4ccfb0-a293-11e9-bb14-17d2f43a55c2",
           "name": "subdomain_output_field",
-          "file_name_prefix": "simpleConforming" + str( xSecN ) + "_xC" + str(max_cont_x) + "_L" + str( elem_l ) + "_P" + str(deg_l),
-          "file_type": "hdf5",
+          "file_name_prefix": "freqOut" + str( xSecN ) + "_xC" + str(max_cont_x) + "_L" + str( elem_l ) + "_P" + str(deg_l),
+          "file_type": "vtk",
           "sample_type": "BEZIER",
           "cache_basis_evals": True,
           "include_elem_outlines": False,
           "solution_type": "current",
-          "subdomain_ids": [ 1, 2, 3 ],
+          "subdomain_ids": [ 1 ],
           "subdomain_output_id": 1,
           "desc": "1",
           "function_temporal_id": 1,
@@ -203,7 +199,7 @@ for elem_l in elem_l_vec:
           "tol": 0.0001
       })
 
-    f = open( "simpleConforming" + str( xSecN ) + "_xC" + str(max_cont_x) + "_L" + str( elem_l ) + "_P" + str(deg_l) + ".json", 'w' )
-    json.dump(      json_data, f, indent = 5)
+    f = open( "freqInput" + str( xSecN ) + "_xC" + str(max_cont_x) + "_L" + str( elem_l ) + "_P" + str(deg_l) + ".json", 'w' )
+    json.dump( json_data, f, indent = 5)
 
     f.close()
