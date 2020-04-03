@@ -8,15 +8,15 @@ import sys
 import ast
 import re
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import pprint
 
 
 in_opts =  { "thickness": 1,
-             "elems_per_length": .1,
+             "elems_per_length": 1,
              "deg_l": 2,
              "cont_l": 1,
-             "pin_tol": 1e-8,
+             "pin_tol": 1e-1,
              "file_name": "test" }
 
 in_json = [ { "name": "patch_creation_surface_square", "patch_id": 1, "width": 5, "refinement": { "degrees": [2,2], "num_elems": [2,2] }, "positioning": { "origin": [0,.5,0] } },
@@ -28,13 +28,12 @@ in_json = [ { "name": "patch_creation_surface_square", "patch_id": 1, "width": 5
             { "name": "function_temporal_constant", "function_temporal_id": 1, "value": 1, "birth": 0, "death": 1e20, "tol": 1e-4 },
             { "name": "version", "version": [0,0,0,3] },
             { "name": "subdomain_elems", "subdomain_id": 1, "domain_elem_segments": [ [1,0,-1], [1,1,-1],[1,2,-1],[1,3,-1] ] } ]
-
-in_geom = { "num_elems": 4, "pin_locations": [ [ 0, 0, 0 ], [ .5, .5, .5 ] ] } #patch sizing indexed by patch_id
-
+in_geom = { "num_elems": 4, "pin_locations": [ [ 0, 0, 0 ], [ .5, .5, .5 ] ] } #patch sizing indexed by patch_id 
 def generateSolidSimulations( input_json, input_options, input_geom ):
     patch_sizing = input_geom["num_elems"]
     file_name = input_options["file_name"]
 
+    thickness = input_options["thickness"]
     length = thickness
     num_elem_l = np.int(np.ceil( length * input_options["elems_per_length"] ))
     const_temporal_func_id = -1
@@ -48,17 +47,19 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
         if "name" in card:
             #convert interior surface subdomains to solid
             if card["name"] == "subdomain_elems":
-                element_subdomain = card["subdomain_id"]
                 if "domain_elem_segments" in card:
                     new_segments = []
                     for elem in card[ "domain_elem_segments" ]:
                         if elem[2] == -1: #this is an interior
+                            element_subdomain = card["subdomain_id"]
                             domain_id = elem[0] # NOTE this assumes that the patch_id is the same as its domain_id
-                            domain_offset = patch_sizing[str(domain_id)] #this gives you the number of elements on the cross section
+                            #print(patch_sizing)
+                            #print(domain_id)
+                            domain_offset = patch_sizing #this gives you the number of elements on the cross section
                             elem_id = elem[1]
                             for i in range(0, num_elem_l):
                                 new_segments.append( [ domain_id, i * domain_offset + elem_id, -1 ] )
-                        else: raise Exception("selection of edges not supported in conversion to solid simulation")
+                        else: print("EDGES DETECTED AND IGNORED") #raise Exception("selection of edges not supported in conversion to solid simulation")
                     card[ "domain_elem_segments" ] = new_segments #replace with the new solid doamin segments
                 else: raise Exception("Subdomain_elems has no attribute: domain_elem_segments")
 
@@ -68,7 +69,14 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
                     card["patch_id"] += 1000 #increment the patch id by 1000 to point at the new solid geometry that will be created
                 else: raise Exception("domain_spline_solid has no attribute: patch_id")
                 card["node_map"] = { "tol": 1e-8 }
-
+            if card["name"] == "domain_spline_shell":
+                card["name"] = "domain_spline_solid"
+                if "patch_id" in card:
+                    card["patch_id"] += 1000 #increment the patch id by 1000 to point at the new solid geometry that will be created
+                else: raise Exception("domain_spline_solid has no attribute: patch_id")
+                card["node_map"] = { "tol": 1e-8 }
+                if "thicknesses" in card:
+                    del card["thicknesses"]
             if card["name"] == "patch" or card["name"] == "patch_creation_surface_square":
                 if "patch_id" in card:
                     patch_id = card["patch_id"] + 1000 #increment the patch_id by 1000 (so that there is no overlap)
@@ -99,6 +107,15 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
         } )
         const_temporal_func_id = 1000
 
+    add_json.append({
+          "uuid": "923e37b0-a282-11e9-bb14-17d2f43a55c2",
+          "name": "part",
+          "formulation_id": 1,
+          "part_id": 1,
+          "subdomain_ids": [ element_subdomain ]
+      })
+    part_ids.append(1)
+
     #add a problem if none was found
     if problem_id == -1:
         problem_id = 1
@@ -113,13 +130,19 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
             "control_timestep_id": 1
         })
 
-        json_data.append({
-            "name": "control_timestep_quasistatic",
+        add_json.append({
+            "name": "control_timestep_implicit_dynamic_2nd_order",
             "desc": "",
-            "control_timestep_id": 1
+            "control_timestep_id": 1,
+            "control_time_integration_id": 1
         })
+        add_json.append({
+            "name": "control_time_integration_generalized_alpha",
+            "control_time_integration_id": 1,
+            "rho_inf": 1.0
+            })
 
-    json_data.append({
+    add_json.append({
           "name": "material_isotropic_linear_elastic",
           "material_id": 1,
           "E": 110316.16,
@@ -127,15 +150,8 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
           "rho": 0.0000089427534
       })
 
-    json_data.append({
-          "uuid": "923e37b0-a282-11e9-bb14-17d2f43a55c2",
-          "name": "part",
-          "formulation_id": 1,
-          "part_id": 1,
-          "subdomain_ids": [ element_subdomain ]
-      })
 
-    json_data.append({
+    add_json.append({
           "name": "formulation_solid",
           "formulation_type": "solid_3d",
           "quadrature": "QP1",
@@ -148,15 +164,7 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
         "name": "control_model",
         "control_time": {
             "initial_time_step": 1,
-            "termination_time": 1,
-            "adaptive_timestep": {
-                "iteration_optimal": 10,
-                "iteration_window": 3,
-                "growth_factor": 1.25,
-                "reduction_factor": 0.75,
-                "delta_t_min": 1e-06,
-                "delta_t_max": .5
-            }
+            "termination_time": 1
         },
         "enable_parent_basis": False,
         "enable_output": True,
@@ -170,10 +178,10 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
 
     #add boundary conditions
     subdomain_nodal_value_ids = []
-    function_spatial_temporal_id = 1000
+    pin_tol = input_options["pin_tol"]
+    function_temporal_id = 1000
     for i, location in enumerate( input_geom["pin_locations"] ):
         subdomain_id = i + 2000
-        domain_elem_segments = segments
         parameters = location + [ location[0], location[1], length ]
         add_json.append( {
             "name": "subdomain_nodes_position",
@@ -193,7 +201,7 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
             "UX": disp,
             "UY": disp,
             "UZ": disp,
-            "function_spatial_temporal_id": const_temporal_func_id
+            "function_temporal_id": const_temporal_func_id
         })
         subdomain_nodal_value_ids.append( subdomain_nodal_value_id )
 
@@ -207,7 +215,7 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
     for card in add_json:
         modified_json.append(card)
 
-    file_out = open( str( file_name ) + "_R" + str( radius ) + ".json", 'w' )
+    file_out = open( str( file_name ) + ".json", 'w' )
     json.dump( modified_json, file_out, indent = 5 )
     file_out.close()
 
@@ -217,5 +225,18 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
     #return input_json
 
 
+in_filename = sys.argv[1]
+in_json = []
+with open( in_filename ) as json_file:
+    in_json = json.load(json_file)
 
+print( in_json )
+
+in_geom = {}
+for i in range(2, len(sys.argv)):
+    if sys.argv[i] == "-p":
+        in_geom["pin_locations"] = ast.literal_eval(sys.argv[i+1])
+    if sys.argv[i] == "-n":
+        in_geom["num_elems"] = ast.literal_eval(sys.argv[i+1])
+print(in_geom)
 generateSolidSimulations( in_json, in_opts, in_geom )
