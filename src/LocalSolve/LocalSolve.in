@@ -1,6 +1,6 @@
 environment
 	tabular_data
-		tabular_data_file "tabular.data"
+	tabular_data_file "tabular.data"
 	output_file "dakota.out"
 	error_file "dakota.err"
 	write_restart "dakota.rst"
@@ -19,9 +19,9 @@ model
 
 variables
 	id_variables "variables1"
-	continuous_design 2
-		initial_point 0.78619246 -0.812318
-		descriptors "x1" "y1"
+	continuous_design 4
+		initial_point +1.00 +1.00 +0.25 +0.25
+		descriptors   "x1" "y1" "x2" "y2"
 
 interface
 	id_interface "interface1"
@@ -33,14 +33,15 @@ interface
 				named "workdir/run"
 				directory_tag
 				directory_save
-				copy_files "runCFS.py" "myTemplate.template" "qoi.py" "optim.py"
+				copy_files "runCFS.py" "circleGeom.trelis" "myTemplate.template" "qoi.py" "optim.py"
 	asynchronous
-		evaluation_concurrency 2
+		evaluation_concurrency 10
 
 responses
 	id_responses "responses1"
-	descriptors "frequency"
+	descriptors "frequency" "nlcon_1" "nlcon_2"
 	objective_functions = 1
+	nonlinear_inequality_constraints = 2
 	numerical_gradients
 		method_source dakota
 		interval_type central

@@ -23,15 +23,16 @@ cubit.init(['cubit','-nobanner','-nographics'])
 
 def main(paramFile, objFile):
     x,y = readParamFile(paramFile)
-    status, bc_xyz, num_elem = makeGeometry(x,y)
+    status, bc_xyz, num_elem, nlcon = makeGeometry(x,y)
     if status != False:
-        error_handle(objFile)
+        error_handle(objFile, nlcon)
         return
-
+    
     buildUSpline(2,0)
     buildSimInput(bc_xyz, num_elem)
     execute_cfs()
-    write_objvalue(objFile)
+    write_objvalue(objFile, nlcon)
+
 
 def readParamFile(paramFile):
     f = open(paramFile,'r')
@@ -46,13 +47,15 @@ def readParamFile(paramFile):
         
     return x,y
 
-def error_handle(objFile):
+def error_handle(objFile, nlcon):
     f = open(objFile,"w+")
-    f.write("ObjVal 100000000.0")
+    f.write("ObjVal 100000000.0" + "\n")
+    for n in range(0,len(nlcon)):
+        f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     f.close()
 
 
-def write_objvalue(objFile):
+def write_objvalue(objFile, nlcon):
     # Get fundamental eigenvalue
     f = open("EigenValue.txt","r")
     freq = float(f.readlines()[0].strip())
@@ -61,15 +64,17 @@ def write_objvalue(objFile):
     objValue = -1. * freq
     # Write objective value to text file
     f = open(objFile, "w+")
-    f.write("ObjVal " + str(objValue))
+    f.write("ObjVal " + str(objValue) + "\n")
+    for n in range(0,len(nlcon)):
+        f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     f.close()
     return freq, objValue
+
 
 def makeGeometry(x,y):
     status = 0
     cubit.cmd("reset")
     cubit.cmd('open "circleGeom.trelis"')
-    
     target_surface = cubit.surface(1)
     vertex_on_surface = [False for i in range(0,len(x))]
     for i in range(0,len(x)):
@@ -77,11 +82,22 @@ def makeGeometry(x,y):
         if vertex_on_surface[i] == True:
             cubit.cmd("create vertex " + str(x[i]) + " " + str(y[i]) + " 0 on surface 1")
         
+    #if any(vertex_on_surface) == False:
+    #    # No pins on board, return with large objective value
+    #    status = 1
+    #    return status, [], []
+    
+    nlcon = computeNonlinearConstraint(x,y)
+    sys.stdout.write("Nonlinear Constraints: ")
+    sys.stdout.write(str(nlcon))
+    sys.stdout.write("\n")
+    sys.stdout.flush()
+    
     if any(vertex_on_surface) == False:
-        # No pins on board, return with large objective value
+        # No pins on board, return with large objective value and nonlinear constraint values
         status = 1
-        return status, [], []
-
+        return status, [], [], nlcon
+    
     V = cubit.get_list_of_free_ref_entities("vertex")
     for i in range(0,len(V)):
         cubit.cmd("imprint volume all with vertex " + str(V[i]))
@@ -111,7 +127,33 @@ def makeGeometry(x,y):
     #cubit.cmd("regularize surf 1")
     #cubit.cmd('save as "mesh.cub" overwrite')
     num_elem = len(cubit.get_entities("Face"))
-    return status, bc_xyz, num_elem
+    return status, bc_xyz, num_elem, nlcon
+
+
+def computeNonlinearConstraint(x,y):
+    nlcon = numpy.zeros(len(x))
+    target_surface = cubit.surface(1)
+    vertex_on_surface = [False for i in range(0,len(x))]
+    # First, determine whether the nonlinear constraint is satisfied
+    for i in range(0,len(x)):
+        vertex_on_surface[i] = target_surface.point_containment([x[i], y[i], 0.])
+    # Second, determine the magnitude of the nonlinear constraint value
+    #         which is the distance of the point to the closest curve
+    cid = cubit.get_entities("Curve")
+    for i in range(0,len(x)):
+        dist = numpy.zeros(len(cid))
+        pXYZ = numpy.array([x[i], y[i], 0.])
+        for c in range(0,1):
+            C = cubit.curve(cid[c])
+            cpXYZ = numpy.array(C.closest_point(pXYZ))
+            dist[c] = numpy.linalg.norm(cpXYZ - pXYZ)
+        if vertex_on_surface[i] == True:
+            # Nonlinear constraint is satisfied
+            nlcon[i] = -1. * numpy.min(dist)
+        else:
+            # Nonlinear constraint not satisfied
+            nlcon[i] = +1. * numpy.min(dist)
+    return nlcon
 
 
 def buildUSpline(degree, continuity):

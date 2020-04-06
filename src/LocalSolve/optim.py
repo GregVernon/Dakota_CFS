@@ -58,7 +58,9 @@ mdl_out_file_default = "dak_py_driver.out"
 # Below are hard-coded values that were inserted when this script was generated
 mdl_in_path = "myTemplate.template"
 mdl_out_option = mdl_out_option_output_file
-qois = [qoi.QoiAnchor("frequency", 1, qoi.FIELDS, 1, qoi.FIELDS, qoi.AFTER, "ObjVal"),]
+qois = [qoi.QoiAnchor("frequency", 1, qoi.FIELDS, 1, qoi.FIELDS, qoi.AFTER, "ObjVal"),
+        qoi.QoiAnchor("nlcon_1",   1, qoi.FIELDS, 1, qoi.FIELDS, qoi.AFTER, "nlcon_1"),
+	qoi.QoiAnchor("nlcon_2",   1, qoi.FIELDS, 1, qoi.FIELDS, qoi.AFTER, "nlcon_2"),]
 
 cmd_line = "python3 runCFS.py ${input_file} ${output_file}"
 cmd_in_repl = "${input_file}"
