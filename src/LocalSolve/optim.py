@@ -60,7 +60,7 @@ mdl_in_path = "myTemplate.template"
 mdl_out_option = mdl_out_option_output_file
 qois = [qoi.QoiAnchor("frequency", 1, qoi.FIELDS, 1, qoi.FIELDS, qoi.AFTER, "ObjVal"),]
 
-cmd_line = "python runCFS.py ${input_file} ${output_file}"
+cmd_line = "python3 runCFS.py ${input_file} ${output_file}"
 cmd_in_repl = "${input_file}"
 cmd_out_repl = "${output_file}"
 cmd_echo = True
