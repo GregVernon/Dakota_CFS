@@ -34,7 +34,7 @@ interface
 				named "workdir/run"
 				directory_tag
 				directory_save
-				copy_files "runCFS.py" "myTemplate.template" "qoi.py" "optim.py"
+				copy_files "runCFS.py" "circleGeom.trelis" "myTemplate.template" "qoi.py" "optim.py"
 	asynchronous
 		evaluation_concurrency 2
 
