@@ -87,9 +87,10 @@ def error_handle(objFile, nlcon, callingFunction):
 def write_objvalue(objFile, nlcon):
     # Get fundamental eigenvalue
     f = open("EigenValue.txt","r")
-    freq = float(f.readlines()[0].strip())
+    eigval = float(f.readlines()[0].strip())
     f.close()
     # Calculate objective value
+    freq = numpy.sqrt(eigval)
     objValue = -1. * freq
     # Write objective value to text file
     f = open(objFile, "w+")
@@ -188,7 +189,7 @@ def computeNonlinearConstraint(x,y):
 def buildUSpline(degree, continuity):
     pathToCFT = "/home/christopher/cf/master/b_codes_with_debug/bin"
     CFT_command = pathToCFT + "/cf_trelis " + "mesh.cub" + " --degree " + str(degree) + " --continuity " + str(continuity)
-    sys.stdout.write(CFT_command)
+    sys.stdout.write(CFT_command + "\n")
     sys.stdout.flush()
     status = subprocess.check_call(CFT_command,shell=True)
     return status
@@ -199,17 +200,31 @@ def buildSimInput(bc_xyz, num_elem):
     XYZ = [[bc_xyz[i][0], bc_xyz[i][1], 0.] for i in range(0,len(bc_xyz))]
     str_XYZ = str(XYZ).replace(" ","")
     py_command = "python3 " + pathToFreqInput + "freqInput.py " + "mes.json " + "-p " + str_XYZ + " " + "-n " + str(num_elem)
-    sys.stdout.write(py_command)
+    sys.stdout.write(py_command + "\n")
     sys.stdout.flush()
     status = subprocess.check_call(py_command, shell=True)
     return status
 
-def execute_cfs():
+def assemble_LinearSystem():
     pathToCFS = "/home/christopher/cf/master/b_codes_with_debug/bin/"
     cfs_command = pathToCFS + "cfs " + "test.json"
-    sys.stdout.write(cfs_command)
+    sys.stdout.write(cfs_command + "\n")
     sys.stdout.flush()
     status = subprocess.check_call(cfs_command, shell=True)
+    return status
+
+def compute_Eigenvalue():
+    pathToJulia = "/home/christopher/cf/master/deps/srcs/julia/julia-1.3.0/bin/"
+    #pathToJulia = "/usr/local/bin/"
+    jl_command = pathToJulia + "julia " + "GenEigProb.jl"
+    sys.stdout.write(jl_command + "\n")
+    sys.stdout.flush()
+    try:
+        status = subprocess.check_call(jl_command, shell=True)
+    except:
+        sys.stdout.write("compute_Eigenvalue FAILED" + "\n")
+        status = True
+    sys.stdout.flush()
     return status
 
 if __name__ == "__main__":
