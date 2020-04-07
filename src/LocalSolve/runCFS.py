@@ -25,12 +25,29 @@ def main(paramFile, objFile):
     x,y = readParamFile(paramFile)
     status, bc_xyz, num_elem, nlcon = makeGeometry(x,y)
     if status != False:
-        error_handle(objFile, nlcon)
+        error_handle(objFile, nlcon, "makeGeometry")
         return
     
-    buildUSpline(2,0)
-    buildSimInput(bc_xyz, num_elem)
-    execute_cfs()
+    status = buildUSpline(2,0)
+    if status != False:
+        error_handle(objFile, [], "buildUSpline")
+        return
+    
+    status = buildSimInput(bc_xyz, num_elem)
+    if status != False:
+        error_handle(objFile, [], "buildSimInput")
+        return
+    
+    status = assemble_LinearSystem()
+    if status != False:
+        error_handle(objFile, [], "assemble_LinearSystem")
+        return
+    
+    status = compute_Eigenvalue()
+    if status != False:
+        error_handle(objFile, nlcon, "compute_Eigenvalue")
+        return
+    
     write_objvalue(objFile, nlcon)
 
 
@@ -47,11 +64,23 @@ def readParamFile(paramFile):
         
     return x,y
 
-def error_handle(objFile, nlcon):
+def error_handle(objFile, nlcon, callingFunction):
     f = open(objFile,"w+")
-    f.write("ObjVal 100000000.0" + "\n")
-    for n in range(0,len(nlcon)):
-        f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
+    if   callingFunction == "makeGeometry":
+        f.write("ObjVal 0.0" + "\n")
+        for n in range(0,len(nlcon)):
+            f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
+    elif callingFunction == "buildUSpline":
+        f.write("FAIL")
+    elif callingFunction == "buildSimInput":
+        f.write("FAIL")
+    elif callingFunction == "assemble_LinearSystem":
+        f.write("FAIL")
+    elif callingFunction == "compute_Eigenvalue":
+        f.write("FAIL")
+        f.write("ObjVal 0.0" + "\n")
+        for n in range(0,len(nlcon)):
+            f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     f.close()
 
 
