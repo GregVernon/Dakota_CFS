@@ -1,0 +1,3553 @@
+Writing new restart file 'dakota.rst'.
+methodName = coliny_pattern_search
+Gradient type = none Hessian type = none
+
+Seed (system-generated) = 1586322138
+
+>>>>> Executing environment.
+
+>>>>> Running coliny_pattern_search iterator.
+
+>>>>> coliny_pattern_search: pre-run phase.
+
+>>>>> coliny_pattern_search: core run phase.
+
+------------------------------
+Begin interface Evaluation    1
+------------------------------
+Parameters for evaluation 1:
+                     -1.8752439851e+00 x1
+                      1.2189131412e+00 y1
+
+blocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.1"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Removing "workdir/run.1/params.in" and "workdir/run.1/results.out"
+
+Active response data for interface evaluation 1:
+Active set vector = { 1 1 }
+                      1.2365798105e+00 objective
+                      1.2365798105e+00 nlcon_1
+
+
+
+------------------------------
+Begin interface Evaluation    2
+------------------------------
+Parameters for evaluation 2:
+                     -1.8352439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 2 added to interface queue)
+
+------------------------------
+Begin interface Evaluation    3
+------------------------------
+Parameters for evaluation 3:
+                     -1.8752439851e+00 x1
+                      1.2589131412e+00 y1
+
+(Asynchronous job 3 added to interface queue)
+
+------------------------------
+Begin interface Evaluation    4
+------------------------------
+Parameters for evaluation 4:
+                     -1.9152439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 4 added to interface queue)
+
+------------------------------
+Begin interface Evaluation    5
+------------------------------
+Parameters for evaluation 5:
+                     -1.8752439851e+00 x1
+                      1.1789131412e+00 y1
+
+(Asynchronous job 5 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 2
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.2"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 3
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.3"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 4
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.4"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 5
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.5"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.3/params.in" and "workdir/run.3/results.out"
+interface evaluation 3 has completed
+Waiting on completed jobs
+Removing "workdir/run.2/params.in" and "workdir/run.2/results.out"
+interface evaluation 2 has completed
+Waiting on completed jobs
+Removing "workdir/run.4/params.in" and "workdir/run.4/results.out"
+interface evaluation 4 has completed
+Waiting on completed jobs
+Removing "workdir/run.5/params.in" and "workdir/run.5/results.out"
+interface evaluation 5 has completed
+
+Active response data for interface evaluation 2:
+Active set vector = { 1 1 }
+                      1.2031499563e+00 objective
+                      1.2031499563e+00 nlcon_1
+
+
+Active response data for interface evaluation 3:
+Active set vector = { 1 1 }
+                      1.2586284112e+00 objective
+                      1.2586284112e+00 nlcon_1
+
+
+Active response data for interface evaluation 4:
+Active set vector = { 1 1 }
+                      1.2702221846e+00 objective
+                      1.2702221846e+00 nlcon_1
+
+
+Active response data for interface evaluation 5:
+Active set vector = { 1 1 }
+                      1.2150341301e+00 objective
+                      1.2150341301e+00 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation    6
+------------------------------
+Parameters for evaluation 6:
+                     -1.7952439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 6 added to interface queue)
+
+------------------------------
+Begin interface Evaluation    7
+------------------------------
+Parameters for evaluation 7:
+                     -1.8352439851e+00 x1
+                      1.2589131412e+00 y1
+
+(Asynchronous job 7 added to interface queue)
+
+------------------------------
+Begin interface Evaluation    8
+------------------------------
+Parameters for evaluation 8:
+                     -1.8352439851e+00 x1
+                      1.1789131412e+00 y1
+
+(Asynchronous job 8 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 6
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.6"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 7
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.7"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 8
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.8"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.8/params.in" and "workdir/run.8/results.out"
+interface evaluation 8 has completed
+Waiting on completed jobs
+Removing "workdir/run.6/params.in" and "workdir/run.6/results.out"
+interface evaluation 6 has completed
+Waiting on completed jobs
+Removing "workdir/run.7/params.in" and "workdir/run.7/results.out"
+interface evaluation 7 has completed
+
+Active response data for interface evaluation 6:
+Active set vector = { 1 1 }
+                      1.1699424442e+00 objective
+                      1.1699424442e+00 nlcon_1
+
+
+Active response data for interface evaluation 7:
+Active set vector = { 1 1 }
+                      1.2255297754e+00 objective
+                      1.2255297754e+00 nlcon_1
+
+
+Active response data for interface evaluation 8:
+Active set vector = { 1 1 }
+                      1.1812740952e+00 objective
+                      1.1812740952e+00 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation    9
+------------------------------
+Parameters for evaluation 9:
+                     -1.7552439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 9 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   10
+------------------------------
+Parameters for evaluation 10:
+                     -1.7952439851e+00 x1
+                      1.2589131412e+00 y1
+
+(Asynchronous job 10 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   11
+------------------------------
+Parameters for evaluation 11:
+                     -1.7952439851e+00 x1
+                      1.1789131412e+00 y1
+
+(Asynchronous job 11 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 9
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.9"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 10
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.10"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 11
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.11"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.11/params.in" and "workdir/run.11/results.out"
+interface evaluation 11 has completed
+Waiting on completed jobs
+Removing "workdir/run.10/params.in" and "workdir/run.10/results.out"
+interface evaluation 10 has completed
+Waiting on completed jobs
+Removing "workdir/run.9/params.in" and "workdir/run.9/results.out"
+interface evaluation 9 has completed
+
+Active response data for interface evaluation 9:
+Active set vector = { 1 1 }
+                      1.1369676395e+00 objective
+                      1.1369676395e+00 nlcon_1
+
+
+Active response data for interface evaluation 10:
+Active set vector = { 1 1 }
+                      1.1926612283e+00 objective
+                      1.1926612283e+00 nlcon_1
+
+
+Active response data for interface evaluation 11:
+Active set vector = { 1 1 }
+                      1.1477283720e+00 objective
+                      1.1477283720e+00 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   12
+------------------------------
+Parameters for evaluation 12:
+                     -1.7152439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 12 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   13
+------------------------------
+Parameters for evaluation 13:
+                     -1.7552439851e+00 x1
+                      1.2589131412e+00 y1
+
+(Asynchronous job 13 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   14
+------------------------------
+Parameters for evaluation 14:
+                     -1.7552439851e+00 x1
+                      1.1789131412e+00 y1
+
+(Asynchronous job 14 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 12
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.12"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 13
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.13"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 14
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.14"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.13/params.in" and "workdir/run.13/results.out"
+interface evaluation 13 has completed
+Waiting on completed jobs
+Removing "workdir/run.14/params.in" and "workdir/run.14/results.out"
+interface evaluation 14 has completed
+Waiting on completed jobs
+Removing "workdir/run.12/params.in" and "workdir/run.12/results.out"
+interface evaluation 12 has completed
+
+Active response data for interface evaluation 12:
+Active set vector = { 1 1 }
+                      1.1042364823e+00 objective
+                      1.1042364823e+00 nlcon_1
+
+
+Active response data for interface evaluation 13:
+Active set vector = { 1 1 }
+                      1.1600332737e+00 objective
+                      1.1600332737e+00 nlcon_1
+
+
+Active response data for interface evaluation 14:
+Active set vector = { 1 1 }
+                      1.1144071606e+00 objective
+                      1.1144071606e+00 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   15
+------------------------------
+Parameters for evaluation 15:
+                     -1.6752439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 15 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   16
+------------------------------
+Parameters for evaluation 16:
+                     -1.7152439851e+00 x1
+                      1.2589131412e+00 y1
+
+(Asynchronous job 16 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   17
+------------------------------
+Parameters for evaluation 17:
+                     -1.7152439851e+00 x1
+                      1.1789131412e+00 y1
+
+(Asynchronous job 17 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 15
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.15"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 16
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.16"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 17
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.17"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.15/params.in" and "workdir/run.15/results.out"
+interface evaluation 15 has completed
+Waiting on completed jobs
+Removing "workdir/run.17/params.in" and "workdir/run.17/results.out"
+interface evaluation 17 has completed
+Waiting on completed jobs
+Removing "workdir/run.16/params.in" and "workdir/run.16/results.out"
+interface evaluation 16 has completed
+
+Active response data for interface evaluation 15:
+Active set vector = { 1 1 }
+                      1.0717605206e+00 objective
+                      1.0717605206e+00 nlcon_1
+
+
+Active response data for interface evaluation 16:
+Active set vector = { 1 1 }
+                      1.1276569800e+00 objective
+                      1.1276569800e+00 nlcon_1
+
+
+Active response data for interface evaluation 17:
+Active set vector = { 1 1 }
+                      1.0813212443e+00 objective
+                      1.0813212443e+00 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   18
+------------------------------
+Parameters for evaluation 18:
+                     -1.5952439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 18 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   19
+------------------------------
+Parameters for evaluation 19:
+                     -1.6752439851e+00 x1
+                      1.2989131412e+00 y1
+
+(Asynchronous job 19 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   20
+------------------------------
+Parameters for evaluation 20:
+                     -1.6752439851e+00 x1
+                      1.1389131412e+00 y1
+
+(Asynchronous job 20 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 18
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.18"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 19
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.19"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 20
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.20"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.20/params.in" and "workdir/run.20/results.out"
+interface evaluation 20 has completed
+Waiting on completed jobs
+Removing "workdir/run.18/params.in" and "workdir/run.18/results.out"
+interface evaluation 18 has completed
+Waiting on completed jobs
+Removing "workdir/run.19/params.in" and "workdir/run.19/results.out"
+interface evaluation 19 has completed
+
+Active response data for interface evaluation 18:
+Active set vector = { 1 1 }
+                      1.0076236243e+00 objective
+                      1.0076236243e+00 nlcon_1
+
+
+Active response data for interface evaluation 19:
+Active set vector = { 1 1 }
+                      1.1198155007e+00 objective
+                      1.1198155007e+00 nlcon_1
+
+
+Active response data for interface evaluation 20:
+Active set vector = { 1 1 }
+                      1.0257259321e+00 objective
+                      1.0257259321e+00 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   21
+------------------------------
+Parameters for evaluation 21:
+                     -1.5152439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 21 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   22
+------------------------------
+Parameters for evaluation 22:
+                     -1.5952439851e+00 x1
+                      1.2989131412e+00 y1
+
+(Asynchronous job 22 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   23
+------------------------------
+Parameters for evaluation 23:
+                     -1.5952439851e+00 x1
+                      1.1389131412e+00 y1
+
+(Asynchronous job 23 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 21
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.21"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 22
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.22"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 23
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.23"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.23/params.in" and "workdir/run.23/results.out"
+interface evaluation 23 has completed
+Waiting on completed jobs
+Removing "workdir/run.22/params.in" and "workdir/run.22/results.out"
+interface evaluation 22 has completed
+Waiting on completed jobs
+Removing "workdir/run.21/params.in" and "workdir/run.21/results.out"
+interface evaluation 21 has completed
+
+Active response data for interface evaluation 21:
+Active set vector = { 1 1 }
+                      9.4466284465e-01 objective
+                      9.4466284465e-01 nlcon_1
+
+
+Active response data for interface evaluation 22:
+Active set vector = { 1 1 }
+                      1.0571773671e+00 objective
+                      1.0571773671e+00 nlcon_1
+
+
+Active response data for interface evaluation 23:
+Active set vector = { 1 1 }
+                      9.6008329273e-01 objective
+                      9.6008329273e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   24
+------------------------------
+Parameters for evaluation 24:
+                     -1.4352439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 24 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   25
+------------------------------
+Parameters for evaluation 25:
+                     -1.5152439851e+00 x1
+                      1.2989131412e+00 y1
+
+(Asynchronous job 25 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   26
+------------------------------
+Parameters for evaluation 26:
+                     -1.5152439851e+00 x1
+                      1.1389131412e+00 y1
+
+(Asynchronous job 26 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 24
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.24"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 25
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.25"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 26
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.26"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.24/params.in" and "workdir/run.24/results.out"
+interface evaluation 24 has completed
+Waiting on completed jobs
+Removing "workdir/run.26/params.in" and "workdir/run.26/results.out"
+interface evaluation 26 has completed
+Waiting on completed jobs
+Removing "workdir/run.25/params.in" and "workdir/run.25/results.out"
+interface evaluation 25 has completed
+
+Active response data for interface evaluation 24:
+Active set vector = { 1 1 }
+                      8.8299616085e-01 objective
+                      8.8299616085e-01 nlcon_1
+
+
+Active response data for interface evaluation 25:
+Active set vector = { 1 1 }
+                      9.9578046938e-01 objective
+                      9.9578046938e-01 nlcon_1
+
+
+Active response data for interface evaluation 26:
+Active set vector = { 1 1 }
+                      8.9554411102e-01 objective
+                      8.9554411102e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   27
+------------------------------
+Parameters for evaluation 27:
+                     -1.3552439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 27 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   28
+------------------------------
+Parameters for evaluation 28:
+                     -1.4352439851e+00 x1
+                      1.2989131412e+00 y1
+
+(Asynchronous job 28 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   29
+------------------------------
+Parameters for evaluation 29:
+                     -1.4352439851e+00 x1
+                      1.1389131412e+00 y1
+
+(Asynchronous job 29 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 27
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.27"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 28
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.28"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 29
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.29"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.28/params.in" and "workdir/run.28/results.out"
+interface evaluation 28 has completed
+Waiting on completed jobs
+Removing "workdir/run.29/params.in" and "workdir/run.29/results.out"
+interface evaluation 29 has completed
+Waiting on completed jobs
+Removing "workdir/run.27/params.in" and "workdir/run.27/results.out"
+interface evaluation 27 has completed
+
+Active response data for interface evaluation 27:
+Active set vector = { 1 1 }
+                      8.2275492159e-01 objective
+                      8.2275492159e-01 nlcon_1
+
+
+Active response data for interface evaluation 28:
+Active set vector = { 1 1 }
+                      9.3574291794e-01 objective
+                      9.3574291794e-01 nlcon_1
+
+
+Active response data for interface evaluation 29:
+Active set vector = { 1 1 }
+                      8.3222499689e-01 objective
+                      8.3222499689e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   30
+------------------------------
+Parameters for evaluation 30:
+                     -1.2752439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 30 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   31
+------------------------------
+Parameters for evaluation 31:
+                     -1.3552439851e+00 x1
+                      1.2989131412e+00 y1
+
+(Asynchronous job 31 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   32
+------------------------------
+Parameters for evaluation 32:
+                     -1.3552439851e+00 x1
+                      1.1389131412e+00 y1
+
+(Asynchronous job 32 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 30
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.30"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 31
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.31"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 32
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.32"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.31/params.in" and "workdir/run.31/results.out"
+interface evaluation 31 has completed
+Waiting on completed jobs
+Removing "workdir/run.30/params.in" and "workdir/run.30/results.out"
+interface evaluation 30 has completed
+Waiting on completed jobs
+Removing "workdir/run.32/params.in" and "workdir/run.32/results.out"
+interface evaluation 32 has completed
+
+Active response data for interface evaluation 30:
+Active set vector = { 1 1 }
+                      7.6408516421e-01 objective
+                      7.6408516421e-01 nlcon_1
+
+
+Active response data for interface evaluation 31:
+Active set vector = { 1 1 }
+                      8.7719514349e-01 objective
+                      8.7719514349e-01 nlcon_1
+
+
+Active response data for interface evaluation 32:
+Active set vector = { 1 1 }
+                      7.7025687447e-01 objective
+                      7.7025687447e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   33
+------------------------------
+Parameters for evaluation 33:
+                     -1.1152439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 33 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   34
+------------------------------
+Parameters for evaluation 34:
+                     -1.2752439851e+00 x1
+                      1.3789131412e+00 y1
+
+(Asynchronous job 34 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   35
+------------------------------
+Parameters for evaluation 35:
+                     -1.2752439851e+00 x1
+                      1.0589131412e+00 y1
+
+(Asynchronous job 35 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 33
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.33"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 34
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.34"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 35
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.35"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.35/params.in" and "workdir/run.35/results.out"
+interface evaluation 35 has completed
+Waiting on completed jobs
+Removing "workdir/run.33/params.in" and "workdir/run.33/results.out"
+interface evaluation 33 has completed
+Waiting on completed jobs
+Removing "workdir/run.34/params.in" and "workdir/run.34/results.out"
+interface evaluation 34 has completed
+
+Active response data for interface evaluation 33:
+Active set vector = { 1 1 }
+                      6.5212541636e-01 objective
+                      6.5212541636e-01 nlcon_1
+
+
+Active response data for interface evaluation 34:
+Active set vector = { 1 1 }
+                      8.7820357568e-01 objective
+                      8.7820357568e-01 nlcon_1
+
+
+Active response data for interface evaluation 35:
+Active set vector = { 1 1 }
+                      6.5757179677e-01 objective
+                      6.5757179677e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   36
+------------------------------
+Parameters for evaluation 36:
+                     -9.5524398512e-01 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 36 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   37
+------------------------------
+Parameters for evaluation 37:
+                     -1.1152439851e+00 x1
+                      1.3789131412e+00 y1
+
+(Asynchronous job 37 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   38
+------------------------------
+Parameters for evaluation 38:
+                     -1.1152439851e+00 x1
+                      1.0589131412e+00 y1
+
+(Asynchronous job 38 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 36
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.36"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 37
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.37"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 38
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.38"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.36/params.in" and "workdir/run.36/results.out"
+interface evaluation 36 has completed
+Waiting on completed jobs
+Removing "workdir/run.37/params.in" and "workdir/run.37/results.out"
+interface evaluation 37 has completed
+Waiting on completed jobs
+Removing "workdir/run.38/params.in" and "workdir/run.38/results.out"
+interface evaluation 38 has completed
+
+Active response data for interface evaluation 36:
+Active set vector = { 1 1 }
+                      5.4862529889e-01 objective
+                      5.4862529889e-01 nlcon_1
+
+
+Active response data for interface evaluation 37:
+Active set vector = { 1 1 }
+                      7.7346288275e-01 objective
+                      7.7346288275e-01 nlcon_1
+
+
+Active response data for interface evaluation 38:
+Active set vector = { 1 1 }
+                      5.3787716878e-01 objective
+                      5.3787716878e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   39
+------------------------------
+Parameters for evaluation 39:
+                     -9.5524398512e-01 x1
+                      1.0589131412e+00 y1
+
+(Asynchronous job 39 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   40
+------------------------------
+Parameters for evaluation 40:
+                     -1.1152439851e+00 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 40 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   41
+------------------------------
+Parameters for evaluation 41:
+                     -1.1152439851e+00 x1
+                      8.9891314123e-01 y1
+
+(Asynchronous job 41 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 39
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.39"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 40
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.40"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 41
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.41"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.39/params.in" and "workdir/run.39/results.out"
+interface evaluation 39 has completed
+Waiting on completed jobs
+Removing "workdir/run.41/params.in" and "workdir/run.41/results.out"
+interface evaluation 41 has completed
+Waiting on completed jobs
+Removing "workdir/run.40/params.in" and "workdir/run.40/results.out"
+interface evaluation 40 has completed
+
+Active response data for interface evaluation 39:
+Active set vector = { 1 1 }
+                      4.2610943172e-01 objective
+                      4.2610943172e-01 nlcon_1
+
+
+Active response data for interface evaluation 40:
+Active set vector = { 1 1 }
+                      6.5212541636e-01 objective
+                      6.5212541636e-01 nlcon_1
+
+
+Active response data for interface evaluation 41:
+Active set vector = { 1 1 }
+                      4.3241543607e-01 objective
+                      4.3241543607e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   42
+------------------------------
+Parameters for evaluation 42:
+                     -7.9524398512e-01 x1
+                      1.0589131412e+00 y1
+
+(Asynchronous job 42 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   43
+------------------------------
+Parameters for evaluation 43:
+                     -9.5524398512e-01 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 43 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   44
+------------------------------
+Parameters for evaluation 44:
+                     -9.5524398512e-01 x1
+                      8.9891314123e-01 y1
+
+(Asynchronous job 44 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 42
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.42"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 43
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.43"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 44
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.44"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.42/params.in" and "workdir/run.42/results.out"
+interface evaluation 42 has completed
+Waiting on completed jobs
+Removing "workdir/run.43/params.in" and "workdir/run.43/results.out"
+interface evaluation 43 has completed
+Waiting on completed jobs
+Removing "workdir/run.44/params.in" and "workdir/run.44/results.out"
+interface evaluation 44 has completed
+
+Active response data for interface evaluation 42:
+Active set vector = { 1 1 }
+                      3.2427717492e-01 objective
+                      3.2427717492e-01 nlcon_1
+
+
+Active response data for interface evaluation 43:
+Active set vector = { 1 1 }
+                      5.4862529889e-01 objective
+                      5.4862529889e-01 nlcon_1
+
+
+Active response data for interface evaluation 44:
+Active set vector = { 1 1 }
+                      3.1169200138e-01 objective
+                      3.1169200138e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   45
+------------------------------
+Parameters for evaluation 45:
+                     -7.9524398512e-01 x1
+                      8.9891314123e-01 y1
+
+(Asynchronous job 45 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   46
+------------------------------
+Parameters for evaluation 46:
+                     -9.5524398512e-01 x1
+                      7.3891314123e-01 y1
+
+(Asynchronous job 46 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 45
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.45"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 46
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.46"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.46/params.in" and "workdir/run.46/results.out"
+interface evaluation 46 has completed
+Waiting on completed jobs
+Removing "workdir/run.45/params.in" and "workdir/run.45/results.out"
+interface evaluation 45 has completed
+
+Active response data for interface evaluation 45:
+Active set vector = { 1 1 }
+                      2.0019074786e-01 objective
+                      2.0019074786e-01 nlcon_1
+
+
+Active response data for interface evaluation 46:
+Active set vector = { 1 1 }
+                      2.0767698550e-01 objective
+                      2.0767698550e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   47
+------------------------------
+Parameters for evaluation 47:
+                     -4.7524398512e-01 x1
+                      8.9891314123e-01 y1
+
+(Asynchronous job 47 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   48
+------------------------------
+Parameters for evaluation 48:
+                     -7.9524398512e-01 x1
+                      1.2189131412e+00 y1
+
+(Asynchronous job 48 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   49
+------------------------------
+Parameters for evaluation 49:
+                     -7.9524398512e-01 x1
+                      5.7891314123e-01 y1
+
+(Asynchronous job 49 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 47
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.47"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 48
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.48"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 49
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.49"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.48/params.in" and "workdir/run.48/results.out"
+interface evaluation 48 has completed
+Waiting on completed jobs
+Removing "workdir/run.47/params.in" and "workdir/run.47/results.out"
+interface evaluation 47 has completed
+Waiting on completed jobs
+Removing "workdir/run.49/params.in" and "workdir/run.49/results.out"
+interface evaluation 49 has completed
+
+Active response data for interface evaluation 47:
+Active set vector = { 1 1 }
+                      1.6809559748e-02 objective
+                      1.6809559748e-02 nlcon_1
+
+
+Active response data for interface evaluation 48:
+Active set vector = { 1 1 }
+                      4.5539075205e-01 objective
+                      4.5539075205e-01 nlcon_1
+
+
+Active response data for interface evaluation 49:
+Active set vector = { 1 1 }
+                     -1.5429677448e+03 objective
+                     -1.6357066364e-02 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   50
+------------------------------
+Parameters for evaluation 50:
+                     -4.7524398512e-01 x1
+                      5.7891314123e-01 y1
+
+(Asynchronous job 50 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   51
+------------------------------
+Parameters for evaluation 51:
+                     -1.1152439851e+00 x1
+                      5.7891314123e-01 y1
+
+(Asynchronous job 51 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   52
+------------------------------
+Parameters for evaluation 52:
+                     -7.9524398512e-01 x1
+                      2.5891314122e-01 y1
+
+(Asynchronous job 52 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 50
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.50"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 51
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.51"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 52
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.52"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.51/params.in" and "workdir/run.51/results.out"
+interface evaluation 51 has completed
+Waiting on completed jobs
+Removing "workdir/run.50/params.in" and "workdir/run.50/results.out"
+interface evaluation 50 has completed
+Waiting on completed jobs
+Removing "workdir/run.52/params.in" and "workdir/run.52/results.out"
+interface evaluation 52 has completed
+
+Active response data for interface evaluation 50:
+Active set vector = { 1 1 }
+                     -1.6826648218e+03 objective
+                     -2.5100248971e-01 nlcon_1
+
+
+Active response data for interface evaluation 51:
+Active set vector = { 1 1 }
+                      2.5654668482e-01 objective
+                      2.5654668482e-01 nlcon_1
+
+
+Active response data for interface evaluation 52:
+Active set vector = { 1 1 }
+                     -1.6120488764e+03 objective
+                     -1.6366931748e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   53
+------------------------------
+Parameters for evaluation 53:
+                     -1.5524398512e-01 x1
+                      5.7891314123e-01 y1
+
+(Asynchronous job 53 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   54
+------------------------------
+Parameters for evaluation 54:
+                     -4.7524398512e-01 x1
+                      2.5891314122e-01 y1
+
+(Asynchronous job 54 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 53
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.53"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 54
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.54"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.53/params.in" and "workdir/run.53/results.out"
+interface evaluation 53 has completed
+Waiting on completed jobs
+Removing "workdir/run.54/params.in" and "workdir/run.54/results.out"
+interface evaluation 54 has completed
+
+Active response data for interface evaluation 53:
+Active set vector = { 1 1 }
+                     -1.8419800148e+03 objective
+                     -4.0063273366e-01 nlcon_1
+
+
+Active response data for interface evaluation 54:
+Active set vector = { 1 1 }
+                     -1.9201370524e+03 objective
+                     -4.5880423130e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   55
+------------------------------
+Parameters for evaluation 55:
+                     -1.5524398512e-01 x1
+                      2.5891314122e-01 y1
+
+(Asynchronous job 55 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   56
+------------------------------
+Parameters for evaluation 56:
+                     -4.7524398512e-01 x1
+                     -6.1086858775e-02 y1
+
+(Asynchronous job 56 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 55
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.55"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 56
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.56"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.55/params.in" and "workdir/run.55/results.out"
+interface evaluation 55 has completed
+Waiting on completed jobs
+Removing "workdir/run.56/params.in" and "workdir/run.56/results.out"
+interface evaluation 56 has completed
+
+Active response data for interface evaluation 55:
+Active set vector = { 1 1 }
+                     -2.3593013416e+03 objective
+                     -6.9811142851e-01 nlcon_1
+
+
+Active response data for interface evaluation 56:
+Active set vector = { 1 1 }
+                     -2.0164249933e+03 objective
+                     -5.2084611064e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   57
+------------------------------
+Parameters for evaluation 57:
+                      1.6475601488e-01 x1
+                      2.5891314122e-01 y1
+
+(Asynchronous job 57 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   58
+------------------------------
+Parameters for evaluation 58:
+                     -1.5524398512e-01 x1
+                     -6.1086858775e-02 y1
+
+(Asynchronous job 58 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 57
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.57"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 58
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.58"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.57/params.in" and "workdir/run.57/results.out"
+interface evaluation 57 has completed
+Waiting on completed jobs
+Removing "workdir/run.58/params.in" and "workdir/run.58/results.out"
+interface evaluation 58 has completed
+
+Active response data for interface evaluation 57:
+Active set vector = { 1 1 }
+                     -2.3494702300e+03 objective
+                     -6.9311148746e-01 nlcon_1
+
+
+Active response data for interface evaluation 58:
+Active set vector = { 1 1 }
+                     -2.7222889422e+03 objective
+                     -8.3316984917e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   59
+------------------------------
+Parameters for evaluation 59:
+                      4.8475601488e-01 x1
+                     -6.1086858775e-02 y1
+
+(Asynchronous job 59 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   60
+------------------------------
+Parameters for evaluation 60:
+                     -7.9524398512e-01 x1
+                     -6.1086858775e-02 y1
+
+(Asynchronous job 60 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   61
+------------------------------
+Parameters for evaluation 61:
+                     -1.5524398512e-01 x1
+                     -7.0108685878e-01 y1
+
+(Asynchronous job 61 added to interface queue)
+
+Blocking synchronize of 3 asynchronous interface evaluations
+First pass: initiating 3 local asynchronous jobs
+Initiating interface evaluation 59
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.59"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 60
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.60"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 61
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.61"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.61/params.in" and "workdir/run.61/results.out"
+interface evaluation 61 has completed
+Waiting on completed jobs
+Removing "workdir/run.60/params.in" and "workdir/run.60/results.out"
+interface evaluation 60 has completed
+Waiting on completed jobs
+Removing "workdir/run.59/params.in" and "workdir/run.59/results.out"
+interface evaluation 59 has completed
+
+Active response data for interface evaluation 59:
+Active set vector = { 1 1 }
+                      0.0000000000e+00 objective
+                     -5.1141019424e-01 nlcon_1
+
+
+Active response data for interface evaluation 60:
+Active set vector = { 1 1 }
+                     -1.6420241358e+03 objective
+                     -2.0241326481e-01 nlcon_1
+
+
+Active response data for interface evaluation 61:
+Active set vector = { 1 1 }
+                     -1.7109655328e+03 objective
+                     -2.8193072863e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   62
+------------------------------
+Parameters for evaluation 62:
+                      1.6475601488e-01 x1
+                     -6.1086858775e-02 y1
+
+(Asynchronous job 62 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   63
+------------------------------
+Parameters for evaluation 63:
+                     -1.5524398512e-01 x1
+                     -3.8108685878e-01 y1
+
+(Asynchronous job 63 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 62
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.62"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 63
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.63"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.63/params.in" and "workdir/run.63/results.out"
+interface evaluation 63 has completed
+Waiting on completed jobs
+Removing "workdir/run.62/params.in" and "workdir/run.62/results.out"
+interface evaluation 62 has completed
+
+Active response data for interface evaluation 62:
+Active set vector = { 1 1 }
+                      0.0000000000e+00 objective
+                     -8.2428389726e-01 nlcon_1
+
+
+Active response data for interface evaluation 63:
+Active set vector = { 1 1 }
+                     -2.1338534262e+03 objective
+                     -5.8850529911e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   64
+------------------------------
+Parameters for evaluation 64:
+                      4.7560148800e-03 x1
+                     -6.1086858775e-02 y1
+
+(Asynchronous job 64 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   65
+------------------------------
+Parameters for evaluation 65:
+                     -1.5524398512e-01 x1
+                      9.8913141225e-02 y1
+
+(Asynchronous job 65 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   66
+------------------------------
+Parameters for evaluation 66:
+                     -3.1524398512e-01 x1
+                     -6.1086858775e-02 y1
+
+(Asynchronous job 66 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   67
+------------------------------
+Parameters for evaluation 67:
+                     -1.5524398512e-01 x1
+                     -2.2108685878e-01 y1
+
+(Asynchronous job 67 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 64
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.64"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 65
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.65"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 66
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.66"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 67
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.67"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.66/params.in" and "workdir/run.66/results.out"
+interface evaluation 66 has completed
+Waiting on completed jobs
+Removing "workdir/run.67/params.in" and "workdir/run.67/results.out"
+interface evaluation 67 has completed
+Waiting on completed jobs
+Removing "workdir/run.65/params.in" and "workdir/run.65/results.out"
+interface evaluation 65 has completed
+Waiting on completed jobs
+Removing "workdir/run.64/params.in" and "workdir/run.64/results.out"
+interface evaluation 64 has completed
+
+Active response data for interface evaluation 64:
+Active set vector = { 1 1 }
+                     -3.0591590586e+03 objective
+                     -9.3872827738e-01 nlcon_1
+
+
+Active response data for interface evaluation 65:
+Active set vector = { 1 1 }
+                     -2.6671202449e+03 objective
+                     -8.1592255865e-01 nlcon_1
+
+
+Active response data for interface evaluation 66:
+Active set vector = { 1 1 }
+                     -2.3214357242e+03 objective
+                     -6.7889195828e-01 nlcon_1
+
+
+Active response data for interface evaluation 67:
+Active set vector = { 1 1 }
+                     -2.4404591721e+03 objective
+                     -7.2985171841e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   68
+------------------------------
+Parameters for evaluation 68:
+                      4.7560148800e-03 x1
+                      9.8913141225e-02 y1
+
+(Asynchronous job 68 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   69
+------------------------------
+Parameters for evaluation 69:
+                      4.7560148800e-03 x1
+                     -2.2108685878e-01 y1
+
+(Asynchronous job 69 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 68
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.68"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 69
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.69"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.69/params.in" and "workdir/run.69/results.out"
+interface evaluation 69 has completed
+Waiting on completed jobs
+Removing "workdir/run.68/params.in" and "workdir/run.68/results.out"
+interface evaluation 68 has completed
+
+Active response data for interface evaluation 68:
+Active set vector = { 1 1 }
+                     -2.9296337850e+03 objective
+                     -9.0097258368e-01 nlcon_1
+
+
+Active response data for interface evaluation 69:
+Active set vector = { 1 1 }
+                     -2.5599322525e+03 objective
+                     -7.7886199148e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   70
+------------------------------
+Parameters for evaluation 70:
+                      8.4756014880e-02 x1
+                     -6.1086858775e-02 y1
+
+(Asynchronous job 70 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   71
+------------------------------
+Parameters for evaluation 71:
+                      4.7560148800e-03 x1
+                      1.8913141225e-02 y1
+
+(Asynchronous job 71 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   72
+------------------------------
+Parameters for evaluation 72:
+                     -7.5243985120e-02 x1
+                     -6.1086858775e-02 y1
+
+(Asynchronous job 72 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   73
+------------------------------
+Parameters for evaluation 73:
+                      4.7560148800e-03 x1
+                     -1.4108685878e-01 y1
+
+(Asynchronous job 73 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 70
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.70"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 71
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.71"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 72
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.72"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 73
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.73"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.72/params.in" and "workdir/run.72/results.out"
+interface evaluation 72 has completed
+Waiting on completed jobs
+Removing "workdir/run.73/params.in" and "workdir/run.73/results.out"
+interface evaluation 73 has completed
+Waiting on completed jobs
+Removing "workdir/run.71/params.in" and "workdir/run.71/results.out"
+interface evaluation 71 has completed
+Waiting on completed jobs
+Removing "workdir/run.70/params.in" and "workdir/run.70/results.out"
+interface evaluation 70 has completed
+
+Active response data for interface evaluation 70:
+Active set vector = { 1 1 }
+                     -2.8879472371e+03 objective
+                     -8.9552423069e-01 nlcon_1
+
+
+Active response data for interface evaluation 71:
+Active set vector = { 1 1 }
+                     -3.1964108555e+03 objective
+                     -9.8049803630e-01 nlcon_1
+
+
+Active response data for interface evaluation 72:
+Active set vector = { 1 1 }
+                     -2.9393318423e+03 objective
+                     -9.0308115966e-01 nlcon_1
+
+
+Active response data for interface evaluation 73:
+Active set vector = { 1 1 }
+                     -2.7937020657e+03 objective
+                     -8.5883300172e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   74
+------------------------------
+Parameters for evaluation 74:
+                      8.4756014880e-02 x1
+                      1.8913141225e-02 y1
+
+(Asynchronous job 74 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   75
+------------------------------
+Parameters for evaluation 75:
+                     -7.5243985120e-02 x1
+                      1.8913141225e-02 y1
+
+(Asynchronous job 75 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 74
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.74"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 75
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.75"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.74/params.in" and "workdir/run.74/results.out"
+interface evaluation 74 has completed
+Waiting on completed jobs
+Removing "workdir/run.75/params.in" and "workdir/run.75/results.out"
+interface evaluation 75 has completed
+
+Active response data for interface evaluation 74:
+Active set vector = { 1 1 }
+                     -2.9698788711e+03 objective
+                     -9.1315940483e-01 nlcon_1
+
+
+Active response data for interface evaluation 75:
+Active set vector = { 1 1 }
+                     -3.0045055056e+03 objective
+                     -9.2241543834e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   76
+------------------------------
+Parameters for evaluation 76:
+                      4.4756014880e-02 x1
+                      1.8913141225e-02 y1
+
+(Asynchronous job 76 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   77
+------------------------------
+Parameters for evaluation 77:
+                      4.7560148800e-03 x1
+                      5.8913141225e-02 y1
+
+(Asynchronous job 77 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   78
+------------------------------
+Parameters for evaluation 78:
+                     -3.5243985120e-02 x1
+                      1.8913141225e-02 y1
+
+(Asynchronous job 78 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   79
+------------------------------
+Parameters for evaluation 79:
+                      4.7560148800e-03 x1
+                     -2.1086858775e-02 y1
+
+(Asynchronous job 79 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 76
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.76"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 77
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.77"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 78
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.78"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 79
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.79"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.78/params.in" and "workdir/run.78/results.out"
+interface evaluation 78 has completed
+Waiting on completed jobs
+Removing "workdir/run.76/params.in" and "workdir/run.76/results.out"
+interface evaluation 76 has completed
+Waiting on completed jobs
+Removing "workdir/run.79/params.in" and "workdir/run.79/results.out"
+interface evaluation 79 has completed
+Waiting on completed jobs
+Removing "workdir/run.77/params.in" and "workdir/run.77/results.out"
+interface evaluation 77 has completed
+
+Active response data for interface evaluation 76:
+Active set vector = { 1 1 }
+                     -3.1020893734e+03 objective
+                     -9.5141185557e-01 nlcon_1
+
+
+Active response data for interface evaluation 77:
+Active set vector = { 1 1 }
+                     -3.0684073544e+03 objective
+                     -9.4089519575e-01 nlcon_1
+
+
+Active response data for interface evaluation 78:
+Active set vector = { 1 1 }
+                     -3.1320245054e+03 objective
+                     -9.6000193257e-01 nlcon_1
+
+
+Active response data for interface evaluation 79:
+Active set vector = { 1 1 }
+                     -3.1892630518e+03 objective
+                     -9.7838344869e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   80
+------------------------------
+Parameters for evaluation 80:
+                      2.4756014880e-02 x1
+                      1.8913141225e-02 y1
+
+(Asynchronous job 80 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   81
+------------------------------
+Parameters for evaluation 81:
+                      4.7560148800e-03 x1
+                      3.8913141225e-02 y1
+
+(Asynchronous job 81 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   82
+------------------------------
+Parameters for evaluation 82:
+                     -1.5243985120e-02 x1
+                      1.8913141225e-02 y1
+
+(Asynchronous job 82 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   83
+------------------------------
+Parameters for evaluation 83:
+                      4.7560148800e-03 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 83 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 80
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.80"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 81
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.81"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 82
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.82"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 83
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.83"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.83/params.in" and "workdir/run.83/results.out"
+interface evaluation 83 has completed
+Waiting on completed jobs
+Removing "workdir/run.82/params.in" and "workdir/run.82/results.out"
+interface evaluation 82 has completed
+Waiting on completed jobs
+Removing "workdir/run.80/params.in" and "workdir/run.80/results.out"
+interface evaluation 80 has completed
+Waiting on completed jobs
+Removing "workdir/run.81/params.in" and "workdir/run.81/results.out"
+interface evaluation 81 has completed
+
+Active response data for interface evaluation 80:
+Active set vector = { 1 1 }
+                     -3.1607941985e+03 objective
+                     -9.6884607274e-01 nlcon_1
+
+
+Active response data for interface evaluation 81:
+Active set vector = { 1 1 }
+                     -3.1361810402e+03 objective
+                     -9.6079729299e-01 nlcon_1
+
+
+Active response data for interface evaluation 82:
+Active set vector = { 1 1 }
+                     -3.1812471549e+03 objective
+                     -9.7570831432e-01 nlcon_1
+
+
+Active response data for interface evaluation 83:
+Active set vector = { 1 1 }
+                     -3.2218991057e+03 objective
+                     -9.9512137934e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   84
+------------------------------
+Parameters for evaluation 84:
+                      2.4756014880e-02 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 84 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   85
+------------------------------
+Parameters for evaluation 85:
+                     -1.5243985120e-02 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 85 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 84
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.84"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 85
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.85"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.84/params.in" and "workdir/run.84/results.out"
+interface evaluation 84 has completed
+Waiting on completed jobs
+Removing "workdir/run.85/params.in" and "workdir/run.85/results.out"
+interface evaluation 85 has completed
+
+Active response data for interface evaluation 84:
+Active set vector = { 1 1 }
+                     -3.1805938935e+03 objective
+                     -9.7522013852e-01 nlcon_1
+
+
+Active response data for interface evaluation 85:
+Active set vector = { 1 1 }
+                     -3.2052225601e+03 objective
+                     -9.8471731881e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   86
+------------------------------
+Parameters for evaluation 86:
+                      1.4756014880e-02 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 86 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   87
+------------------------------
+Parameters for evaluation 87:
+                      4.7560148800e-03 x1
+                      8.9131412250e-03 y1
+
+(Asynchronous job 87 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   88
+------------------------------
+Parameters for evaluation 88:
+                     -5.2439851200e-03 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 88 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   89
+------------------------------
+Parameters for evaluation 89:
+                      4.7560148800e-03 x1
+                     -1.1086858775e-02 y1
+
+(Asynchronous job 89 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 86
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.86"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 87
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.87"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 88
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.88"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 89
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.89"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.88/params.in" and "workdir/run.88/results.out"
+interface evaluation 88 has completed
+Waiting on completed jobs
+Removing "workdir/run.86/params.in" and "workdir/run.86/results.out"
+interface evaluation 86 has completed
+Waiting on completed jobs
+Removing "workdir/run.89/params.in" and "workdir/run.89/results.out"
+interface evaluation 89 has completed
+Waiting on completed jobs
+Removing "workdir/run.87/params.in" and "workdir/run.87/results.out"
+interface evaluation 87 has completed
+
+Active response data for interface evaluation 86:
+Active set vector = { 1 1 }
+                     -3.2072915263e+03 objective
+                     -9.8520401280e-01 nlcon_1
+
+
+Active response data for interface evaluation 87:
+Active set vector = { 1 1 }
+                     -3.2150249962e+03 objective
+                     -9.8989733876e-01 nlcon_1
+
+
+Active response data for interface evaluation 88:
+Active set vector = { 1 1 }
+                     -3.2214886084e+03 objective
+                     -9.9464456893e-01 nlcon_1
+
+
+Active response data for interface evaluation 89:
+Active set vector = { 1 1 }
+                     -3.2119120223e+03 objective
+                     -9.8793608210e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   90
+------------------------------
+Parameters for evaluation 90:
+                      9.7560148800e-03 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 90 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   91
+------------------------------
+Parameters for evaluation 91:
+                      4.7560148800e-03 x1
+                      3.9131412250e-03 y1
+
+(Asynchronous job 91 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   92
+------------------------------
+Parameters for evaluation 92:
+                     -2.4398512000e-04 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 92 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   93
+------------------------------
+Parameters for evaluation 93:
+                      4.7560148800e-03 x1
+                     -6.0868587750e-03 y1
+
+(Asynchronous job 93 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 90
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.90"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 91
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.91"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 92
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.92"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 93
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.93"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.91/params.in" and "workdir/run.91/results.out"
+interface evaluation 91 has completed
+Waiting on completed jobs
+Removing "workdir/run.90/params.in" and "workdir/run.90/results.out"
+interface evaluation 90 has completed
+Waiting on completed jobs
+Removing "workdir/run.92/params.in" and "workdir/run.92/results.out"
+interface evaluation 92 has completed
+Waiting on completed jobs
+Removing "workdir/run.93/params.in" and "workdir/run.93/results.out"
+interface evaluation 93 has completed
+
+Active response data for interface evaluation 90:
+Active set vector = { 1 1 }
+                     -3.2157399524e+03 objective
+                     -9.9018363161e-01 nlcon_1
+
+
+Active response data for interface evaluation 91:
+Active set vector = { 1 1 }
+                     -3.2205414923e+03 objective
+                     -9.9384107544e-01 nlcon_1
+
+
+Active response data for interface evaluation 92:
+Active set vector = { 1 1 }
+                     -3.2239080003e+03 objective
+                     -9.9888609213e-01 nlcon_1
+
+
+Active response data for interface evaluation 93:
+Active set vector = { 1 1 }
+                     -3.2188887229e+03 objective
+                     -9.9227539468e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   94
+------------------------------
+Parameters for evaluation 94:
+                     -2.4398512000e-04 x1
+                      3.9131412250e-03 y1
+
+(Asynchronous job 94 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   95
+------------------------------
+Parameters for evaluation 95:
+                     -2.4398512000e-04 x1
+                     -6.0868587750e-03 y1
+
+(Asynchronous job 95 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 94
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.94"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 95
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.95"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.94/params.in" and "workdir/run.94/results.out"
+interface evaluation 94 has completed
+Waiting on completed jobs
+Removing "workdir/run.95/params.in" and "workdir/run.95/results.out"
+interface evaluation 95 has completed
+
+Active response data for interface evaluation 94:
+Active set vector = { 1 1 }
+                     -3.2225074518e+03 objective
+                     -9.9607925989e-01 nlcon_1
+
+
+Active response data for interface evaluation 95:
+Active set vector = { 1 1 }
+                     -3.2208377502e+03 objective
+                     -9.9390825325e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation   96
+------------------------------
+Parameters for evaluation 96:
+                      2.2560148800e-03 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 96 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   97
+------------------------------
+Parameters for evaluation 97:
+                     -2.4398512000e-04 x1
+                      1.4131412250e-03 y1
+
+(Asynchronous job 97 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   98
+------------------------------
+Parameters for evaluation 98:
+                     -2.7439851200e-03 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 98 added to interface queue)
+
+------------------------------
+Begin interface Evaluation   99
+------------------------------
+Parameters for evaluation 99:
+                     -2.4398512000e-04 x1
+                     -3.5868587750e-03 y1
+
+(Asynchronous job 99 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 96
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.96"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 97
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.97"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 98
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.98"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 99
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.99"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.96/params.in" and "workdir/run.96/results.out"
+interface evaluation 96 has completed
+Waiting on completed jobs
+Removing "workdir/run.99/params.in" and "workdir/run.99/results.out"
+interface evaluation 99 has completed
+Waiting on completed jobs
+Removing "workdir/run.97/params.in" and "workdir/run.97/results.out"
+interface evaluation 97 has completed
+Waiting on completed jobs
+Removing "workdir/run.98/params.in" and "workdir/run.98/results.out"
+interface evaluation 98 has completed
+
+Active response data for interface evaluation 96:
+Active set vector = { 1 1 }
+                     -3.2234544915e+03 objective
+                     -9.9749583045e-01 nlcon_1
+
+
+Active response data for interface evaluation 97:
+Active set vector = { 1 1 }
+                     -3.2237681716e+03 objective
+                     -9.9856595089e-01 nlcon_1
+
+
+Active response data for interface evaluation 98:
+Active set vector = { 1 1 }
+                     -3.2232435956e+03 objective
+                     -9.9704860773e-01 nlcon_1
+
+
+Active response data for interface evaluation 99:
+Active set vector = { 1 1 }
+                     -3.2229190117e+03 objective
+                     -9.9640485263e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  100
+------------------------------
+Parameters for evaluation 100:
+                      1.0060148800e-03 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 100 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  101
+------------------------------
+Parameters for evaluation 101:
+                     -2.4398512000e-04 x1
+                      1.6314122500e-04 y1
+
+(Asynchronous job 101 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  102
+------------------------------
+Parameters for evaluation 102:
+                     -1.4939851200e-03 x1
+                     -1.0868587750e-03 y1
+
+(Asynchronous job 102 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  103
+------------------------------
+Parameters for evaluation 103:
+                     -2.4398512000e-04 x1
+                     -2.3368587750e-03 y1
+
+(Asynchronous job 103 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 100
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.100"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 101
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.101"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 102
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.102"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 103
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.103"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.101/params.in" and "workdir/run.101/results.out"
+interface evaluation 101 has completed
+Waiting on completed jobs
+Removing "workdir/run.100/params.in" and "workdir/run.100/results.out"
+interface evaluation 100 has completed
+Waiting on completed jobs
+Removing "workdir/run.103/params.in" and "workdir/run.103/results.out"
+interface evaluation 103 has completed
+Waiting on completed jobs
+Removing "workdir/run.102/params.in" and "workdir/run.102/results.out"
+interface evaluation 102 has completed
+
+Active response data for interface evaluation 100:
+Active set vector = { 1 1 }
+                     -3.2238210037e+03 objective
+                     -9.9851901116e-01 nlcon_1
+
+
+Active response data for interface evaluation 101:
+Active set vector = { 1 1 }
+                     -3.2239797591e+03 objective
+                     -9.9970649736e-01 nlcon_1
+
+
+Active response data for interface evaluation 102:
+Active set vector = { 1 1 }
+                     -3.2237148252e+03 objective
+                     -9.9815250073e-01 nlcon_1
+
+
+Active response data for interface evaluation 103:
+Active set vector = { 1 1 }
+                     -3.2235533259e+03 objective
+                     -9.9765043883e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  104
+------------------------------
+Parameters for evaluation 104:
+                      1.0060148800e-03 x1
+                      1.6314122500e-04 y1
+
+(Asynchronous job 104 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  105
+------------------------------
+Parameters for evaluation 105:
+                     -1.4939851200e-03 x1
+                      1.6314122500e-04 y1
+
+(Asynchronous job 105 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 104
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.104"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 105
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.105"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.104/params.in" and "workdir/run.104/results.out"
+interface evaluation 104 has completed
+Waiting on completed jobs
+Removing "workdir/run.105/params.in" and "workdir/run.105/results.out"
+interface evaluation 105 has completed
+
+Active response data for interface evaluation 104:
+Active set vector = { 1 1 }
+                     -3.2238934775e+03 objective
+                     -9.9898084300e-01 nlcon_1
+
+
+Active response data for interface evaluation 105:
+Active set vector = { 1 1 }
+                     -3.2237855641e+03 objective
+                     -9.9849713387e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  106
+------------------------------
+Parameters for evaluation 106:
+                      3.8101488000e-04 x1
+                      1.6314122500e-04 y1
+
+(Asynchronous job 106 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  107
+------------------------------
+Parameters for evaluation 107:
+                     -2.4398512000e-04 x1
+                      7.8814122500e-04 y1
+
+(Asynchronous job 107 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  108
+------------------------------
+Parameters for evaluation 108:
+                     -8.6898512000e-04 x1
+                      1.6314122500e-04 y1
+
+(Asynchronous job 108 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  109
+------------------------------
+Parameters for evaluation 109:
+                     -2.4398512000e-04 x1
+                     -4.6185877500e-04 y1
+
+(Asynchronous job 109 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 106
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.106"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 107
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.107"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 108
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.108"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 109
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.109"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.106/params.in" and "workdir/run.106/results.out"
+interface evaluation 106 has completed
+Waiting on completed jobs
+Removing "workdir/run.107/params.in" and "workdir/run.107/results.out"
+interface evaluation 107 has completed
+Waiting on completed jobs
+Removing "workdir/run.108/params.in" and "workdir/run.108/results.out"
+interface evaluation 108 has completed
+Waiting on completed jobs
+Removing "workdir/run.109/params.in" and "workdir/run.109/results.out"
+interface evaluation 109 has completed
+
+Active response data for interface evaluation 106:
+Active set vector = { 1 1 }
+                     -3.2239717027e+03 objective
+                     -9.9958552757e-01 nlcon_1
+
+
+Active response data for interface evaluation 107:
+Active set vector = { 1 1 }
+                     -3.2239092979e+03 objective
+                     -9.9917495738e-01 nlcon_1
+
+
+Active response data for interface evaluation 108:
+Active set vector = { 1 1 }
+                     -3.2239176528e+03 objective
+                     -9.9911583361e-01 nlcon_1
+
+
+Active response data for interface evaluation 109:
+Active set vector = { 1 1 }
+                     -3.2239793388e+03 objective
+                     -9.9947765695e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  110
+------------------------------
+Parameters for evaluation 110:
+                      6.8514880001e-05 x1
+                      1.6314122500e-04 y1
+
+(Asynchronous job 110 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  111
+------------------------------
+Parameters for evaluation 111:
+                     -2.4398512000e-04 x1
+                      4.7564122500e-04 y1
+
+(Asynchronous job 111 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  112
+------------------------------
+Parameters for evaluation 112:
+                     -5.5648512000e-04 x1
+                      1.6314122500e-04 y1
+
+(Asynchronous job 112 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  113
+------------------------------
+Parameters for evaluation 113:
+                     -2.4398512000e-04 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 113 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 110
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.110"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 111
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.111"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 112
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.112"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 113
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.113"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.110/params.in" and "workdir/run.110/results.out"
+interface evaluation 110 has completed
+Waiting on completed jobs
+Removing "workdir/run.111/params.in" and "workdir/run.111/results.out"
+interface evaluation 111 has completed
+Waiting on completed jobs
+Removing "workdir/run.112/params.in" and "workdir/run.112/results.out"
+interface evaluation 112 has completed
+Waiting on completed jobs
+Removing "workdir/run.113/params.in" and "workdir/run.113/results.out"
+interface evaluation 113 has completed
+
+Active response data for interface evaluation 110:
+Active set vector = { 1 1 }
+                     -3.2239845057e+03 objective
+                     -9.9982305552e-01 nlcon_1
+
+
+Active response data for interface evaluation 111:
+Active set vector = { 1 1 }
+                     -3.2239533794e+03 objective
+                     -9.9946543166e-01 nlcon_1
+
+
+Active response data for interface evaluation 112:
+Active set vector = { 1 1 }
+                     -3.2239574690e+03 objective
+                     -9.9942009419e-01 nlcon_1
+
+
+Active response data for interface evaluation 113:
+Active set vector = { 1 1 }
+                     -3.2239884155e+03 objective
+                     -9.9971392871e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  114
+------------------------------
+Parameters for evaluation 114:
+                      6.8514880001e-05 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 114 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  115
+------------------------------
+Parameters for evaluation 115:
+                     -5.5648512000e-04 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 115 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 114
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.114"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 115
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.115"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.114/params.in" and "workdir/run.114/results.out"
+interface evaluation 114 has completed
+Waiting on completed jobs
+Removing "workdir/run.115/params.in" and "workdir/run.115/results.out"
+interface evaluation 115 has completed
+
+Active response data for interface evaluation 114:
+Active set vector = { 1 1 }
+                     -3.2239931114e+03 objective
+                     -9.9983567614e-01 nlcon_1
+
+
+Active response data for interface evaluation 115:
+Active set vector = { 1 1 }
+                     -3.2239661756e+03 objective
+                     -9.9942381970e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  116
+------------------------------
+Parameters for evaluation 116:
+                      3.8101488000e-04 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 116 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  117
+------------------------------
+Parameters for evaluation 117:
+                      6.8514880001e-05 x1
+                     -4.6185877500e-04 y1
+
+(Asynchronous job 117 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 116
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.116"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 117
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.117"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.116/params.in" and "workdir/run.116/results.out"
+interface evaluation 116 has completed
+Waiting on completed jobs
+Removing "workdir/run.117/params.in" and "workdir/run.117/results.out"
+interface evaluation 117 has completed
+
+Active response data for interface evaluation 116:
+Active set vector = { 1 1 }
+                     -3.2239802568e+03 objective
+                     -9.9959075633e-01 nlcon_1
+
+
+Active response data for interface evaluation 117:
+Active set vector = { 1 1 }
+                      0.0000000000e+00 objective
+                     -9.9953308693e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  118
+------------------------------
+Parameters for evaluation 118:
+                      2.2476488000e-04 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 118 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  119
+------------------------------
+Parameters for evaluation 119:
+                      6.8514880001e-05 x1
+                      6.8912249999e-06 y1
+
+(Asynchronous job 119 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  120
+------------------------------
+Parameters for evaluation 120:
+                     -8.7735119999e-05 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 120 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  121
+------------------------------
+Parameters for evaluation 121:
+                      6.8514880001e-05 x1
+                     -3.0560877500e-04 y1
+
+(Asynchronous job 121 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 118
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.118"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 119
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.119"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 120
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.120"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 121
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.121"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.118/params.in" and "workdir/run.118/results.out"
+interface evaluation 118 has completed
+Waiting on completed jobs
+Removing "workdir/run.120/params.in" and "workdir/run.120/results.out"
+interface evaluation 120 has completed
+Waiting on completed jobs
+Removing "workdir/run.121/params.in" and "workdir/run.121/results.out"
+interface evaluation 121 has completed
+Waiting on completed jobs
+Removing "workdir/run.119/params.in" and "workdir/run.119/results.out"
+interface evaluation 119 has completed
+
+Active response data for interface evaluation 118:
+Active set vector = { 1 1 }
+                     -3.2239888778e+03 objective
+                     -9.9973013467e-01 nlcon_1
+
+
+Active response data for interface evaluation 119:
+Active set vector = { 1 1 }
+                      0.0000000000e+00 objective
+                     -9.9993113943e-01 nlcon_1
+
+
+Active response data for interface evaluation 120:
+Active set vector = { 1 1 }
+                     -3.2239929571e+03 objective
+                     -9.9982677906e-01 nlcon_1
+
+
+Active response data for interface evaluation 121:
+Active set vector = { 1 1 }
+                     -3.2239907641e+03 objective
+                     -9.9968680515e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  122
+------------------------------
+Parameters for evaluation 122:
+                      1.4663988000e-04 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 122 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  123
+------------------------------
+Parameters for evaluation 123:
+                      6.8514880001e-05 x1
+                     -7.1233775000e-05 y1
+
+(Asynchronous job 123 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  124
+------------------------------
+Parameters for evaluation 124:
+                     -9.6101199991e-06 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 124 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  125
+------------------------------
+Parameters for evaluation 125:
+                      6.8514880001e-05 x1
+                     -2.2748377500e-04 y1
+
+(Asynchronous job 125 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 122
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.122"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 123
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.123"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 124
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.124"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 125
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.125"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.124/params.in" and "workdir/run.124/results.out"
+interface evaluation 124 has completed
+Waiting on completed jobs
+Removing "workdir/run.125/params.in" and "workdir/run.125/results.out"
+interface evaluation 125 has completed
+Waiting on completed jobs
+Removing "workdir/run.123/params.in" and "workdir/run.123/results.out"
+interface evaluation 123 has completed
+Waiting on completed jobs
+Removing "workdir/run.122/params.in" and "workdir/run.122/results.out"
+interface evaluation 122 has completed
+
+Active response data for interface evaluation 122:
+Active set vector = { 1 1 }
+                     -3.2239915431e+03 objective
+                     -9.9979068851e-01 nlcon_1
+
+
+Active response data for interface evaluation 123:
+Active set vector = { 1 1 }
+                     -3.2239926223e+03 objective
+                     -9.9990116408e-01 nlcon_1
+
+
+Active response data for interface evaluation 124:
+Active set vector = { 1 1 }
+                     -3.2239935827e+03 objective
+                     -9.9985033237e-01 nlcon_1
+
+
+Active response data for interface evaluation 125:
+Active set vector = { 1 1 }
+                     -3.2239924919e+03 objective
+                     -9.9976242231e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  126
+------------------------------
+Parameters for evaluation 126:
+                     -9.6101199991e-06 x1
+                     -7.1233775000e-05 y1
+
+(Asynchronous job 126 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  127
+------------------------------
+Parameters for evaluation 127:
+                     -9.6101199991e-06 x1
+                     -2.2748377500e-04 y1
+
+(Asynchronous job 127 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 126
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.126"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 127
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.127"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.126/params.in" and "workdir/run.126/results.out"
+interface evaluation 126 has completed
+Waiting on completed jobs
+Removing "workdir/run.127/params.in" and "workdir/run.127/results.out"
+interface evaluation 127 has completed
+
+Active response data for interface evaluation 126:
+Active set vector = { 1 1 }
+                     -3.2239930905e+03 objective
+                     -9.9992812090e-01 nlcon_1
+
+
+Active response data for interface evaluation 127:
+Active set vector = { 1 1 }
+                     -3.2239929665e+03 objective
+                     -9.9977231332e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  128
+------------------------------
+Parameters for evaluation 128:
+                      2.9452380001e-05 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 128 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  129
+------------------------------
+Parameters for evaluation 129:
+                     -9.6101199991e-06 x1
+                     -1.1029627500e-04 y1
+
+(Asynchronous job 129 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  130
+------------------------------
+Parameters for evaluation 130:
+                     -4.8672619999e-05 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 130 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  131
+------------------------------
+Parameters for evaluation 131:
+                     -9.6101199991e-06 x1
+                     -1.8842127500e-04 y1
+
+(Asynchronous job 131 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 128
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.128"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 129
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.129"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 130
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.130"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 131
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.131"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.128/params.in" and "workdir/run.128/results.out"
+interface evaluation 128 has completed
+Waiting on completed jobs
+Removing "workdir/run.129/params.in" and "workdir/run.129/results.out"
+interface evaluation 129 has completed
+Waiting on completed jobs
+Removing "workdir/run.130/params.in" and "workdir/run.130/results.out"
+interface evaluation 130 has completed
+Waiting on completed jobs
+Removing "workdir/run.131/params.in" and "workdir/run.131/results.out"
+interface evaluation 131 has completed
+
+Active response data for interface evaluation 128:
+Active set vector = { 1 1 }
+                     -3.2239934842e+03 objective
+                     -9.9984776503e-01 nlcon_1
+
+
+Active response data for interface evaluation 129:
+Active set vector = { 1 1 }
+                     -3.2239934752e+03 objective
+                     -9.9988928585e-01 nlcon_1
+
+
+Active response data for interface evaluation 130:
+Active set vector = { 1 1 }
+                     -3.2239934070e+03 objective
+                     -9.9984291064e-01 nlcon_1
+
+
+Active response data for interface evaluation 131:
+Active set vector = { 1 1 }
+                     -3.2239934132e+03 objective
+                     -9.9981133381e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  132
+------------------------------
+Parameters for evaluation 132:
+                      9.9211300009e-06 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 132 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  133
+------------------------------
+Parameters for evaluation 133:
+                     -9.6101199991e-06 x1
+                     -1.2982752500e-04 y1
+
+(Asynchronous job 133 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  134
+------------------------------
+Parameters for evaluation 134:
+                     -2.9141369999e-05 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 134 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  135
+------------------------------
+Parameters for evaluation 135:
+                     -9.6101199991e-06 x1
+                     -1.6889002500e-04 y1
+
+(Asynchronous job 135 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 132
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.132"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 133
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.133"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 134
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.134"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 135
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.135"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.132/params.in" and "workdir/run.132/results.out"
+interface evaluation 132 has completed
+Waiting on completed jobs
+Removing "workdir/run.135/params.in" and "workdir/run.135/results.out"
+interface evaluation 135 has completed
+Waiting on completed jobs
+Removing "workdir/run.133/params.in" and "workdir/run.133/results.out"
+interface evaluation 133 has completed
+Waiting on completed jobs
+Removing "workdir/run.134/params.in" and "workdir/run.134/results.out"
+interface evaluation 134 has completed
+
+Active response data for interface evaluation 132:
+Active set vector = { 1 1 }
+                     -3.2239935677e+03 objective
+                     -9.9985031208e-01 nlcon_1
+
+
+Active response data for interface evaluation 133:
+Active set vector = { 1 1 }
+                     -3.2239935636e+03 objective
+                     -9.9986981728e-01 nlcon_1
+
+
+Active response data for interface evaluation 134:
+Active set vector = { 1 1 }
+                      0.0000000000e+00 objective
+                     -9.9984782489e-01 nlcon_1
+
+
+Active response data for interface evaluation 135:
+Active set vector = { 1 1 }
+                     -3.2239935326e+03 objective
+                     -9.9983083678e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  136
+------------------------------
+Parameters for evaluation 136:
+                      1.5550500088e-07 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 136 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  137
+------------------------------
+Parameters for evaluation 137:
+                     -9.6101199991e-06 x1
+                     -1.3959315000e-04 y1
+
+(Asynchronous job 137 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  138
+------------------------------
+Parameters for evaluation 138:
+                     -1.9375744999e-05 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 138 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  139
+------------------------------
+Parameters for evaluation 139:
+                     -9.6101199991e-06 x1
+                     -1.5912440000e-04 y1
+
+(Asynchronous job 139 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 136
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.136"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 137
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.137"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 138
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.138"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 139
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.139"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.139/params.in" and "workdir/run.139/results.out"
+interface evaluation 139 has completed
+Waiting on completed jobs
+Removing "workdir/run.138/params.in" and "workdir/run.138/results.out"
+interface evaluation 138 has completed
+Waiting on completed jobs
+Removing "workdir/run.136/params.in" and "workdir/run.136/results.out"
+interface evaluation 136 has completed
+Waiting on completed jobs
+Removing "workdir/run.137/params.in" and "workdir/run.137/results.out"
+interface evaluation 137 has completed
+
+Active response data for interface evaluation 136:
+Active set vector = { 1 1 }
+                     -3.2239935838e+03 objective
+                     -9.9985064114e-01 nlcon_1
+
+
+Active response data for interface evaluation 137:
+Active set vector = { 1 1 }
+                     -3.2239935818e+03 objective
+                     -9.9986007644e-01 nlcon_1
+
+
+Active response data for interface evaluation 138:
+Active set vector = { 1 1 }
+                     -3.2239935645e+03 objective
+                     -9.9984938970e-01 nlcon_1
+
+
+Active response data for interface evaluation 139:
+Active set vector = { 1 1 }
+                     -3.2239935663e+03 objective
+                     -9.9984058567e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  140
+------------------------------
+Parameters for evaluation 140:
+                      1.5550500088e-07 x1
+                     -1.3959315000e-04 y1
+
+(Asynchronous job 140 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  141
+------------------------------
+Parameters for evaluation 141:
+                      1.5550500088e-07 x1
+                     -1.5912440000e-04 y1
+
+(Asynchronous job 141 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 140
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.140"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 141
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.141"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.141/params.in" and "workdir/run.141/results.out"
+interface evaluation 141 has completed
+Waiting on completed jobs
+Removing "workdir/run.140/params.in" and "workdir/run.140/results.out"
+interface evaluation 140 has completed
+
+Active response data for interface evaluation 140:
+Active set vector = { 1 1 }
+                     -3.2239935829e+03 objective
+                     -9.9986040676e-01 nlcon_1
+
+
+Active response data for interface evaluation 141:
+Active set vector = { 1 1 }
+                     -3.2239935673e+03 objective
+                     -9.9984087552e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  142
+------------------------------
+Parameters for evaluation 142:
+                      5.0383175009e-06 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 142 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  143
+------------------------------
+Parameters for evaluation 143:
+                      1.5550500088e-07 x1
+                     -1.4447596250e-04 y1
+
+(Asynchronous job 143 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  144
+------------------------------
+Parameters for evaluation 144:
+                     -4.7273074991e-06 x1
+                     -1.4935877500e-04 y1
+
+(Asynchronous job 144 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  145
+------------------------------
+Parameters for evaluation 145:
+                      1.5550500088e-07 x1
+                     -1.5424158750e-04 y1
+
+(Asynchronous job 145 added to interface queue)
+
+Blocking synchronize of 4 asynchronous interface evaluations
+First pass: initiating 4 local asynchronous jobs
+Initiating interface evaluation 142
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.142"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 143
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.143"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 144
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.144"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 145
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.145"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.145/params.in" and "workdir/run.145/results.out"
+interface evaluation 145 has completed
+Waiting on completed jobs
+Removing "workdir/run.143/params.in" and "workdir/run.143/results.out"
+interface evaluation 143 has completed
+Waiting on completed jobs
+Removing "workdir/run.142/params.in" and "workdir/run.142/results.out"
+interface evaluation 142 has completed
+Waiting on completed jobs
+Removing "workdir/run.144/params.in" and "workdir/run.144/results.out"
+interface evaluation 144 has completed
+
+Active response data for interface evaluation 142:
+Active set vector = { 1 1 }
+                     -3.2239935779e+03 objective
+                     -9.9985055627e-01 nlcon_1
+
+
+Active response data for interface evaluation 143:
+Active set vector = { 1 1 }
+                     -3.2239935855e+03 objective
+                     -9.9985552395e-01 nlcon_1
+
+
+Active response data for interface evaluation 144:
+Active set vector = { 1 1 }
+                     -3.2239935854e+03 objective
+                     -9.9985056643e-01 nlcon_1
+
+
+Active response data for interface evaluation 145:
+Active set vector = { 1 1 }
+                     -3.2239935777e+03 objective
+                     -9.9984575833e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  146
+------------------------------
+Parameters for evaluation 146:
+                      5.0383175009e-06 x1
+                     -1.4447596250e-04 y1
+
+(Asynchronous job 146 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  147
+------------------------------
+Parameters for evaluation 147:
+                     -4.7273074991e-06 x1
+                     -1.4447596250e-04 y1
+
+(Asynchronous job 147 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 146
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.146"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 147
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.147"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.147/params.in" and "workdir/run.147/results.out"
+interface evaluation 147 has completed
+Waiting on completed jobs
+Removing "workdir/run.146/params.in" and "workdir/run.146/results.out"
+interface evaluation 146 has completed
+
+Active response data for interface evaluation 146:
+Active set vector = { 1 1 }
+                     -3.2239935796e+03 objective
+                     -9.9985543621e-01 nlcon_1
+
+
+Active response data for interface evaluation 147:
+Active set vector = { 1 1 }
+                     -3.2239935871e+03 objective
+                     -9.9985544672e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+------------------------------
+Begin interface Evaluation  148
+------------------------------
+Parameters for evaluation 148:
+                     -4.7273074991e-06 x1
+                     -1.3959315000e-04 y1
+
+(Asynchronous job 148 added to interface queue)
+
+------------------------------
+Begin interface Evaluation  149
+------------------------------
+Parameters for evaluation 149:
+                     -9.6101199991e-06 x1
+                     -1.4447596250e-04 y1
+
+(Asynchronous job 149 added to interface queue)
+
+Blocking synchronize of 2 asynchronous interface evaluations
+First pass: initiating 2 local asynchronous jobs
+Initiating interface evaluation 148
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.148"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Initiating interface evaluation 149
+nonblocking fork: python3 -m optim params.in results.out
+Changing directory to "workdir/run.149"
+Changing directory back to /home/greg/Dakota_CFS/src/Problems/Disk
+Waiting on completed jobs
+Removing "workdir/run.148/params.in" and "workdir/run.148/results.out"
+interface evaluation 148 has completed
+Waiting on completed jobs
+Removing "workdir/run.149/params.in" and "workdir/run.149/results.out"
+interface evaluation 149 has completed
+
+Active response data for interface evaluation 148:
+Active set vector = { 1 1 }
+                     -3.2239935844e+03 objective
+                     -9.9986032683e-01 nlcon_1
+
+
+Active response data for interface evaluation 149:
+Active set vector = { 1 1 }
+                     -3.2239935844e+03 objective
+                     -9.9985520477e-01 nlcon_1
+
+
+Blocking synchronize of 0 asynchronous interface evaluations
+
+>>>>> coliny_pattern_search: post-run phase.
+<<<<< Function evaluation summary (interface): 149 total (149 new, 0 duplicate)
+      objective: 149 val (149 n, 0 d), 0 grad (0 n, 0 d), 0 Hess (0 n, 0 d)
+        nlcon_1: 149 val (149 n, 0 d), 0 grad (0 n, 0 d), 0 Hess (0 n, 0 d)
+<<<<< Best parameters          =
+                     -4.7273074991e-06 x1
+                     -1.4447596250e-04 y1
+<<<<< Best objective function  =
+                     -3.2239935871e+03
+<<<<< Best constraint values   =
+                     -9.9985544672e-01
+<<<<< Best data captured at function evaluation 147
+
+
+<<<<< Iterator coliny_pattern_search completed.
+<<<<< Environment execution completed.
+DAKOTA execution time in seconds:
+  Total CPU        =   0.749381 [parent =   0.749381, child =          0]
+  Total wall clock =    826.823
