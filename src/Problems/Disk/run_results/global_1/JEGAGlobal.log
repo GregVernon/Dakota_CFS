@@ -1,0 +1,2076 @@
+JEGA Genetic Algorithm Optimization Software v2.7.0
+Run started Tue Apr  7 20:45:50 2020
+
+Global Log initialized using "verbose" as default level.
+Global Log logging to file JEGAGlobal.log
+Global Log logging to console window
+20:45:50: quiet- JEGA Front End: Random seed = 1586388899
+20:45:50: verbose- Design Target: Design variable x1 added.  1 design variables now in target.
+20:45:50: verbose- Design Target: Design variable y1 added.  2 design variables now in target.
+20:45:50: verbose- Design Target: Objective Non-Linear Minimize objective added.  1 objectives now in target.
+20:45:50: verbose- Design Target: Constraint Non-Linear Two-Sided Inequality 0(-inf<=g(x)<=0) added.  1 constraints now in target.
+20:45:50: verbose- JEGA Front End: Creating a SOGA
+20:45:50: debug-  Matching Group: Trying "Favor Feasible Operator Group".
+20:45:50: verbose- Favor Feasible Operator Group: Contains Converger "average_fitness_tracker".
+20:45:50: verbose- Favor Feasible Operator Group: Contains Crosser "shuffle_random".
+20:45:50: verbose- Favor Feasible Operator Group: Does not contain FitnessAssessor "merit_function".  Match failed.
+20:45:50: debug-  Matching Group: Trying "Standard SOGA Operator Group".
+20:45:50: verbose- Standard SOGA Operator Group: Contains Converger "average_fitness_tracker".
+20:45:50: verbose- Standard SOGA Operator Group: Contains Crosser "shuffle_random".
+20:45:50: verbose- Standard SOGA Operator Group: Contains FitnessAssessor "merit_function".
+20:45:50: verbose- Standard SOGA Operator Group: Contains Initializer "unique_random".
+20:45:50: verbose- Standard SOGA Operator Group: Contains MainLoop "duplicate_free".
+20:45:50: verbose- Standard SOGA Operator Group: Contains Mutator "replace_uniform".
+20:45:50: verbose- Standard SOGA Operator Group: Contains Selector "elitist".
+20:45:50: verbose- Standard SOGA Operator Group: Contains PostProcessor "null_postprocessor".
+20:45:50: verbose- Standard SOGA Operator Group: Contains NichePressureApplicator "null_niching".
+20:45:50: debug-  Matching Group: "Standard SOGA Operator Group" match succeeded.
+20:45:50: quiet- : Matched new set to a group that is not the current group.  Adopting the new group.
+20:45:50: verbose- Standard SOGA Operator Group: Contains Converger "average_fitness_tracker".
+20:45:50: verbose- Standard SOGA Operator Group: Contains Crosser "shuffle_random".
+20:45:50: verbose- Standard SOGA Operator Group: Contains FitnessAssessor "merit_function".
+20:45:50: verbose- Standard SOGA Operator Group: Contains Initializer "unique_random".
+20:45:50: verbose- Standard SOGA Operator Group: Contains MainLoop "duplicate_free".
+20:45:50: verbose- Standard SOGA Operator Group: Contains Mutator "replace_uniform".
+20:45:50: verbose- Standard SOGA Operator Group: Contains Selector "elitist".
+20:45:50: verbose- Standard SOGA Operator Group: Contains PostProcessor "null_postprocessor".
+20:45:50: verbose- Standard SOGA Operator Group: Contains NichePressureApplicator "null_niching".
+20:45:50: quiet- : Assigning missing weights to 1.
+20:45:50: verbose- Global_SOGA: The name of this GA is now Global_SOGA
+20:45:50: verbose- Global_SOGA: The print each population flag is now set to 0
+20:45:50: verbose- Global_SOGA: The print final data flag is now set to 1
+20:45:50: verbose- Global_SOGA: The print discards flag is now set to 1
+20:45:50: verbose- Global_SOGA: The name of the file to which final data will be written is now finaldata1.dat
+20:45:50: verbose- Global_SOGA: The data directory is now set to ./
+20:45:50: verbose- average_fitness_tracker: Number of generations tracked now = 15
+20:45:50: verbose- average_fitness_tracker: Max allowable % change now = 0.0001
+20:45:50: verbose- average_fitness_tracker: Maximum allowable generations now = 1000
+20:45:50: verbose- average_fitness_tracker: Maximum allowable evaluations now = 1000
+20:45:50: quiet- Error encountered while retrieving parameter named "method.max_time" of type "d" from parameter database reading: Parameter not found for tag: method.max_time
+20:45:50: verbose- average_fitness_tracker: The maximum allowable amount of time was not found in the parameter database.  Using the current value of 1.79769e+308
+20:45:50: verbose- average_fitness_tracker: Maximum allowable time now = 1.79769e+308 seconds 
+20:45:50: verbose- shuffle_random: Number of children per mating now = 2
+20:45:50: verbose- shuffle_random: Number of parents per mating now = 2
+20:45:50: verbose- shuffle_random: Crossover rate now = 0.75
+20:45:50: verbose- DAKOTA JEGA Evaluator: Maximum allowable evaluations now = 1000
+20:45:50: verbose- DAKOTA JEGA Evaluator: The evaluation concurrency is now 1
+20:45:50: verbose- merit_function: Penalty multiplier now = 1
+20:45:50: quiet- merit_function: Assigning missing weights to 1.
+20:45:50: verbose- unique_random: Desired initial population size now = 20
+20:45:50: verbose- replace_uniform: Mutation rate now = 0.1
+20:45:50: verbose- Global_SOGA: About to perform algorithm execution.
+20:45:50: verbose- unique_random: 20 unique random designs created.
+20:46:13: verbose- merit_function: maximum encountered fitness = 2326.35.
+20:46:13: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  0 of 0 offspring were immediately rejected.
+20:46:13: verbose- average_fitness_tracker: Average fitness = 204.094
+20:46:13: verbose- average_fitness_tracker: Pushed metric value of 204.094 onto the convergence stack.
+20:46:13: quiet- duplicate_free: 1 generation so far.
+20:46:13: quiet- duplicate_free: 20 evaluations so far.
+20:46:13: verbose- duplicate_free: 20 members in population so far.
+20:46:13: verbose- shuffle_random: 16 children created.
+20:46:13: verbose- replace_uniform: Performed 2 total mutations.
+20:46:13: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+20:46:13: verbose- duplicate_free: flushed 5 offspring designs that duplicate existing population members.
+20:46:34: verbose- merit_function: maximum encountered fitness = 2326.35.
+20:46:34: verbose- Global_SOGA: 6 of 20 population members were not selected to continue.  4 of 10 offspring were immediately rejected.
+20:46:34: verbose- average_fitness_tracker: Average fitness = 308.147
+20:46:34: verbose- average_fitness_tracker: Pushed metric value of 308.147 onto the convergence stack.
+20:46:34: quiet- duplicate_free: 2 generations so far.
+20:46:34: quiet- duplicate_free: 30 evaluations so far.
+20:46:34: verbose- duplicate_free: 20 members in population so far.
+20:46:34: verbose- shuffle_random: 16 children created.
+20:46:34: verbose- replace_uniform: Performed 2 total mutations.
+20:46:34: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+20:46:34: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+20:46:35: verbose- merit_function: maximum encountered fitness = 2326.35.
+20:46:35: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  2 of 4 offspring were immediately rejected.
+20:46:35: verbose- average_fitness_tracker: Average fitness = 308.247
+20:46:35: verbose- average_fitness_tracker: Pushed metric value of 308.247 onto the convergence stack.
+20:46:35: quiet- duplicate_free: 3 generations so far.
+20:46:35: quiet- duplicate_free: 34 evaluations so far.
+20:46:35: verbose- duplicate_free: 20 members in population so far.
+20:46:35: verbose- shuffle_random: 16 children created.
+20:46:35: verbose- replace_uniform: Performed 2 total mutations.
+20:46:35: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+20:46:35: verbose- duplicate_free: flushed 6 offspring designs that duplicate existing population members.
+20:46:58: verbose- merit_function: maximum encountered fitness = 2444.1.
+20:46:58: verbose- Global_SOGA: 6 of 20 population members were not selected to continue.  3 of 9 offspring were immediately rejected.
+20:46:58: verbose- average_fitness_tracker: Average fitness = 627.914
+20:46:58: verbose- average_fitness_tracker: Pushed metric value of 627.914 onto the convergence stack.
+20:46:58: quiet- duplicate_free: 4 generations so far.
+20:46:58: quiet- duplicate_free: 43 evaluations so far.
+20:46:58: verbose- duplicate_free: 20 members in population so far.
+20:46:58: verbose- shuffle_random: 16 children created.
+20:46:58: verbose- replace_uniform: Performed 2 total mutations.
+20:46:58: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:46:58: verbose- duplicate_free: flushed 4 offspring designs that duplicate existing population members.
+20:47:20: verbose- merit_function: maximum encountered fitness = 2444.1.
+20:47:20: verbose- Global_SOGA: 5 of 20 population members were not selected to continue.  3 of 8 offspring were immediately rejected.
+20:47:20: verbose- average_fitness_tracker: Average fitness = 708.926
+20:47:20: verbose- average_fitness_tracker: Pushed metric value of 708.926 onto the convergence stack.
+20:47:20: quiet- duplicate_free: 5 generations so far.
+20:47:20: quiet- duplicate_free: 51 evaluations so far.
+20:47:20: verbose- duplicate_free: 20 members in population so far.
+20:47:20: verbose- shuffle_random: 16 children created.
+20:47:20: verbose- replace_uniform: Performed 2 total mutations.
+20:47:20: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:47:20: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+20:47:43: verbose- merit_function: maximum encountered fitness = 2444.1.
+20:47:43: verbose- Global_SOGA: 4 of 20 population members were not selected to continue.  1 of 5 offspring were immediately rejected.
+20:47:43: verbose- average_fitness_tracker: Average fitness = 960.807
+20:47:43: verbose- average_fitness_tracker: Pushed metric value of 960.807 onto the convergence stack.
+20:47:43: quiet- duplicate_free: 6 generations so far.
+20:47:43: quiet- duplicate_free: 56 evaluations so far.
+20:47:43: verbose- duplicate_free: 20 members in population so far.
+20:47:43: verbose- shuffle_random: 16 children created.
+20:47:43: verbose- replace_uniform: Performed 2 total mutations.
+20:47:43: verbose- duplicate_free: flushed 2 duplicate offspring designs after application of the variational operators.
+20:47:43: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+20:48:08: verbose- merit_function: maximum encountered fitness = 2444.1.
+20:48:08: verbose- Global_SOGA: 4 of 20 population members were not selected to continue.  3 of 7 offspring were immediately rejected.
+20:48:08: verbose- average_fitness_tracker: Average fitness = 1306.01
+20:48:08: verbose- average_fitness_tracker: Pushed metric value of 1306.01 onto the convergence stack.
+20:48:08: quiet- duplicate_free: 7 generations so far.
+20:48:08: quiet- duplicate_free: 63 evaluations so far.
+20:48:08: verbose- duplicate_free: 20 members in population so far.
+20:48:08: verbose- shuffle_random: 16 children created.
+20:48:08: verbose- replace_uniform: Performed 2 total mutations.
+20:48:08: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:48:08: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+20:48:34: verbose- merit_function: maximum encountered fitness = 2444.1.
+20:48:34: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  0 of 2 offspring were immediately rejected.
+20:48:34: verbose- average_fitness_tracker: Average fitness = 1306.02
+20:48:34: verbose- average_fitness_tracker: Pushed metric value of 1306.02 onto the convergence stack.
+20:48:34: quiet- duplicate_free: 8 generations so far.
+20:48:34: quiet- duplicate_free: 65 evaluations so far.
+20:48:34: verbose- duplicate_free: 20 members in population so far.
+20:48:34: verbose- shuffle_random: 16 children created.
+20:48:34: verbose- replace_uniform: Performed 2 total mutations.
+20:48:34: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:48:34: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+20:48:56: verbose- merit_function: maximum encountered fitness = 2444.1.
+20:48:56: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  1 of 2 offspring were immediately rejected.
+20:48:56: verbose- average_fitness_tracker: Average fitness = 1385.08
+20:48:56: verbose- average_fitness_tracker: Pushed metric value of 1385.08 onto the convergence stack.
+20:48:56: quiet- duplicate_free: 9 generations so far.
+20:48:56: quiet- duplicate_free: 67 evaluations so far.
+20:48:56: verbose- duplicate_free: 20 members in population so far.
+20:48:56: verbose- shuffle_random: 16 children created.
+20:48:56: verbose- replace_uniform: Performed 2 total mutations.
+20:48:56: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+20:48:56: verbose- duplicate_free: flushed 6 offspring designs that duplicate existing population members.
+20:49:21: verbose- merit_function: maximum encountered fitness = 2444.1.
+20:49:21: verbose- Global_SOGA: 5 of 20 population members were not selected to continue.  2 of 7 offspring were immediately rejected.
+20:49:21: verbose- average_fitness_tracker: Average fitness = 1867.61
+20:49:21: verbose- average_fitness_tracker: Pushed metric value of 1867.61 onto the convergence stack.
+20:49:21: quiet- duplicate_free: 10 generations so far.
+20:49:21: quiet- duplicate_free: 74 evaluations so far.
+20:49:21: verbose- duplicate_free: 20 members in population so far.
+20:49:21: verbose- shuffle_random: 16 children created.
+20:49:21: verbose- replace_uniform: Performed 2 total mutations.
+20:49:21: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:49:21: verbose- duplicate_free: flushed 6 offspring designs that duplicate existing population members.
+20:49:44: verbose- merit_function: maximum encountered fitness = 2444.1.
+20:49:44: verbose- Global_SOGA: 4 of 20 population members were not selected to continue.  2 of 6 offspring were immediately rejected.
+20:49:44: verbose- average_fitness_tracker: Average fitness = 1911.41
+20:49:44: verbose- average_fitness_tracker: Pushed metric value of 1911.41 onto the convergence stack.
+20:49:44: quiet- duplicate_free: 11 generations so far.
+20:49:44: quiet- duplicate_free: 80 evaluations so far.
+20:49:44: verbose- duplicate_free: 20 members in population so far.
+20:49:44: verbose- shuffle_random: 16 children created.
+20:49:44: verbose- replace_uniform: Performed 2 total mutations.
+20:49:44: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:49:44: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+20:50:11: verbose- merit_function: maximum encountered fitness = 2444.1.
+20:50:11: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  3 of 4 offspring were immediately rejected.
+20:50:11: verbose- average_fitness_tracker: Average fitness = 1925.03
+20:50:11: verbose- average_fitness_tracker: Pushed metric value of 1925.03 onto the convergence stack.
+20:50:11: quiet- duplicate_free: 12 generations so far.
+20:50:11: quiet- duplicate_free: 84 evaluations so far.
+20:50:11: verbose- duplicate_free: 20 members in population so far.
+20:50:11: verbose- shuffle_random: 16 children created.
+20:50:11: verbose- replace_uniform: Performed 2 total mutations.
+20:50:11: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:50:11: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+20:50:34: verbose- merit_function: maximum encountered fitness = 2444.1.
+20:50:34: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  1 of 3 offspring were immediately rejected.
+20:50:34: verbose- average_fitness_tracker: Average fitness = 1935.11
+20:50:34: verbose- average_fitness_tracker: Pushed metric value of 1935.11 onto the convergence stack.
+20:50:34: quiet- duplicate_free: 13 generations so far.
+20:50:34: quiet- duplicate_free: 87 evaluations so far.
+20:50:34: verbose- duplicate_free: 20 members in population so far.
+20:50:34: verbose- shuffle_random: 16 children created.
+20:50:34: verbose- replace_uniform: Performed 2 total mutations.
+20:50:34: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:50:34: verbose- duplicate_free: flushed 7 offspring designs that duplicate existing population members.
+20:50:56: verbose- merit_function: maximum encountered fitness = 2541.48.
+20:50:56: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  3 of 4 offspring were immediately rejected.
+20:50:56: verbose- average_fitness_tracker: Average fitness = 1980.63
+20:50:56: verbose- average_fitness_tracker: Pushed metric value of 1980.63 onto the convergence stack.
+20:50:56: quiet- duplicate_free: 14 generations so far.
+20:50:56: quiet- duplicate_free: 91 evaluations so far.
+20:50:56: verbose- duplicate_free: 20 members in population so far.
+20:50:56: verbose- shuffle_random: 16 children created.
+20:50:56: verbose- replace_uniform: Performed 2 total mutations.
+20:50:56: verbose- duplicate_free: flushed 9 duplicate offspring designs after application of the variational operators.
+20:50:56: verbose- duplicate_free: flushed 7 offspring designs that duplicate existing population members.
+20:50:57: verbose- merit_function: maximum encountered fitness = 2541.48.
+20:50:57: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+20:50:57: verbose- average_fitness_tracker: Average fitness = 1980.63
+20:50:57: verbose- average_fitness_tracker: Pushed metric value of 1980.63 onto the convergence stack.
+20:50:57: verbose- average_fitness_tracker: Current max percentage progress is 89.696%.
+20:50:57: quiet- duplicate_free: 15 generations so far.
+20:50:57: quiet- duplicate_free: 93 evaluations so far.
+20:50:57: verbose- duplicate_free: 20 members in population so far.
+20:50:57: verbose- shuffle_random: 16 children created.
+20:50:57: verbose- replace_uniform: Performed 2 total mutations.
+20:50:57: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:50:57: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+20:51:22: verbose- merit_function: maximum encountered fitness = 2541.48.
+20:51:22: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  2 of 4 offspring were immediately rejected.
+20:51:22: verbose- average_fitness_tracker: Average fitness = 2028.4
+20:51:22: verbose- average_fitness_tracker: Pushed metric value of 2028.4 onto the convergence stack.
+20:51:22: verbose- average_fitness_tracker: Current max percentage progress is 84.808%.
+20:51:22: quiet- duplicate_free: 16 generations so far.
+20:51:22: quiet- duplicate_free: 97 evaluations so far.
+20:51:22: verbose- duplicate_free: 20 members in population so far.
+20:51:22: verbose- shuffle_random: 16 children created.
+20:51:22: verbose- replace_uniform: Performed 2 total mutations.
+20:51:22: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+20:51:22: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+20:51:45: verbose- merit_function: maximum encountered fitness = 2541.48.
+20:51:45: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  1 of 3 offspring were immediately rejected.
+20:51:45: verbose- average_fitness_tracker: Average fitness = 2059.74
+20:51:45: verbose- average_fitness_tracker: Pushed metric value of 2059.74 onto the convergence stack.
+20:51:45: verbose- average_fitness_tracker: Current max percentage progress is 85.035%.
+20:51:45: quiet- duplicate_free: 17 generations so far.
+20:51:45: quiet- duplicate_free: 100 evaluations so far.
+20:51:45: verbose- duplicate_free: 20 members in population so far.
+20:51:45: verbose- shuffle_random: 16 children created.
+20:51:45: verbose- replace_uniform: Performed 2 total mutations.
+20:51:45: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:51:45: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+20:52:06: verbose- merit_function: maximum encountered fitness = 2541.48.
+20:52:06: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  1 of 3 offspring were immediately rejected.
+20:52:06: verbose- average_fitness_tracker: Average fitness = 2079.92
+20:52:06: verbose- average_fitness_tracker: Pushed metric value of 2079.92 onto the convergence stack.
+20:52:06: verbose- average_fitness_tracker: Current max percentage progress is 69.811%.
+20:52:06: quiet- duplicate_free: 18 generations so far.
+20:52:06: quiet- duplicate_free: 103 evaluations so far.
+20:52:06: verbose- duplicate_free: 20 members in population so far.
+20:52:06: verbose- shuffle_random: 16 children created.
+20:52:06: verbose- replace_uniform: Performed 2 total mutations.
+20:52:06: verbose- duplicate_free: flushed 9 duplicate offspring designs after application of the variational operators.
+20:52:06: verbose- duplicate_free: flushed 7 offspring designs that duplicate existing population members.
+20:52:28: verbose- merit_function: maximum encountered fitness = 2541.48.
+20:52:28: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+20:52:28: verbose- average_fitness_tracker: Average fitness = 2079.92
+20:52:28: verbose- average_fitness_tracker: Pushed metric value of 2079.92 onto the convergence stack.
+20:52:28: verbose- average_fitness_tracker: Current max percentage progress is 65.916%.
+20:52:28: quiet- duplicate_free: 19 generations so far.
+20:52:28: quiet- duplicate_free: 105 evaluations so far.
+20:52:28: verbose- duplicate_free: 20 members in population so far.
+20:52:28: verbose- shuffle_random: 16 children created.
+20:52:28: verbose- replace_uniform: Performed 2 total mutations.
+20:52:28: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:52:28: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+20:52:50: verbose- merit_function: maximum encountered fitness = 2541.48.
+20:52:50: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  0 of 2 offspring were immediately rejected.
+20:52:50: verbose- average_fitness_tracker: Average fitness = 2122.28
+20:52:50: verbose- average_fitness_tracker: Pushed metric value of 2122.28 onto the convergence stack.
+20:52:50: verbose- average_fitness_tracker: Current max percentage progress is 54.728%.
+20:52:50: quiet- duplicate_free: 20 generations so far.
+20:52:50: quiet- duplicate_free: 107 evaluations so far.
+20:52:50: verbose- duplicate_free: 20 members in population so far.
+20:52:50: verbose- shuffle_random: 16 children created.
+20:52:50: verbose- replace_uniform: Performed 2 total mutations.
+20:52:50: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+20:52:50: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+20:53:14: verbose- merit_function: maximum encountered fitness = 2541.48.
+20:53:14: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  3 of 4 offspring were immediately rejected.
+20:53:14: verbose- average_fitness_tracker: Average fitness = 2134.15
+20:53:14: verbose- average_fitness_tracker: Pushed metric value of 2134.15 onto the convergence stack.
+20:53:14: verbose- average_fitness_tracker: Current max percentage progress is 38.804%.
+20:53:14: quiet- duplicate_free: 21 generations so far.
+20:53:14: quiet- duplicate_free: 111 evaluations so far.
+20:53:14: verbose- duplicate_free: 20 members in population so far.
+20:53:14: verbose- shuffle_random: 16 children created.
+20:53:14: verbose- replace_uniform: Performed 2 total mutations.
+20:53:14: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:53:14: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+20:53:36: verbose- merit_function: maximum encountered fitness = 2541.48.
+20:53:36: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  2 of 4 offspring were immediately rejected.
+20:53:36: verbose- average_fitness_tracker: Average fitness = 2176.9
+20:53:36: verbose- average_fitness_tracker: Pushed metric value of 2176.9 onto the convergence stack.
+20:53:36: verbose- average_fitness_tracker: Current max percentage progress is 40.006%.
+20:53:36: quiet- duplicate_free: 22 generations so far.
+20:53:36: quiet- duplicate_free: 115 evaluations so far.
+20:53:36: verbose- duplicate_free: 20 members in population so far.
+20:53:36: verbose- shuffle_random: 16 children created.
+20:53:36: verbose- replace_uniform: Performed 2 total mutations.
+20:53:36: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+20:53:36: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+20:53:59: verbose- merit_function: maximum encountered fitness = 2649.15.
+20:53:59: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  1 of 2 offspring were immediately rejected.
+20:53:59: verbose- average_fitness_tracker: Average fitness = 2215.69
+20:53:59: verbose- average_fitness_tracker: Pushed metric value of 2215.69 onto the convergence stack.
+20:53:59: verbose- average_fitness_tracker: Current max percentage progress is 37.488%.
+20:53:59: quiet- duplicate_free: 23 generations so far.
+20:53:59: quiet- duplicate_free: 117 evaluations so far.
+20:53:59: verbose- duplicate_free: 20 members in population so far.
+20:53:59: verbose- shuffle_random: 16 children created.
+20:53:59: verbose- replace_uniform: Performed 2 total mutations.
+20:53:59: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+20:53:59: verbose- duplicate_free: flushed 7 offspring designs that duplicate existing population members.
+20:54:22: verbose- merit_function: maximum encountered fitness = 2649.15.
+20:54:22: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+20:54:22: verbose- average_fitness_tracker: Average fitness = 2245.59
+20:54:22: verbose- average_fitness_tracker: Pushed metric value of 2245.59 onto the convergence stack.
+20:54:22: verbose- average_fitness_tracker: Current max percentage progress is 16.832%.
+20:54:22: quiet- duplicate_free: 24 generations so far.
+20:54:22: quiet- duplicate_free: 120 evaluations so far.
+20:54:22: verbose- duplicate_free: 20 members in population so far.
+20:54:22: verbose- shuffle_random: 16 children created.
+20:54:22: verbose- replace_uniform: Performed 2 total mutations.
+20:54:22: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+20:54:22: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+20:54:47: verbose- merit_function: maximum encountered fitness = 2649.15.
+20:54:47: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+20:54:47: verbose- average_fitness_tracker: Average fitness = 2260.29
+20:54:47: verbose- average_fitness_tracker: Pushed metric value of 2260.29 onto the convergence stack.
+20:54:47: verbose- average_fitness_tracker: Current max percentage progress is 15.435%.
+20:54:47: quiet- duplicate_free: 25 generations so far.
+20:54:47: quiet- duplicate_free: 123 evaluations so far.
+20:54:47: verbose- duplicate_free: 20 members in population so far.
+20:54:47: verbose- shuffle_random: 16 children created.
+20:54:47: verbose- replace_uniform: Performed 2 total mutations.
+20:54:47: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:54:47: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+20:55:10: verbose- merit_function: maximum encountered fitness = 2766.64.
+20:55:10: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  2 of 4 offspring were immediately rejected.
+20:55:10: verbose- average_fitness_tracker: Average fitness = 2338.76
+20:55:10: verbose- average_fitness_tracker: Pushed metric value of 2338.76 onto the convergence stack.
+20:55:10: verbose- average_fitness_tracker: Current max percentage progress is 17.69%.
+20:55:10: quiet- duplicate_free: 26 generations so far.
+20:55:10: quiet- duplicate_free: 127 evaluations so far.
+20:55:10: verbose- duplicate_free: 20 members in population so far.
+20:55:10: verbose- shuffle_random: 16 children created.
+20:55:10: verbose- replace_uniform: Performed 2 total mutations.
+20:55:10: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:55:10: verbose- duplicate_free: flushed 7 offspring designs that duplicate existing population members.
+20:55:32: verbose- merit_function: maximum encountered fitness = 2766.64.
+20:55:32: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+20:55:32: verbose- average_fitness_tracker: Average fitness = 2363.13
+20:55:32: verbose- average_fitness_tracker: Pushed metric value of 2363.13 onto the convergence stack.
+20:55:32: verbose- average_fitness_tracker: Current max percentage progress is 18.112%.
+20:55:32: quiet- duplicate_free: 27 generations so far.
+20:55:32: quiet- duplicate_free: 130 evaluations so far.
+20:55:32: verbose- duplicate_free: 20 members in population so far.
+20:55:32: verbose- shuffle_random: 16 children created.
+20:55:32: verbose- replace_uniform: Performed 2 total mutations.
+20:55:32: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:55:32: verbose- duplicate_free: flushed 6 offspring designs that duplicate existing population members.
+20:55:56: verbose- merit_function: maximum encountered fitness = 2766.64.
+20:55:56: verbose- Global_SOGA: 4 of 20 population members were not selected to continue.  3 of 7 offspring were immediately rejected.
+20:55:56: verbose- average_fitness_tracker: Average fitness = 2451.57
+20:55:56: verbose- average_fitness_tracker: Pushed metric value of 2451.57 onto the convergence stack.
+20:55:56: verbose- average_fitness_tracker: Current max percentage progress is 19.21%.
+20:55:56: quiet- duplicate_free: 28 generations so far.
+20:55:56: quiet- duplicate_free: 137 evaluations so far.
+20:55:56: verbose- duplicate_free: 20 members in population so far.
+20:55:56: verbose- shuffle_random: 16 children created.
+20:55:56: verbose- replace_uniform: Performed 2 total mutations.
+20:55:56: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:55:56: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+20:56:18: verbose- merit_function: maximum encountered fitness = 2766.64.
+20:56:18: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  3 of 4 offspring were immediately rejected.
+20:56:18: verbose- average_fitness_tracker: Average fitness = 2454.02
+20:56:18: verbose- average_fitness_tracker: Pushed metric value of 2454.02 onto the convergence stack.
+20:56:18: verbose- average_fitness_tracker: Current max percentage progress is 19.291%.
+20:56:18: quiet- duplicate_free: 29 generations so far.
+20:56:18: quiet- duplicate_free: 141 evaluations so far.
+20:56:18: verbose- duplicate_free: 20 members in population so far.
+20:56:18: verbose- shuffle_random: 16 children created.
+20:56:18: verbose- replace_uniform: Performed 2 total mutations.
+20:56:18: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+20:56:18: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+20:56:41: verbose- merit_function: maximum encountered fitness = 2766.64.
+20:56:41: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  2 of 4 offspring were immediately rejected.
+20:56:41: verbose- average_fitness_tracker: Average fitness = 2475.99
+20:56:41: verbose- average_fitness_tracker: Pushed metric value of 2475.99 onto the convergence stack.
+20:56:41: verbose- average_fitness_tracker: Current max percentage progress is 18.077%.
+20:56:41: quiet- duplicate_free: 30 generations so far.
+20:56:41: quiet- duplicate_free: 145 evaluations so far.
+20:56:41: verbose- duplicate_free: 20 members in population so far.
+20:56:41: verbose- shuffle_random: 16 children created.
+20:56:41: verbose- replace_uniform: Performed 2 total mutations.
+20:56:41: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:56:41: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+20:57:02: verbose- merit_function: maximum encountered fitness = 2766.64.
+20:57:02: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+20:57:02: verbose- average_fitness_tracker: Average fitness = 2480.57
+20:57:02: verbose- average_fitness_tracker: Pushed metric value of 2480.57 onto the convergence stack.
+20:57:02: verbose- average_fitness_tracker: Current max percentage progress is 16.965%.
+20:57:02: quiet- duplicate_free: 31 generations so far.
+20:57:02: quiet- duplicate_free: 148 evaluations so far.
+20:57:02: verbose- duplicate_free: 20 members in population so far.
+20:57:02: verbose- shuffle_random: 16 children created.
+20:57:02: verbose- replace_uniform: Performed 2 total mutations.
+20:57:02: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+20:57:02: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+20:57:32: verbose- merit_function: maximum encountered fitness = 2766.64.
+20:57:32: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  3 of 3 offspring were immediately rejected.
+20:57:32: verbose- average_fitness_tracker: Average fitness = 2480.57
+20:57:32: verbose- average_fitness_tracker: Pushed metric value of 2480.57 onto the convergence stack.
+20:57:32: verbose- average_fitness_tracker: Current max percentage progress is 16.151%.
+20:57:32: quiet- duplicate_free: 32 generations so far.
+20:57:32: quiet- duplicate_free: 151 evaluations so far.
+20:57:32: verbose- duplicate_free: 20 members in population so far.
+20:57:32: verbose- shuffle_random: 16 children created.
+20:57:32: verbose- replace_uniform: Performed 2 total mutations.
+20:57:32: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:57:32: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+20:57:58: verbose- merit_function: maximum encountered fitness = 2766.64.
+20:57:58: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  3 of 4 offspring were immediately rejected.
+20:57:58: verbose- average_fitness_tracker: Average fitness = 2495
+20:57:58: verbose- average_fitness_tracker: Pushed metric value of 2495 onto the convergence stack.
+20:57:58: verbose- average_fitness_tracker: Current max percentage progress is 16.636%.
+20:57:58: quiet- duplicate_free: 33 generations so far.
+20:57:58: quiet- duplicate_free: 155 evaluations so far.
+20:57:58: verbose- duplicate_free: 20 members in population so far.
+20:57:58: verbose- shuffle_random: 16 children created.
+20:57:58: verbose- replace_uniform: Performed 2 total mutations.
+20:57:58: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:57:58: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+20:57:59: verbose- merit_function: maximum encountered fitness = 2766.64.
+20:57:59: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+20:57:59: verbose- average_fitness_tracker: Average fitness = 2495
+20:57:59: verbose- average_fitness_tracker: Pushed metric value of 2495 onto the convergence stack.
+20:57:59: verbose- average_fitness_tracker: Current max percentage progress is 14.939%.
+20:57:59: quiet- duplicate_free: 34 generations so far.
+20:57:59: quiet- duplicate_free: 157 evaluations so far.
+20:57:59: verbose- duplicate_free: 20 members in population so far.
+20:57:59: verbose- shuffle_random: 16 children created.
+20:57:59: verbose- replace_uniform: Performed 2 total mutations.
+20:57:59: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:57:59: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+20:58:23: verbose- merit_function: maximum encountered fitness = 3009.91.
+20:58:23: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  2 of 4 offspring were immediately rejected.
+20:58:23: verbose- average_fitness_tracker: Average fitness = 2535.7
+20:58:23: verbose- average_fitness_tracker: Pushed metric value of 2535.7 onto the convergence stack.
+20:58:23: verbose- average_fitness_tracker: Current max percentage progress is 15.836%.
+20:58:23: quiet- duplicate_free: 35 generations so far.
+20:58:23: quiet- duplicate_free: 161 evaluations so far.
+20:58:23: verbose- duplicate_free: 20 members in population so far.
+20:58:23: verbose- shuffle_random: 16 children created.
+20:58:23: verbose- replace_uniform: Performed 2 total mutations.
+20:58:23: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:58:23: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+20:58:24: verbose- merit_function: maximum encountered fitness = 3009.91.
+20:58:24: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+20:58:24: verbose- average_fitness_tracker: Average fitness = 2535.7
+20:58:24: verbose- average_fitness_tracker: Pushed metric value of 2535.7 onto the convergence stack.
+20:58:24: verbose- average_fitness_tracker: Current max percentage progress is 14.15%.
+20:58:24: quiet- duplicate_free: 36 generations so far.
+20:58:24: quiet- duplicate_free: 163 evaluations so far.
+20:58:24: verbose- duplicate_free: 20 members in population so far.
+20:58:24: verbose- shuffle_random: 16 children created.
+20:58:24: verbose- replace_uniform: Performed 2 total mutations.
+20:58:24: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:58:24: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+20:58:45: verbose- merit_function: maximum encountered fitness = 3009.91.
+20:58:45: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+20:58:45: verbose- average_fitness_tracker: Average fitness = 2535.7
+20:58:45: verbose- average_fitness_tracker: Pushed metric value of 2535.7 onto the convergence stack.
+20:58:45: verbose- average_fitness_tracker: Current max percentage progress is 12.62%.
+20:58:45: quiet- duplicate_free: 37 generations so far.
+20:58:45: quiet- duplicate_free: 165 evaluations so far.
+20:58:45: verbose- duplicate_free: 20 members in population so far.
+20:58:45: verbose- shuffle_random: 16 children created.
+20:58:45: verbose- replace_uniform: Performed 2 total mutations.
+20:58:45: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+20:58:45: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+20:59:08: verbose- merit_function: maximum encountered fitness = 3009.91.
+20:59:08: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+20:59:08: verbose- average_fitness_tracker: Average fitness = 2535.7
+20:59:08: verbose- average_fitness_tracker: Pushed metric value of 2535.7 onto the convergence stack.
+20:59:08: verbose- average_fitness_tracker: Current max percentage progress is 11.441%.
+20:59:08: quiet- duplicate_free: 38 generations so far.
+20:59:08: quiet- duplicate_free: 167 evaluations so far.
+20:59:08: verbose- duplicate_free: 20 members in population so far.
+20:59:08: verbose- shuffle_random: 16 children created.
+20:59:08: verbose- replace_uniform: Performed 2 total mutations.
+20:59:08: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:59:08: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+20:59:30: verbose- merit_function: maximum encountered fitness = 3009.91.
+20:59:30: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  1 of 2 offspring were immediately rejected.
+20:59:30: verbose- average_fitness_tracker: Average fitness = 2550.69
+20:59:30: verbose- average_fitness_tracker: Pushed metric value of 2550.69 onto the convergence stack.
+20:59:30: verbose- average_fitness_tracker: Current max percentage progress is 11.385%.
+20:59:30: quiet- duplicate_free: 39 generations so far.
+20:59:30: quiet- duplicate_free: 169 evaluations so far.
+20:59:30: verbose- duplicate_free: 20 members in population so far.
+20:59:30: verbose- shuffle_random: 16 children created.
+20:59:30: verbose- replace_uniform: Performed 2 total mutations.
+20:59:30: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+20:59:30: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+20:59:52: verbose- merit_function: maximum encountered fitness = 3009.91.
+20:59:52: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  1 of 3 offspring were immediately rejected.
+20:59:52: verbose- average_fitness_tracker: Average fitness = 2570.98
+20:59:52: verbose- average_fitness_tracker: Pushed metric value of 2570.98 onto the convergence stack.
+20:59:52: verbose- average_fitness_tracker: Current max percentage progress is 9.033%.
+20:59:52: quiet- duplicate_free: 40 generations so far.
+20:59:52: quiet- duplicate_free: 172 evaluations so far.
+20:59:52: verbose- duplicate_free: 20 members in population so far.
+20:59:52: verbose- shuffle_random: 16 children created.
+20:59:52: verbose- replace_uniform: Performed 2 total mutations.
+20:59:52: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+20:59:52: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+20:59:53: verbose- merit_function: maximum encountered fitness = 3009.91.
+20:59:53: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+20:59:53: verbose- average_fitness_tracker: Average fitness = 2570.98
+20:59:53: verbose- average_fitness_tracker: Pushed metric value of 2570.98 onto the convergence stack.
+20:59:53: verbose- average_fitness_tracker: Current max percentage progress is 8.084%.
+20:59:53: quiet- duplicate_free: 41 generations so far.
+20:59:53: quiet- duplicate_free: 174 evaluations so far.
+20:59:53: verbose- duplicate_free: 20 members in population so far.
+20:59:53: verbose- shuffle_random: 16 children created.
+20:59:53: verbose- replace_uniform: Performed 2 total mutations.
+20:59:53: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+20:59:53: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:00:16: verbose- merit_function: maximum encountered fitness = 3009.91.
+21:00:16: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  1 of 2 offspring were immediately rejected.
+21:00:16: verbose- average_fitness_tracker: Average fitness = 2580.3
+21:00:16: verbose- average_fitness_tracker: Pushed metric value of 2580.3 onto the convergence stack.
+21:00:16: verbose- average_fitness_tracker: Current max percentage progress is 4.989%.
+21:00:16: quiet- duplicate_free: 42 generations so far.
+21:00:16: quiet- duplicate_free: 176 evaluations so far.
+21:00:16: verbose- duplicate_free: 20 members in population so far.
+21:00:16: verbose- shuffle_random: 16 children created.
+21:00:16: verbose- replace_uniform: Performed 2 total mutations.
+21:00:16: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:00:16: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:00:40: verbose- merit_function: maximum encountered fitness = 3009.91.
+21:00:40: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:00:40: verbose- average_fitness_tracker: Average fitness = 2580.3
+21:00:40: verbose- average_fitness_tracker: Pushed metric value of 2580.3 onto the convergence stack.
+21:00:40: verbose- average_fitness_tracker: Current max percentage progress is 4.894%.
+21:00:40: quiet- duplicate_free: 43 generations so far.
+21:00:40: quiet- duplicate_free: 178 evaluations so far.
+21:00:40: verbose- duplicate_free: 20 members in population so far.
+21:00:40: verbose- shuffle_random: 16 children created.
+21:00:40: verbose- replace_uniform: Performed 2 total mutations.
+21:00:40: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:00:40: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:01:02: verbose- merit_function: maximum encountered fitness = 3009.91.
+21:01:02: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:01:02: verbose- average_fitness_tracker: Average fitness = 2591.57
+21:01:02: verbose- average_fitness_tracker: Pushed metric value of 2591.57 onto the convergence stack.
+21:01:02: verbose- average_fitness_tracker: Current max percentage progress is 4.46%.
+21:01:02: quiet- duplicate_free: 44 generations so far.
+21:01:02: quiet- duplicate_free: 181 evaluations so far.
+21:01:02: verbose- duplicate_free: 20 members in population so far.
+21:01:02: verbose- shuffle_random: 16 children created.
+21:01:02: verbose- replace_uniform: Performed 2 total mutations.
+21:01:02: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:01:02: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:01:26: verbose- merit_function: maximum encountered fitness = 3039.34.
+21:01:26: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  2 of 4 offspring were immediately rejected.
+21:01:26: verbose- average_fitness_tracker: Average fitness = 2642.28
+21:01:26: verbose- average_fitness_tracker: Pushed metric value of 2642.28 onto the convergence stack.
+21:01:26: verbose- average_fitness_tracker: Current max percentage progress is 6.12%.
+21:01:26: quiet- duplicate_free: 45 generations so far.
+21:01:26: quiet- duplicate_free: 185 evaluations so far.
+21:01:26: verbose- duplicate_free: 20 members in population so far.
+21:01:26: verbose- shuffle_random: 16 children created.
+21:01:26: verbose- replace_uniform: Performed 2 total mutations.
+21:01:26: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:01:26: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:01:27: verbose- merit_function: maximum encountered fitness = 3039.34.
+21:01:27: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:01:27: verbose- average_fitness_tracker: Average fitness = 2642.28
+21:01:27: verbose- average_fitness_tracker: Pushed metric value of 2642.28 onto the convergence stack.
+21:01:27: verbose- average_fitness_tracker: Current max percentage progress is 6.12%.
+21:01:27: quiet- duplicate_free: 46 generations so far.
+21:01:27: quiet- duplicate_free: 187 evaluations so far.
+21:01:27: verbose- duplicate_free: 20 members in population so far.
+21:01:27: verbose- shuffle_random: 16 children created.
+21:01:27: verbose- replace_uniform: Performed 2 total mutations.
+21:01:27: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:01:27: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:01:48: verbose- merit_function: maximum encountered fitness = 3039.34.
+21:01:48: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:01:48: verbose- average_fitness_tracker: Average fitness = 2653.81
+21:01:48: verbose- average_fitness_tracker: Pushed metric value of 2653.81 onto the convergence stack.
+21:01:48: verbose- average_fitness_tracker: Current max percentage progress is 5.984%.
+21:01:48: quiet- duplicate_free: 47 generations so far.
+21:01:48: quiet- duplicate_free: 190 evaluations so far.
+21:01:48: verbose- duplicate_free: 20 members in population so far.
+21:01:48: verbose- shuffle_random: 16 children created.
+21:01:48: verbose- replace_uniform: Performed 2 total mutations.
+21:01:48: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:01:48: verbose- duplicate_free: flushed 6 offspring designs that duplicate existing population members.
+21:02:12: verbose- merit_function: maximum encountered fitness = 3039.34.
+21:02:12: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  1 of 2 offspring were immediately rejected.
+21:02:12: verbose- average_fitness_tracker: Average fitness = 2672.89
+21:02:12: verbose- average_fitness_tracker: Pushed metric value of 2672.89 onto the convergence stack.
+21:02:12: verbose- average_fitness_tracker: Current max percentage progress is 6.655%.
+21:02:12: quiet- duplicate_free: 48 generations so far.
+21:02:12: quiet- duplicate_free: 192 evaluations so far.
+21:02:12: verbose- duplicate_free: 20 members in population so far.
+21:02:12: verbose- shuffle_random: 16 children created.
+21:02:12: verbose- replace_uniform: Performed 2 total mutations.
+21:02:12: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:02:12: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:02:36: verbose- merit_function: maximum encountered fitness = 3073.7.
+21:02:36: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  2 of 4 offspring were immediately rejected.
+21:02:36: verbose- average_fitness_tracker: Average fitness = 2730.02
+21:02:36: verbose- average_fitness_tracker: Pushed metric value of 2730.02 onto the convergence stack.
+21:02:36: verbose- average_fitness_tracker: Current max percentage progress is 7.118%.
+21:02:36: quiet- duplicate_free: 49 generations so far.
+21:02:36: quiet- duplicate_free: 196 evaluations so far.
+21:02:36: verbose- duplicate_free: 20 members in population so far.
+21:02:36: verbose- shuffle_random: 16 children created.
+21:02:36: verbose- replace_uniform: Performed 2 total mutations.
+21:02:36: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:02:36: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:02:58: verbose- merit_function: maximum encountered fitness = 3073.7.
+21:02:58: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  3 of 3 offspring were immediately rejected.
+21:02:58: verbose- average_fitness_tracker: Average fitness = 2730.02
+21:02:58: verbose- average_fitness_tracker: Pushed metric value of 2730.02 onto the convergence stack.
+21:02:58: verbose- average_fitness_tracker: Current max percentage progress is 7.118%.
+21:02:58: quiet- duplicate_free: 50 generations so far.
+21:02:58: quiet- duplicate_free: 199 evaluations so far.
+21:02:58: verbose- duplicate_free: 20 members in population so far.
+21:02:58: verbose- shuffle_random: 16 children created.
+21:02:58: verbose- replace_uniform: Performed 2 total mutations.
+21:02:58: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:02:58: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:03:22: verbose- merit_function: maximum encountered fitness = 3083.
+21:03:22: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:03:22: verbose- average_fitness_tracker: Average fitness = 2757.7
+21:03:22: verbose- average_fitness_tracker: Pushed metric value of 2757.7 onto the convergence stack.
+21:03:22: verbose- average_fitness_tracker: Current max percentage progress is 8.05%.
+21:03:22: quiet- duplicate_free: 51 generations so far.
+21:03:22: quiet- duplicate_free: 202 evaluations so far.
+21:03:22: verbose- duplicate_free: 20 members in population so far.
+21:03:22: verbose- shuffle_random: 16 children created.
+21:03:22: verbose- replace_uniform: Performed 2 total mutations.
+21:03:22: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+21:03:22: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:03:44: verbose- merit_function: maximum encountered fitness = 3083.
+21:03:44: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  2 of 4 offspring were immediately rejected.
+21:03:44: verbose- average_fitness_tracker: Average fitness = 2780.16
+21:03:44: verbose- average_fitness_tracker: Pushed metric value of 2780.16 onto the convergence stack.
+21:03:44: verbose- average_fitness_tracker: Current max percentage progress is 8.793%.
+21:03:44: quiet- duplicate_free: 52 generations so far.
+21:03:44: quiet- duplicate_free: 206 evaluations so far.
+21:03:44: verbose- duplicate_free: 20 members in population so far.
+21:03:44: verbose- shuffle_random: 16 children created.
+21:03:44: verbose- replace_uniform: Performed 2 total mutations.
+21:03:44: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:03:44: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:04:07: verbose- merit_function: maximum encountered fitness = 3083.
+21:04:07: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:04:07: verbose- average_fitness_tracker: Average fitness = 2785.36
+21:04:07: verbose- average_fitness_tracker: Pushed metric value of 2785.36 onto the convergence stack.
+21:04:07: verbose- average_fitness_tracker: Current max percentage progress is 8.425%.
+21:04:07: quiet- duplicate_free: 53 generations so far.
+21:04:07: quiet- duplicate_free: 209 evaluations so far.
+21:04:07: verbose- duplicate_free: 20 members in population so far.
+21:04:07: verbose- shuffle_random: 16 children created.
+21:04:07: verbose- replace_uniform: Performed 2 total mutations.
+21:04:07: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:04:07: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:04:07: verbose- merit_function: maximum encountered fitness = 3083.
+21:04:07: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:04:07: verbose- average_fitness_tracker: Average fitness = 2785.36
+21:04:07: verbose- average_fitness_tracker: Pushed metric value of 2785.36 onto the convergence stack.
+21:04:07: verbose- average_fitness_tracker: Current max percentage progress is 7.697%.
+21:04:07: quiet- duplicate_free: 54 generations so far.
+21:04:07: quiet- duplicate_free: 211 evaluations so far.
+21:04:07: verbose- duplicate_free: 20 members in population so far.
+21:04:07: verbose- shuffle_random: 16 children created.
+21:04:07: verbose- replace_uniform: Performed 2 total mutations.
+21:04:07: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:04:07: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:04:08: verbose- merit_function: maximum encountered fitness = 3083.
+21:04:08: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:04:08: verbose- average_fitness_tracker: Average fitness = 2785.36
+21:04:08: verbose- average_fitness_tracker: Pushed metric value of 2785.36 onto the convergence stack.
+21:04:08: verbose- average_fitness_tracker: Current max percentage progress is 7.697%.
+21:04:08: quiet- duplicate_free: 55 generations so far.
+21:04:08: quiet- duplicate_free: 213 evaluations so far.
+21:04:08: verbose- duplicate_free: 20 members in population so far.
+21:04:08: verbose- shuffle_random: 16 children created.
+21:04:08: verbose- replace_uniform: Performed 2 total mutations.
+21:04:08: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:04:08: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:04:30: verbose- merit_function: maximum encountered fitness = 3083.
+21:04:30: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  3 of 3 offspring were immediately rejected.
+21:04:30: verbose- average_fitness_tracker: Average fitness = 2785.36
+21:04:30: verbose- average_fitness_tracker: Pushed metric value of 2785.36 onto the convergence stack.
+21:04:30: verbose- average_fitness_tracker: Current max percentage progress is 7.362%.
+21:04:30: quiet- duplicate_free: 56 generations so far.
+21:04:30: quiet- duplicate_free: 216 evaluations so far.
+21:04:30: verbose- duplicate_free: 20 members in population so far.
+21:04:30: verbose- shuffle_random: 16 children created.
+21:04:30: verbose- replace_uniform: Performed 2 total mutations.
+21:04:30: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:04:30: verbose- duplicate_free: flushed 7 offspring designs that duplicate existing population members.
+21:04:54: verbose- merit_function: maximum encountered fitness = 3083.
+21:04:54: verbose- Global_SOGA: 3 of 20 population members were not selected to continue.  0 of 3 offspring were immediately rejected.
+21:04:54: verbose- average_fitness_tracker: Average fitness = 2827.91
+21:04:54: verbose- average_fitness_tracker: Pushed metric value of 2827.91 onto the convergence stack.
+21:04:54: verbose- average_fitness_tracker: Current max percentage progress is 8.756%.
+21:04:54: quiet- duplicate_free: 57 generations so far.
+21:04:54: quiet- duplicate_free: 219 evaluations so far.
+21:04:54: verbose- duplicate_free: 20 members in population so far.
+21:04:54: verbose- shuffle_random: 16 children created.
+21:04:54: verbose- replace_uniform: Performed 2 total mutations.
+21:04:54: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:04:54: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:05:17: verbose- merit_function: maximum encountered fitness = 3083.
+21:05:17: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:05:17: verbose- average_fitness_tracker: Average fitness = 2848.01
+21:05:17: verbose- average_fitness_tracker: Pushed metric value of 2848.01 onto the convergence stack.
+21:05:17: verbose- average_fitness_tracker: Current max percentage progress is 9.004%.
+21:05:17: quiet- duplicate_free: 58 generations so far.
+21:05:17: quiet- duplicate_free: 222 evaluations so far.
+21:05:17: verbose- duplicate_free: 20 members in population so far.
+21:05:17: verbose- shuffle_random: 16 children created.
+21:05:17: verbose- replace_uniform: Performed 2 total mutations.
+21:05:17: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:05:17: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:05:39: verbose- merit_function: maximum encountered fitness = 3083.
+21:05:39: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:05:39: verbose- average_fitness_tracker: Average fitness = 2848.01
+21:05:39: verbose- average_fitness_tracker: Pushed metric value of 2848.01 onto the convergence stack.
+21:05:39: verbose- average_fitness_tracker: Current max percentage progress is 7.224%.
+21:05:39: quiet- duplicate_free: 59 generations so far.
+21:05:39: quiet- duplicate_free: 224 evaluations so far.
+21:05:39: verbose- duplicate_free: 20 members in population so far.
+21:05:39: verbose- shuffle_random: 16 children created.
+21:05:39: verbose- replace_uniform: Performed 2 total mutations.
+21:05:39: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:05:39: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:05:40: verbose- merit_function: maximum encountered fitness = 3083.
+21:05:40: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:05:40: verbose- average_fitness_tracker: Average fitness = 2848.01
+21:05:40: verbose- average_fitness_tracker: Pushed metric value of 2848.01 onto the convergence stack.
+21:05:40: verbose- average_fitness_tracker: Current max percentage progress is 7.224%.
+21:05:40: quiet- duplicate_free: 60 generations so far.
+21:05:40: quiet- duplicate_free: 226 evaluations so far.
+21:05:40: verbose- duplicate_free: 20 members in population so far.
+21:05:40: verbose- shuffle_random: 16 children created.
+21:05:40: verbose- replace_uniform: Performed 2 total mutations.
+21:05:40: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:05:40: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:05:41: verbose- merit_function: maximum encountered fitness = 3083.
+21:05:41: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:05:41: verbose- average_fitness_tracker: Average fitness = 2848.01
+21:05:41: verbose- average_fitness_tracker: Pushed metric value of 2848.01 onto the convergence stack.
+21:05:41: verbose- average_fitness_tracker: Current max percentage progress is 6.819%.
+21:05:41: quiet- duplicate_free: 61 generations so far.
+21:05:41: quiet- duplicate_free: 228 evaluations so far.
+21:05:41: verbose- duplicate_free: 20 members in population so far.
+21:05:41: verbose- shuffle_random: 16 children created.
+21:05:41: verbose- replace_uniform: Performed 2 total mutations.
+21:05:41: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:05:41: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:06:04: verbose- merit_function: maximum encountered fitness = 3083.
+21:06:04: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:06:04: verbose- average_fitness_tracker: Average fitness = 2863.22
+21:06:04: verbose- average_fitness_tracker: Pushed metric value of 2863.22 onto the convergence stack.
+21:06:04: verbose- average_fitness_tracker: Current max percentage progress is 6.648%.
+21:06:04: quiet- duplicate_free: 62 generations so far.
+21:06:04: quiet- duplicate_free: 231 evaluations so far.
+21:06:04: verbose- duplicate_free: 20 members in population so far.
+21:06:04: verbose- shuffle_random: 16 children created.
+21:06:04: verbose- replace_uniform: Performed 2 total mutations.
+21:06:04: verbose- duplicate_free: flushed 8 duplicate offspring designs after application of the variational operators.
+21:06:04: verbose- duplicate_free: flushed 7 offspring designs that duplicate existing population members.
+21:06:26: verbose- merit_function: maximum encountered fitness = 3083.
+21:06:26: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:06:26: verbose- average_fitness_tracker: Average fitness = 2866.13
+21:06:26: verbose- average_fitness_tracker: Pushed metric value of 2866.13 onto the convergence stack.
+21:06:26: verbose- average_fitness_tracker: Current max percentage progress is 4.749%.
+21:06:26: quiet- duplicate_free: 63 generations so far.
+21:06:26: quiet- duplicate_free: 234 evaluations so far.
+21:06:26: verbose- duplicate_free: 20 members in population so far.
+21:06:26: verbose- shuffle_random: 16 children created.
+21:06:26: verbose- replace_uniform: Performed 2 total mutations.
+21:06:26: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:06:26: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+21:06:47: verbose- merit_function: maximum encountered fitness = 3083.
+21:06:47: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:06:47: verbose- average_fitness_tracker: Average fitness = 2866.13
+21:06:47: verbose- average_fitness_tracker: Pushed metric value of 2866.13 onto the convergence stack.
+21:06:47: verbose- average_fitness_tracker: Current max percentage progress is 4.749%.
+21:06:47: quiet- duplicate_free: 64 generations so far.
+21:06:47: quiet- duplicate_free: 236 evaluations so far.
+21:06:47: verbose- duplicate_free: 20 members in population so far.
+21:06:47: verbose- shuffle_random: 16 children created.
+21:06:47: verbose- replace_uniform: Performed 2 total mutations.
+21:06:47: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:06:47: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:07:09: verbose- merit_function: maximum encountered fitness = 3083.
+21:07:09: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  3 of 3 offspring were immediately rejected.
+21:07:09: verbose- average_fitness_tracker: Average fitness = 2866.13
+21:07:09: verbose- average_fitness_tracker: Pushed metric value of 2866.13 onto the convergence stack.
+21:07:09: verbose- average_fitness_tracker: Current max percentage progress is 3.783%.
+21:07:09: quiet- duplicate_free: 65 generations so far.
+21:07:09: quiet- duplicate_free: 239 evaluations so far.
+21:07:09: verbose- duplicate_free: 20 members in population so far.
+21:07:09: verbose- shuffle_random: 16 children created.
+21:07:09: verbose- replace_uniform: Performed 2 total mutations.
+21:07:09: verbose- duplicate_free: flushed 8 duplicate offspring designs after application of the variational operators.
+21:07:09: verbose- duplicate_free: flushed 6 offspring designs that duplicate existing population members.
+21:07:30: verbose- merit_function: maximum encountered fitness = 3083.
+21:07:30: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:07:30: verbose- average_fitness_tracker: Average fitness = 2866.13
+21:07:30: verbose- average_fitness_tracker: Pushed metric value of 2866.13 onto the convergence stack.
+21:07:30: verbose- average_fitness_tracker: Current max percentage progress is 2.999%.
+21:07:30: quiet- duplicate_free: 66 generations so far.
+21:07:30: quiet- duplicate_free: 241 evaluations so far.
+21:07:30: verbose- duplicate_free: 20 members in population so far.
+21:07:30: verbose- shuffle_random: 16 children created.
+21:07:30: verbose- replace_uniform: Performed 2 total mutations.
+21:07:30: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:07:30: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:07:54: verbose- merit_function: maximum encountered fitness = 3083.
+21:07:54: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  1 of 2 offspring were immediately rejected.
+21:07:54: verbose- average_fitness_tracker: Average fitness = 2872.75
+21:07:54: verbose- average_fitness_tracker: Pushed metric value of 2872.75 onto the convergence stack.
+21:07:54: verbose- average_fitness_tracker: Current max percentage progress is 3.042%.
+21:07:54: quiet- duplicate_free: 67 generations so far.
+21:07:54: quiet- duplicate_free: 243 evaluations so far.
+21:07:54: verbose- duplicate_free: 20 members in population so far.
+21:07:54: verbose- shuffle_random: 16 children created.
+21:07:54: verbose- replace_uniform: Performed 2 total mutations.
+21:07:54: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+21:07:54: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:08:17: verbose- merit_function: maximum encountered fitness = 3101.72.
+21:08:17: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:08:17: verbose- average_fitness_tracker: Average fitness = 2894.92
+21:08:17: verbose- average_fitness_tracker: Pushed metric value of 2894.92 onto the convergence stack.
+21:08:17: verbose- average_fitness_tracker: Current max percentage progress is 3.784%.
+21:08:17: quiet- duplicate_free: 68 generations so far.
+21:08:17: quiet- duplicate_free: 246 evaluations so far.
+21:08:17: verbose- duplicate_free: 20 members in population so far.
+21:08:17: verbose- shuffle_random: 16 children created.
+21:08:17: verbose- replace_uniform: Performed 2 total mutations.
+21:08:17: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:08:17: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:08:41: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:08:41: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  2 of 4 offspring were immediately rejected.
+21:08:41: verbose- average_fitness_tracker: Average fitness = 2929.1
+21:08:41: verbose- average_fitness_tracker: Pushed metric value of 2929.1 onto the convergence stack.
+21:08:41: verbose- average_fitness_tracker: Current max percentage progress is 4.907%.
+21:08:41: quiet- duplicate_free: 69 generations so far.
+21:08:41: quiet- duplicate_free: 250 evaluations so far.
+21:08:41: verbose- duplicate_free: 20 members in population so far.
+21:08:41: verbose- shuffle_random: 16 children created.
+21:08:41: verbose- replace_uniform: Performed 2 total mutations.
+21:08:41: verbose- duplicate_free: flushed 8 duplicate offspring designs after application of the variational operators.
+21:08:41: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:08:42: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:08:42: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:08:42: verbose- average_fitness_tracker: Average fitness = 2929.1
+21:08:42: verbose- average_fitness_tracker: Pushed metric value of 2929.1 onto the convergence stack.
+21:08:42: verbose- average_fitness_tracker: Current max percentage progress is 4.907%.
+21:08:42: quiet- duplicate_free: 70 generations so far.
+21:08:42: quiet- duplicate_free: 252 evaluations so far.
+21:08:42: verbose- duplicate_free: 20 members in population so far.
+21:08:42: verbose- shuffle_random: 16 children created.
+21:08:42: verbose- replace_uniform: Performed 2 total mutations.
+21:08:42: verbose- duplicate_free: flushed 9 duplicate offspring designs after application of the variational operators.
+21:08:42: verbose- duplicate_free: flushed 7 offspring designs that duplicate existing population members.
+21:09:04: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:09:04: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:09:04: verbose- average_fitness_tracker: Average fitness = 2929.1
+21:09:04: verbose- average_fitness_tracker: Pushed metric value of 2929.1 onto the convergence stack.
+21:09:04: verbose- average_fitness_tracker: Current max percentage progress is 3.455%.
+21:09:04: quiet- duplicate_free: 71 generations so far.
+21:09:04: quiet- duplicate_free: 254 evaluations so far.
+21:09:04: verbose- duplicate_free: 20 members in population so far.
+21:09:04: verbose- shuffle_random: 16 children created.
+21:09:04: verbose- replace_uniform: Performed 2 total mutations.
+21:09:04: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:09:04: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:09:05: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:09:05: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:09:05: verbose- average_fitness_tracker: Average fitness = 2929.1
+21:09:05: verbose- average_fitness_tracker: Pushed metric value of 2929.1 onto the convergence stack.
+21:09:05: verbose- average_fitness_tracker: Current max percentage progress is 2.768%.
+21:09:05: quiet- duplicate_free: 72 generations so far.
+21:09:05: quiet- duplicate_free: 256 evaluations so far.
+21:09:05: verbose- duplicate_free: 20 members in population so far.
+21:09:05: verbose- shuffle_random: 16 children created.
+21:09:05: verbose- replace_uniform: Performed 2 total mutations.
+21:09:05: verbose- duplicate_free: flushed 8 duplicate offspring designs after application of the variational operators.
+21:09:05: verbose- duplicate_free: flushed 7 offspring designs that duplicate existing population members.
+21:09:06: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:09:06: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:09:06: verbose- average_fitness_tracker: Average fitness = 2929.1
+21:09:06: verbose- average_fitness_tracker: Pushed metric value of 2929.1 onto the convergence stack.
+21:09:06: verbose- average_fitness_tracker: Current max percentage progress is 2.768%.
+21:09:06: quiet- duplicate_free: 73 generations so far.
+21:09:06: quiet- duplicate_free: 258 evaluations so far.
+21:09:06: verbose- duplicate_free: 20 members in population so far.
+21:09:06: verbose- shuffle_random: 16 children created.
+21:09:06: verbose- replace_uniform: Performed 2 total mutations.
+21:09:06: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:09:06: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:09:28: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:09:28: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:09:28: verbose- average_fitness_tracker: Average fitness = 2933.7
+21:09:28: verbose- average_fitness_tracker: Pushed metric value of 2933.7 onto the convergence stack.
+21:09:28: verbose- average_fitness_tracker: Current max percentage progress is 2.921%.
+21:09:28: quiet- duplicate_free: 74 generations so far.
+21:09:28: quiet- duplicate_free: 261 evaluations so far.
+21:09:28: verbose- duplicate_free: 20 members in population so far.
+21:09:28: verbose- shuffle_random: 16 children created.
+21:09:28: verbose- replace_uniform: Performed 2 total mutations.
+21:09:28: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:09:28: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:09:29: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:09:29: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:09:29: verbose- average_fitness_tracker: Average fitness = 2933.7
+21:09:29: verbose- average_fitness_tracker: Pushed metric value of 2933.7 onto the convergence stack.
+21:09:29: verbose- average_fitness_tracker: Current max percentage progress is 2.921%.
+21:09:29: quiet- duplicate_free: 75 generations so far.
+21:09:29: quiet- duplicate_free: 263 evaluations so far.
+21:09:29: verbose- duplicate_free: 20 members in population so far.
+21:09:29: verbose- shuffle_random: 16 children created.
+21:09:29: verbose- replace_uniform: Performed 2 total mutations.
+21:09:29: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:09:29: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:09:51: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:09:51: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:09:51: verbose- average_fitness_tracker: Average fitness = 2933.7
+21:09:51: verbose- average_fitness_tracker: Pushed metric value of 2933.7 onto the convergence stack.
+21:09:51: verbose- average_fitness_tracker: Current max percentage progress is 2.402%.
+21:09:51: quiet- duplicate_free: 76 generations so far.
+21:09:51: quiet- duplicate_free: 265 evaluations so far.
+21:09:51: verbose- duplicate_free: 20 members in population so far.
+21:09:51: verbose- shuffle_random: 16 children created.
+21:09:51: verbose- replace_uniform: Performed 2 total mutations.
+21:09:51: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:09:51: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:09:51: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:09:51: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:09:51: verbose- average_fitness_tracker: Average fitness = 2933.7
+21:09:51: verbose- average_fitness_tracker: Pushed metric value of 2933.7 onto the convergence stack.
+21:09:51: verbose- average_fitness_tracker: Current max percentage progress is 2.303%.
+21:09:51: quiet- duplicate_free: 77 generations so far.
+21:09:51: quiet- duplicate_free: 267 evaluations so far.
+21:09:51: verbose- duplicate_free: 20 members in population so far.
+21:09:51: verbose- shuffle_random: 16 children created.
+21:09:51: verbose- replace_uniform: Performed 2 total mutations.
+21:09:51: verbose- duplicate_free: flushed 1 duplicate offspring designs after application of the variational operators.
+21:09:51: verbose- duplicate_free: flushed 13 offspring designs that duplicate existing population members.
+21:10:14: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:10:14: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:10:14: verbose- average_fitness_tracker: Average fitness = 2941.96
+21:10:14: verbose- average_fitness_tracker: Pushed metric value of 2941.96 onto the convergence stack.
+21:10:14: verbose- average_fitness_tracker: Current max percentage progress is 2.578%.
+21:10:14: quiet- duplicate_free: 78 generations so far.
+21:10:14: quiet- duplicate_free: 270 evaluations so far.
+21:10:14: verbose- duplicate_free: 20 members in population so far.
+21:10:14: verbose- shuffle_random: 16 children created.
+21:10:14: verbose- replace_uniform: Performed 2 total mutations.
+21:10:14: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:10:14: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+21:10:36: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:10:36: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:10:36: verbose- average_fitness_tracker: Average fitness = 2941.96
+21:10:36: verbose- average_fitness_tracker: Pushed metric value of 2941.96 onto the convergence stack.
+21:10:36: verbose- average_fitness_tracker: Current max percentage progress is 2.578%.
+21:10:36: quiet- duplicate_free: 79 generations so far.
+21:10:36: quiet- duplicate_free: 272 evaluations so far.
+21:10:36: verbose- duplicate_free: 20 members in population so far.
+21:10:36: verbose- shuffle_random: 16 children created.
+21:10:36: verbose- replace_uniform: Performed 2 total mutations.
+21:10:36: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:10:36: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:10:59: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:10:59: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:10:59: verbose- average_fitness_tracker: Average fitness = 2953.91
+21:10:59: verbose- average_fitness_tracker: Pushed metric value of 2953.91 onto the convergence stack.
+21:10:59: verbose- average_fitness_tracker: Current max percentage progress is 2.972%.
+21:10:59: quiet- duplicate_free: 80 generations so far.
+21:10:59: quiet- duplicate_free: 275 evaluations so far.
+21:10:59: verbose- duplicate_free: 20 members in population so far.
+21:10:59: verbose- shuffle_random: 16 children created.
+21:10:59: verbose- replace_uniform: Performed 2 total mutations.
+21:10:59: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:10:59: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:11:20: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:11:20: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:11:20: verbose- average_fitness_tracker: Average fitness = 2953.91
+21:11:20: verbose- average_fitness_tracker: Pushed metric value of 2953.91 onto the convergence stack.
+21:11:20: verbose- average_fitness_tracker: Current max percentage progress is 2.748%.
+21:11:20: quiet- duplicate_free: 81 generations so far.
+21:11:20: quiet- duplicate_free: 277 evaluations so far.
+21:11:20: verbose- duplicate_free: 20 members in population so far.
+21:11:20: verbose- shuffle_random: 16 children created.
+21:11:20: verbose- replace_uniform: Performed 2 total mutations.
+21:11:20: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:11:20: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:11:41: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:11:41: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:11:41: verbose- average_fitness_tracker: Average fitness = 2953.91
+21:11:41: verbose- average_fitness_tracker: Pushed metric value of 2953.91 onto the convergence stack.
+21:11:41: verbose- average_fitness_tracker: Current max percentage progress is 1.997%.
+21:11:41: quiet- duplicate_free: 82 generations so far.
+21:11:41: quiet- duplicate_free: 279 evaluations so far.
+21:11:41: verbose- duplicate_free: 20 members in population so far.
+21:11:41: verbose- shuffle_random: 16 children created.
+21:11:41: verbose- replace_uniform: Performed 2 total mutations.
+21:11:41: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:11:41: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:12:04: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:12:04: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  1 of 2 offspring were immediately rejected.
+21:12:04: verbose- average_fitness_tracker: Average fitness = 2954.81
+21:12:04: verbose- average_fitness_tracker: Pushed metric value of 2954.81 onto the convergence stack.
+21:12:04: verbose- average_fitness_tracker: Current max percentage progress is 0.87%.
+21:12:04: quiet- duplicate_free: 83 generations so far.
+21:12:04: quiet- duplicate_free: 281 evaluations so far.
+21:12:04: verbose- duplicate_free: 20 members in population so far.
+21:12:04: verbose- shuffle_random: 16 children created.
+21:12:04: verbose- replace_uniform: Performed 2 total mutations.
+21:12:04: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:12:04: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:12:27: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:12:27: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:12:27: verbose- average_fitness_tracker: Average fitness = 2966.5
+21:12:27: verbose- average_fitness_tracker: Pushed metric value of 2966.5 onto the convergence stack.
+21:12:27: verbose- average_fitness_tracker: Current max percentage progress is 1.261%.
+21:12:27: quiet- duplicate_free: 84 generations so far.
+21:12:27: quiet- duplicate_free: 284 evaluations so far.
+21:12:27: verbose- duplicate_free: 20 members in population so far.
+21:12:27: verbose- shuffle_random: 16 children created.
+21:12:27: verbose- replace_uniform: Performed 2 total mutations.
+21:12:27: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+21:12:27: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+21:12:50: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:12:50: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:12:50: verbose- average_fitness_tracker: Average fitness = 2975.35
+21:12:50: verbose- average_fitness_tracker: Pushed metric value of 2975.35 onto the convergence stack.
+21:12:50: verbose- average_fitness_tracker: Current max percentage progress is 1.555%.
+21:12:50: quiet- duplicate_free: 85 generations so far.
+21:12:50: quiet- duplicate_free: 287 evaluations so far.
+21:12:50: verbose- duplicate_free: 20 members in population so far.
+21:12:50: verbose- shuffle_random: 16 children created.
+21:12:50: verbose- replace_uniform: Performed 2 total mutations.
+21:12:50: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:12:50: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:13:20: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:13:20: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:13:20: verbose- average_fitness_tracker: Average fitness = 2984.28
+21:13:20: verbose- average_fitness_tracker: Pushed metric value of 2984.28 onto the convergence stack.
+21:13:20: verbose- average_fitness_tracker: Current max percentage progress is 1.849%.
+21:13:20: quiet- duplicate_free: 86 generations so far.
+21:13:20: quiet- duplicate_free: 290 evaluations so far.
+21:13:20: verbose- duplicate_free: 20 members in population so far.
+21:13:20: verbose- shuffle_random: 16 children created.
+21:13:20: verbose- replace_uniform: Performed 2 total mutations.
+21:13:20: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:13:20: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:13:42: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:13:42: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:13:42: verbose- average_fitness_tracker: Average fitness = 2984.28
+21:13:42: verbose- average_fitness_tracker: Pushed metric value of 2984.28 onto the convergence stack.
+21:13:42: verbose- average_fitness_tracker: Current max percentage progress is 1.849%.
+21:13:42: quiet- duplicate_free: 87 generations so far.
+21:13:42: quiet- duplicate_free: 292 evaluations so far.
+21:13:42: verbose- duplicate_free: 20 members in population so far.
+21:13:42: verbose- shuffle_random: 16 children created.
+21:13:42: verbose- replace_uniform: Performed 2 total mutations.
+21:13:42: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:13:42: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:13:43: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:13:43: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:13:43: verbose- average_fitness_tracker: Average fitness = 2984.28
+21:13:43: verbose- average_fitness_tracker: Pushed metric value of 2984.28 onto the convergence stack.
+21:13:43: verbose- average_fitness_tracker: Current max percentage progress is 1.695%.
+21:13:43: quiet- duplicate_free: 88 generations so far.
+21:13:43: quiet- duplicate_free: 294 evaluations so far.
+21:13:43: verbose- duplicate_free: 20 members in population so far.
+21:13:43: verbose- shuffle_random: 16 children created.
+21:13:43: verbose- replace_uniform: Performed 2 total mutations.
+21:13:43: verbose- duplicate_free: flushed 8 duplicate offspring designs after application of the variational operators.
+21:13:43: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:14:05: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:14:05: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:14:05: verbose- average_fitness_tracker: Average fitness = 2984.28
+21:14:05: verbose- average_fitness_tracker: Pushed metric value of 2984.28 onto the convergence stack.
+21:14:05: verbose- average_fitness_tracker: Current max percentage progress is 1.695%.
+21:14:05: quiet- duplicate_free: 89 generations so far.
+21:14:05: quiet- duplicate_free: 296 evaluations so far.
+21:14:05: verbose- duplicate_free: 20 members in population so far.
+21:14:05: verbose- shuffle_random: 16 children created.
+21:14:05: verbose- replace_uniform: Performed 2 total mutations.
+21:14:05: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:14:05: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:14:27: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:14:27: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:14:27: verbose- average_fitness_tracker: Average fitness = 2984.28
+21:14:27: verbose- average_fitness_tracker: Pushed metric value of 2984.28 onto the convergence stack.
+21:14:27: verbose- average_fitness_tracker: Current max percentage progress is 1.695%.
+21:14:27: quiet- duplicate_free: 90 generations so far.
+21:14:27: quiet- duplicate_free: 298 evaluations so far.
+21:14:27: verbose- duplicate_free: 20 members in population so far.
+21:14:27: verbose- shuffle_random: 16 children created.
+21:14:27: verbose- replace_uniform: Performed 2 total mutations.
+21:14:27: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:14:27: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:14:49: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:14:49: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:14:49: verbose- average_fitness_tracker: Average fitness = 2984.28
+21:14:49: verbose- average_fitness_tracker: Pushed metric value of 2984.28 onto the convergence stack.
+21:14:49: verbose- average_fitness_tracker: Current max percentage progress is 1.695%.
+21:14:49: quiet- duplicate_free: 91 generations so far.
+21:14:49: quiet- duplicate_free: 300 evaluations so far.
+21:14:49: verbose- duplicate_free: 20 members in population so far.
+21:14:49: verbose- shuffle_random: 16 children created.
+21:14:49: verbose- replace_uniform: Performed 2 total mutations.
+21:14:49: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:14:49: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:15:11: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:15:11: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:15:11: verbose- average_fitness_tracker: Average fitness = 2984.28
+21:15:11: verbose- average_fitness_tracker: Pushed metric value of 2984.28 onto the convergence stack.
+21:15:11: verbose- average_fitness_tracker: Current max percentage progress is 1.418%.
+21:15:11: quiet- duplicate_free: 92 generations so far.
+21:15:11: quiet- duplicate_free: 302 evaluations so far.
+21:15:11: verbose- duplicate_free: 20 members in population so far.
+21:15:11: verbose- shuffle_random: 16 children created.
+21:15:11: verbose- replace_uniform: Performed 2 total mutations.
+21:15:11: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:15:11: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:15:32: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:15:32: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:15:32: verbose- average_fitness_tracker: Average fitness = 2984.28
+21:15:32: verbose- average_fitness_tracker: Pushed metric value of 2984.28 onto the convergence stack.
+21:15:32: verbose- average_fitness_tracker: Current max percentage progress is 1.418%.
+21:15:32: quiet- duplicate_free: 93 generations so far.
+21:15:32: quiet- duplicate_free: 304 evaluations so far.
+21:15:32: verbose- duplicate_free: 20 members in population so far.
+21:15:32: verbose- shuffle_random: 16 children created.
+21:15:32: verbose- replace_uniform: Performed 2 total mutations.
+21:15:32: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:15:32: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:15:56: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:15:56: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:15:56: verbose- average_fitness_tracker: Average fitness = 2987.2
+21:15:56: verbose- average_fitness_tracker: Pushed metric value of 2987.2 onto the convergence stack.
+21:15:56: verbose- average_fitness_tracker: Current max percentage progress is 1.115%.
+21:15:56: quiet- duplicate_free: 94 generations so far.
+21:15:56: quiet- duplicate_free: 307 evaluations so far.
+21:15:56: verbose- duplicate_free: 20 members in population so far.
+21:15:56: verbose- shuffle_random: 16 children created.
+21:15:56: verbose- replace_uniform: Performed 2 total mutations.
+21:15:56: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:15:56: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:16:18: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:16:18: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:16:18: verbose- average_fitness_tracker: Average fitness = 2987.2
+21:16:18: verbose- average_fitness_tracker: Pushed metric value of 2987.2 onto the convergence stack.
+21:16:18: verbose- average_fitness_tracker: Current max percentage progress is 1.115%.
+21:16:18: quiet- duplicate_free: 95 generations so far.
+21:16:18: quiet- duplicate_free: 309 evaluations so far.
+21:16:18: verbose- duplicate_free: 20 members in population so far.
+21:16:18: verbose- shuffle_random: 16 children created.
+21:16:18: verbose- replace_uniform: Performed 2 total mutations.
+21:16:18: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:16:18: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:16:40: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:16:40: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:16:40: verbose- average_fitness_tracker: Average fitness = 2987.2
+21:16:40: verbose- average_fitness_tracker: Pushed metric value of 2987.2 onto the convergence stack.
+21:16:40: verbose- average_fitness_tracker: Current max percentage progress is 1.115%.
+21:16:40: quiet- duplicate_free: 96 generations so far.
+21:16:40: quiet- duplicate_free: 311 evaluations so far.
+21:16:40: verbose- duplicate_free: 20 members in population so far.
+21:16:40: verbose- shuffle_random: 16 children created.
+21:16:40: verbose- replace_uniform: Performed 2 total mutations.
+21:16:40: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:16:40: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:17:03: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:17:03: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:17:03: verbose- average_fitness_tracker: Average fitness = 2987.2
+21:17:03: verbose- average_fitness_tracker: Pushed metric value of 2987.2 onto the convergence stack.
+21:17:03: verbose- average_fitness_tracker: Current max percentage progress is 1.084%.
+21:17:03: quiet- duplicate_free: 97 generations so far.
+21:17:03: quiet- duplicate_free: 313 evaluations so far.
+21:17:03: verbose- duplicate_free: 20 members in population so far.
+21:17:03: verbose- shuffle_random: 16 children created.
+21:17:03: verbose- replace_uniform: Performed 2 total mutations.
+21:17:03: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:17:03: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:17:25: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:17:25: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:17:25: verbose- average_fitness_tracker: Average fitness = 2987.2
+21:17:25: verbose- average_fitness_tracker: Pushed metric value of 2987.2 onto the convergence stack.
+21:17:25: verbose- average_fitness_tracker: Current max percentage progress is 0.693%.
+21:17:25: quiet- duplicate_free: 98 generations so far.
+21:17:25: quiet- duplicate_free: 315 evaluations so far.
+21:17:25: verbose- duplicate_free: 20 members in population so far.
+21:17:25: verbose- shuffle_random: 16 children created.
+21:17:25: verbose- replace_uniform: Performed 2 total mutations.
+21:17:25: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:17:25: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:17:47: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:17:47: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:17:47: verbose- average_fitness_tracker: Average fitness = 2987.2
+21:17:47: verbose- average_fitness_tracker: Pushed metric value of 2987.2 onto the convergence stack.
+21:17:47: verbose- average_fitness_tracker: Current max percentage progress is 0.397%.
+21:17:47: quiet- duplicate_free: 99 generations so far.
+21:17:47: quiet- duplicate_free: 317 evaluations so far.
+21:17:47: verbose- duplicate_free: 20 members in population so far.
+21:17:47: verbose- shuffle_random: 16 children created.
+21:17:47: verbose- replace_uniform: Performed 2 total mutations.
+21:17:47: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:17:47: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:18:08: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:18:08: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:18:08: verbose- average_fitness_tracker: Average fitness = 2987.2
+21:18:08: verbose- average_fitness_tracker: Pushed metric value of 2987.2 onto the convergence stack.
+21:18:08: verbose- average_fitness_tracker: Current max percentage progress is 0.098%.
+21:18:08: quiet- duplicate_free: 100 generations so far.
+21:18:08: quiet- duplicate_free: 319 evaluations so far.
+21:18:08: verbose- duplicate_free: 20 members in population so far.
+21:18:08: verbose- shuffle_random: 16 children created.
+21:18:08: verbose- replace_uniform: Performed 2 total mutations.
+21:18:08: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:18:08: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:18:09: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:18:09: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:18:09: verbose- average_fitness_tracker: Average fitness = 2987.2
+21:18:09: verbose- average_fitness_tracker: Pushed metric value of 2987.2 onto the convergence stack.
+21:18:09: verbose- average_fitness_tracker: Current max percentage progress is 0.098%.
+21:18:09: quiet- duplicate_free: 101 generations so far.
+21:18:09: quiet- duplicate_free: 321 evaluations so far.
+21:18:09: verbose- duplicate_free: 20 members in population so far.
+21:18:09: verbose- shuffle_random: 16 children created.
+21:18:09: verbose- replace_uniform: Performed 2 total mutations.
+21:18:09: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:18:09: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:18:32: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:18:32: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:18:32: verbose- average_fitness_tracker: Average fitness = 2987.2
+21:18:32: verbose- average_fitness_tracker: Pushed metric value of 2987.2 onto the convergence stack.
+21:18:32: verbose- average_fitness_tracker: Current max percentage progress is 0.098%.
+21:18:32: quiet- duplicate_free: 102 generations so far.
+21:18:32: quiet- duplicate_free: 323 evaluations so far.
+21:18:32: verbose- duplicate_free: 20 members in population so far.
+21:18:32: verbose- shuffle_random: 16 children created.
+21:18:32: verbose- replace_uniform: Performed 2 total mutations.
+21:18:32: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:18:32: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:18:33: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:18:33: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:18:33: verbose- average_fitness_tracker: Average fitness = 2987.2
+21:18:33: verbose- average_fitness_tracker: Pushed metric value of 2987.2 onto the convergence stack.
+21:18:33: verbose- average_fitness_tracker: Current max percentage progress is 0.098%.
+21:18:33: quiet- duplicate_free: 103 generations so far.
+21:18:33: quiet- duplicate_free: 325 evaluations so far.
+21:18:33: verbose- duplicate_free: 20 members in population so far.
+21:18:33: verbose- shuffle_random: 16 children created.
+21:18:33: verbose- replace_uniform: Performed 2 total mutations.
+21:18:33: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:18:33: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:18:56: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:18:56: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  1 of 2 offspring were immediately rejected.
+21:18:56: verbose- average_fitness_tracker: Average fitness = 2992.78
+21:18:56: verbose- average_fitness_tracker: Pushed metric value of 2992.78 onto the convergence stack.
+21:18:56: verbose- average_fitness_tracker: Current max percentage progress is 0.284%.
+21:18:56: quiet- duplicate_free: 104 generations so far.
+21:18:56: quiet- duplicate_free: 327 evaluations so far.
+21:18:56: verbose- duplicate_free: 20 members in population so far.
+21:18:56: verbose- shuffle_random: 16 children created.
+21:18:56: verbose- replace_uniform: Performed 2 total mutations.
+21:18:56: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:18:56: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:18:56: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:18:56: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:18:56: verbose- average_fitness_tracker: Average fitness = 2992.78
+21:18:56: verbose- average_fitness_tracker: Pushed metric value of 2992.78 onto the convergence stack.
+21:18:56: verbose- average_fitness_tracker: Current max percentage progress is 0.284%.
+21:18:56: quiet- duplicate_free: 105 generations so far.
+21:18:56: quiet- duplicate_free: 329 evaluations so far.
+21:18:56: verbose- duplicate_free: 20 members in population so far.
+21:18:56: verbose- shuffle_random: 16 children created.
+21:18:56: verbose- replace_uniform: Performed 2 total mutations.
+21:18:56: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:18:56: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:19:20: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:19:20: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:19:20: verbose- average_fitness_tracker: Average fitness = 3002.61
+21:19:20: verbose- average_fitness_tracker: Pushed metric value of 3002.61 onto the convergence stack.
+21:19:20: verbose- average_fitness_tracker: Current max percentage progress is 0.61%.
+21:19:20: quiet- duplicate_free: 106 generations so far.
+21:19:20: quiet- duplicate_free: 332 evaluations so far.
+21:19:20: verbose- duplicate_free: 20 members in population so far.
+21:19:20: verbose- shuffle_random: 16 children created.
+21:19:20: verbose- replace_uniform: Performed 2 total mutations.
+21:19:20: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:19:20: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:19:41: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:19:41: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:19:41: verbose- average_fitness_tracker: Average fitness = 3002.61
+21:19:41: verbose- average_fitness_tracker: Pushed metric value of 3002.61 onto the convergence stack.
+21:19:41: verbose- average_fitness_tracker: Current max percentage progress is 0.61%.
+21:19:41: quiet- duplicate_free: 107 generations so far.
+21:19:41: quiet- duplicate_free: 334 evaluations so far.
+21:19:41: verbose- duplicate_free: 20 members in population so far.
+21:19:41: verbose- shuffle_random: 16 children created.
+21:19:41: verbose- replace_uniform: Performed 2 total mutations.
+21:19:41: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:19:41: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:20:04: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:20:04: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:20:04: verbose- average_fitness_tracker: Average fitness = 3011.77
+21:20:04: verbose- average_fitness_tracker: Pushed metric value of 3011.77 onto the convergence stack.
+21:20:04: verbose- average_fitness_tracker: Current max percentage progress is 0.816%.
+21:20:04: quiet- duplicate_free: 108 generations so far.
+21:20:04: quiet- duplicate_free: 337 evaluations so far.
+21:20:04: verbose- duplicate_free: 20 members in population so far.
+21:20:04: verbose- shuffle_random: 16 children created.
+21:20:04: verbose- replace_uniform: Performed 2 total mutations.
+21:20:04: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:20:04: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:20:28: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:20:28: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:20:28: verbose- average_fitness_tracker: Average fitness = 3017.58
+21:20:28: verbose- average_fitness_tracker: Pushed metric value of 3017.58 onto the convergence stack.
+21:20:28: verbose- average_fitness_tracker: Current max percentage progress is 1.006%.
+21:20:28: quiet- duplicate_free: 109 generations so far.
+21:20:28: quiet- duplicate_free: 340 evaluations so far.
+21:20:28: verbose- duplicate_free: 20 members in population so far.
+21:20:28: verbose- shuffle_random: 16 children created.
+21:20:28: verbose- replace_uniform: Performed 2 total mutations.
+21:20:28: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+21:20:28: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+21:20:54: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:20:54: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:20:54: verbose- average_fitness_tracker: Average fitness = 3027.12
+21:20:54: verbose- average_fitness_tracker: Pushed metric value of 3027.12 onto the convergence stack.
+21:20:54: verbose- average_fitness_tracker: Current max percentage progress is 1.319%.
+21:20:54: quiet- duplicate_free: 110 generations so far.
+21:20:54: quiet- duplicate_free: 343 evaluations so far.
+21:20:54: verbose- duplicate_free: 20 members in population so far.
+21:20:54: verbose- shuffle_random: 16 children created.
+21:20:54: verbose- replace_uniform: Performed 2 total mutations.
+21:20:54: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:20:54: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:21:15: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:21:15: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:21:15: verbose- average_fitness_tracker: Average fitness = 3027.12
+21:21:15: verbose- average_fitness_tracker: Pushed metric value of 3027.12 onto the convergence stack.
+21:21:15: verbose- average_fitness_tracker: Current max percentage progress is 1.319%.
+21:21:15: quiet- duplicate_free: 111 generations so far.
+21:21:15: quiet- duplicate_free: 345 evaluations so far.
+21:21:15: verbose- duplicate_free: 20 members in population so far.
+21:21:15: verbose- shuffle_random: 16 children created.
+21:21:15: verbose- replace_uniform: Performed 2 total mutations.
+21:21:15: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:21:15: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:21:38: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:21:38: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  1 of 2 offspring were immediately rejected.
+21:21:38: verbose- average_fitness_tracker: Average fitness = 3031.77
+21:21:38: verbose- average_fitness_tracker: Pushed metric value of 3031.77 onto the convergence stack.
+21:21:38: verbose- average_fitness_tracker: Current max percentage progress is 1.47%.
+21:21:38: quiet- duplicate_free: 112 generations so far.
+21:21:38: quiet- duplicate_free: 347 evaluations so far.
+21:21:38: verbose- duplicate_free: 20 members in population so far.
+21:21:38: verbose- shuffle_random: 16 children created.
+21:21:38: verbose- replace_uniform: Performed 2 total mutations.
+21:21:38: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:21:38: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:22:01: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:22:01: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:22:01: verbose- average_fitness_tracker: Average fitness = 3037.17
+21:22:01: verbose- average_fitness_tracker: Pushed metric value of 3037.17 onto the convergence stack.
+21:22:01: verbose- average_fitness_tracker: Current max percentage progress is 1.645%.
+21:22:01: quiet- duplicate_free: 113 generations so far.
+21:22:01: quiet- duplicate_free: 350 evaluations so far.
+21:22:01: verbose- duplicate_free: 20 members in population so far.
+21:22:01: verbose- shuffle_random: 16 children created.
+21:22:01: verbose- replace_uniform: Performed 2 total mutations.
+21:22:01: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:22:01: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:22:02: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:22:02: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:22:02: verbose- average_fitness_tracker: Average fitness = 3037.17
+21:22:02: verbose- average_fitness_tracker: Pushed metric value of 3037.17 onto the convergence stack.
+21:22:02: verbose- average_fitness_tracker: Current max percentage progress is 1.645%.
+21:22:02: quiet- duplicate_free: 114 generations so far.
+21:22:02: quiet- duplicate_free: 352 evaluations so far.
+21:22:02: verbose- duplicate_free: 20 members in population so far.
+21:22:02: verbose- shuffle_random: 16 children created.
+21:22:02: verbose- replace_uniform: Performed 2 total mutations.
+21:22:02: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+21:22:02: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+21:22:03: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:22:03: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:22:03: verbose- average_fitness_tracker: Average fitness = 3037.17
+21:22:03: verbose- average_fitness_tracker: Pushed metric value of 3037.17 onto the convergence stack.
+21:22:03: verbose- average_fitness_tracker: Current max percentage progress is 1.645%.
+21:22:03: quiet- duplicate_free: 115 generations so far.
+21:22:03: quiet- duplicate_free: 354 evaluations so far.
+21:22:03: verbose- duplicate_free: 20 members in population so far.
+21:22:03: verbose- shuffle_random: 16 children created.
+21:22:03: verbose- replace_uniform: Performed 2 total mutations.
+21:22:03: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:22:03: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:22:24: verbose- merit_function: maximum encountered fitness = 3112.26.
+21:22:24: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:22:24: verbose- average_fitness_tracker: Average fitness = 3037.17
+21:22:24: verbose- average_fitness_tracker: Pushed metric value of 3037.17 onto the convergence stack.
+21:22:24: verbose- average_fitness_tracker: Current max percentage progress is 1.645%.
+21:22:24: quiet- duplicate_free: 116 generations so far.
+21:22:24: quiet- duplicate_free: 356 evaluations so far.
+21:22:24: verbose- duplicate_free: 20 members in population so far.
+21:22:24: verbose- shuffle_random: 16 children created.
+21:22:24: verbose- replace_uniform: Performed 2 total mutations.
+21:22:24: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:22:24: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:22:48: verbose- merit_function: maximum encountered fitness = 3131.97.
+21:22:48: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:22:48: verbose- average_fitness_tracker: Average fitness = 3045.81
+21:22:48: verbose- average_fitness_tracker: Pushed metric value of 3045.81 onto the convergence stack.
+21:22:48: verbose- average_fitness_tracker: Current max percentage progress is 1.924%.
+21:22:48: quiet- duplicate_free: 117 generations so far.
+21:22:48: quiet- duplicate_free: 359 evaluations so far.
+21:22:48: verbose- duplicate_free: 20 members in population so far.
+21:22:48: verbose- shuffle_random: 16 children created.
+21:22:48: verbose- replace_uniform: Performed 2 total mutations.
+21:22:48: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:22:48: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:23:10: verbose- merit_function: maximum encountered fitness = 3131.97.
+21:23:10: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:23:10: verbose- average_fitness_tracker: Average fitness = 3045.81
+21:23:10: verbose- average_fitness_tracker: Pushed metric value of 3045.81 onto the convergence stack.
+21:23:10: verbose- average_fitness_tracker: Current max percentage progress is 1.741%.
+21:23:10: quiet- duplicate_free: 118 generations so far.
+21:23:10: quiet- duplicate_free: 361 evaluations so far.
+21:23:10: verbose- duplicate_free: 20 members in population so far.
+21:23:10: verbose- shuffle_random: 16 children created.
+21:23:10: verbose- replace_uniform: Performed 2 total mutations.
+21:23:10: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:23:10: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:23:11: verbose- merit_function: maximum encountered fitness = 3131.97.
+21:23:11: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:23:11: verbose- average_fitness_tracker: Average fitness = 3045.81
+21:23:11: verbose- average_fitness_tracker: Pushed metric value of 3045.81 onto the convergence stack.
+21:23:11: verbose- average_fitness_tracker: Current max percentage progress is 1.741%.
+21:23:11: quiet- duplicate_free: 119 generations so far.
+21:23:11: quiet- duplicate_free: 363 evaluations so far.
+21:23:11: verbose- duplicate_free: 20 members in population so far.
+21:23:11: verbose- shuffle_random: 16 children created.
+21:23:11: verbose- replace_uniform: Performed 2 total mutations.
+21:23:11: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:23:11: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:23:34: verbose- merit_function: maximum encountered fitness = 3131.97.
+21:23:34: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:23:34: verbose- average_fitness_tracker: Average fitness = 3047.92
+21:23:34: verbose- average_fitness_tracker: Pushed metric value of 3047.92 onto the convergence stack.
+21:23:34: verbose- average_fitness_tracker: Current max percentage progress is 1.487%.
+21:23:34: quiet- duplicate_free: 120 generations so far.
+21:23:34: quiet- duplicate_free: 366 evaluations so far.
+21:23:34: verbose- duplicate_free: 20 members in population so far.
+21:23:34: verbose- shuffle_random: 16 children created.
+21:23:34: verbose- replace_uniform: Performed 2 total mutations.
+21:23:34: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:23:34: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:23:58: verbose- merit_function: maximum encountered fitness = 3131.97.
+21:23:58: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  3 of 4 offspring were immediately rejected.
+21:23:58: verbose- average_fitness_tracker: Average fitness = 3052.84
+21:23:58: verbose- average_fitness_tracker: Pushed metric value of 3052.84 onto the convergence stack.
+21:23:58: verbose- average_fitness_tracker: Current max percentage progress is 1.645%.
+21:23:58: quiet- duplicate_free: 121 generations so far.
+21:23:58: quiet- duplicate_free: 370 evaluations so far.
+21:23:58: verbose- duplicate_free: 20 members in population so far.
+21:23:58: verbose- shuffle_random: 16 children created.
+21:23:58: verbose- replace_uniform: Performed 2 total mutations.
+21:23:58: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:23:58: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:24:20: verbose- merit_function: maximum encountered fitness = 3131.97.
+21:24:20: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:24:20: verbose- average_fitness_tracker: Average fitness = 3052.84
+21:24:20: verbose- average_fitness_tracker: Pushed metric value of 3052.84 onto the convergence stack.
+21:24:20: verbose- average_fitness_tracker: Current max percentage progress is 1.345%.
+21:24:20: quiet- duplicate_free: 122 generations so far.
+21:24:20: quiet- duplicate_free: 372 evaluations so far.
+21:24:20: verbose- duplicate_free: 20 members in population so far.
+21:24:20: verbose- shuffle_random: 16 children created.
+21:24:20: verbose- replace_uniform: Performed 2 total mutations.
+21:24:20: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:24:20: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+21:24:42: verbose- merit_function: maximum encountered fitness = 3131.97.
+21:24:42: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:24:42: verbose- average_fitness_tracker: Average fitness = 3052.84
+21:24:42: verbose- average_fitness_tracker: Pushed metric value of 3052.84 onto the convergence stack.
+21:24:42: verbose- average_fitness_tracker: Current max percentage progress is 1.155%.
+21:24:42: quiet- duplicate_free: 123 generations so far.
+21:24:42: quiet- duplicate_free: 374 evaluations so far.
+21:24:42: verbose- duplicate_free: 20 members in population so far.
+21:24:42: verbose- shuffle_random: 16 children created.
+21:24:42: verbose- replace_uniform: Performed 2 total mutations.
+21:24:42: verbose- duplicate_free: flushed 8 duplicate offspring designs after application of the variational operators.
+21:24:42: verbose- duplicate_free: flushed 7 offspring designs that duplicate existing population members.
+21:25:03: verbose- merit_function: maximum encountered fitness = 3131.97.
+21:25:03: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:25:03: verbose- average_fitness_tracker: Average fitness = 3052.84
+21:25:03: verbose- average_fitness_tracker: Pushed metric value of 3052.84 onto the convergence stack.
+21:25:03: verbose- average_fitness_tracker: Current max percentage progress is 0.842%.
+21:25:03: quiet- duplicate_free: 124 generations so far.
+21:25:03: quiet- duplicate_free: 376 evaluations so far.
+21:25:03: verbose- duplicate_free: 20 members in population so far.
+21:25:03: verbose- shuffle_random: 16 children created.
+21:25:03: verbose- replace_uniform: Performed 2 total mutations.
+21:25:03: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:25:03: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:25:26: verbose- merit_function: maximum encountered fitness = 3131.97.
+21:25:26: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:25:26: verbose- average_fitness_tracker: Average fitness = 3057.85
+21:25:26: verbose- average_fitness_tracker: Pushed metric value of 3057.85 onto the convergence stack.
+21:25:26: verbose- average_fitness_tracker: Current max percentage progress is 1.005%.
+21:25:26: quiet- duplicate_free: 125 generations so far.
+21:25:26: quiet- duplicate_free: 379 evaluations so far.
+21:25:26: verbose- duplicate_free: 20 members in population so far.
+21:25:26: verbose- shuffle_random: 16 children created.
+21:25:26: verbose- replace_uniform: Performed 2 total mutations.
+21:25:26: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:25:26: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:25:48: verbose- merit_function: maximum encountered fitness = 3131.97.
+21:25:48: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:25:48: verbose- average_fitness_tracker: Average fitness = 3057.85
+21:25:48: verbose- average_fitness_tracker: Pushed metric value of 3057.85 onto the convergence stack.
+21:25:48: verbose- average_fitness_tracker: Current max percentage progress is 0.853%.
+21:25:48: quiet- duplicate_free: 126 generations so far.
+21:25:48: quiet- duplicate_free: 381 evaluations so far.
+21:25:48: verbose- duplicate_free: 20 members in population so far.
+21:25:48: verbose- shuffle_random: 16 children created.
+21:25:48: verbose- replace_uniform: Performed 2 total mutations.
+21:25:48: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:25:48: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:26:11: verbose- merit_function: maximum encountered fitness = 3149.38.
+21:26:11: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  1 of 2 offspring were immediately rejected.
+21:26:11: verbose- average_fitness_tracker: Average fitness = 3065.81
+21:26:11: verbose- average_fitness_tracker: Pushed metric value of 3065.81 onto the convergence stack.
+21:26:11: verbose- average_fitness_tracker: Current max percentage progress is 0.934%.
+21:26:11: quiet- duplicate_free: 127 generations so far.
+21:26:11: quiet- duplicate_free: 383 evaluations so far.
+21:26:11: verbose- duplicate_free: 20 members in population so far.
+21:26:11: verbose- shuffle_random: 16 children created.
+21:26:11: verbose- replace_uniform: Performed 2 total mutations.
+21:26:11: verbose- duplicate_free: flushed 9 duplicate offspring designs after application of the variational operators.
+21:26:11: verbose- duplicate_free: flushed 6 offspring designs that duplicate existing population members.
+21:26:32: verbose- merit_function: maximum encountered fitness = 3149.38.
+21:26:32: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:26:32: verbose- average_fitness_tracker: Average fitness = 3065.81
+21:26:32: verbose- average_fitness_tracker: Pushed metric value of 3065.81 onto the convergence stack.
+21:26:32: verbose- average_fitness_tracker: Current max percentage progress is 0.934%.
+21:26:32: quiet- duplicate_free: 128 generations so far.
+21:26:32: quiet- duplicate_free: 385 evaluations so far.
+21:26:32: verbose- duplicate_free: 20 members in population so far.
+21:26:32: verbose- shuffle_random: 16 children created.
+21:26:32: verbose- replace_uniform: Performed 2 total mutations.
+21:26:32: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:26:32: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:26:55: verbose- merit_function: maximum encountered fitness = 3149.38.
+21:26:55: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:26:55: verbose- average_fitness_tracker: Average fitness = 3072.42
+21:26:55: verbose- average_fitness_tracker: Pushed metric value of 3072.42 onto the convergence stack.
+21:26:55: verbose- average_fitness_tracker: Current max percentage progress is 1.147%.
+21:26:55: quiet- duplicate_free: 129 generations so far.
+21:26:55: quiet- duplicate_free: 388 evaluations so far.
+21:26:55: verbose- duplicate_free: 20 members in population so far.
+21:26:55: verbose- shuffle_random: 16 children created.
+21:26:55: verbose- replace_uniform: Performed 2 total mutations.
+21:26:55: verbose- duplicate_free: flushed 8 duplicate offspring designs after application of the variational operators.
+21:26:55: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:27:18: verbose- merit_function: maximum encountered fitness = 3149.38.
+21:27:18: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:27:18: verbose- average_fitness_tracker: Average fitness = 3072.42
+21:27:18: verbose- average_fitness_tracker: Pushed metric value of 3072.42 onto the convergence stack.
+21:27:18: verbose- average_fitness_tracker: Current max percentage progress is 1.147%.
+21:27:18: quiet- duplicate_free: 130 generations so far.
+21:27:18: quiet- duplicate_free: 390 evaluations so far.
+21:27:18: verbose- duplicate_free: 20 members in population so far.
+21:27:18: verbose- shuffle_random: 16 children created.
+21:27:18: verbose- replace_uniform: Performed 2 total mutations.
+21:27:18: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:27:18: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:27:41: verbose- merit_function: maximum encountered fitness = 3149.38.
+21:27:41: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:27:41: verbose- average_fitness_tracker: Average fitness = 3078.04
+21:27:41: verbose- average_fitness_tracker: Pushed metric value of 3078.04 onto the convergence stack.
+21:27:41: verbose- average_fitness_tracker: Current max percentage progress is 1.047%.
+21:27:41: quiet- duplicate_free: 131 generations so far.
+21:27:41: quiet- duplicate_free: 393 evaluations so far.
+21:27:41: verbose- duplicate_free: 20 members in population so far.
+21:27:41: verbose- shuffle_random: 16 children created.
+21:27:41: verbose- replace_uniform: Performed 2 total mutations.
+21:27:41: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:27:41: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:28:05: verbose- merit_function: maximum encountered fitness = 3149.38.
+21:28:05: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  3 of 4 offspring were immediately rejected.
+21:28:05: verbose- average_fitness_tracker: Average fitness = 3080.97
+21:28:05: verbose- average_fitness_tracker: Pushed metric value of 3080.97 onto the convergence stack.
+21:28:05: verbose- average_fitness_tracker: Current max percentage progress is 1.141%.
+21:28:05: quiet- duplicate_free: 132 generations so far.
+21:28:05: quiet- duplicate_free: 397 evaluations so far.
+21:28:05: verbose- duplicate_free: 20 members in population so far.
+21:28:05: verbose- shuffle_random: 16 children created.
+21:28:05: verbose- replace_uniform: Performed 2 total mutations.
+21:28:05: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:28:05: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:28:26: verbose- merit_function: maximum encountered fitness = 3149.38.
+21:28:26: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:28:26: verbose- average_fitness_tracker: Average fitness = 3080.97
+21:28:26: verbose- average_fitness_tracker: Pushed metric value of 3080.97 onto the convergence stack.
+21:28:26: verbose- average_fitness_tracker: Current max percentage progress is 1.141%.
+21:28:26: quiet- duplicate_free: 133 generations so far.
+21:28:26: quiet- duplicate_free: 399 evaluations so far.
+21:28:26: verbose- duplicate_free: 20 members in population so far.
+21:28:26: verbose- shuffle_random: 16 children created.
+21:28:26: verbose- replace_uniform: Performed 2 total mutations.
+21:28:26: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:28:26: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:28:27: verbose- merit_function: maximum encountered fitness = 3149.38.
+21:28:27: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:28:27: verbose- average_fitness_tracker: Average fitness = 3080.97
+21:28:27: verbose- average_fitness_tracker: Pushed metric value of 3080.97 onto the convergence stack.
+21:28:27: verbose- average_fitness_tracker: Current max percentage progress is 1.073%.
+21:28:27: quiet- duplicate_free: 134 generations so far.
+21:28:27: quiet- duplicate_free: 401 evaluations so far.
+21:28:27: verbose- duplicate_free: 20 members in population so far.
+21:28:27: verbose- shuffle_random: 16 children created.
+21:28:27: verbose- replace_uniform: Performed 2 total mutations.
+21:28:27: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:28:27: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:28:28: verbose- merit_function: maximum encountered fitness = 3149.38.
+21:28:28: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:28:28: verbose- average_fitness_tracker: Average fitness = 3080.97
+21:28:28: verbose- average_fitness_tracker: Pushed metric value of 3080.97 onto the convergence stack.
+21:28:28: verbose- average_fitness_tracker: Current max percentage progress is 0.913%.
+21:28:28: quiet- duplicate_free: 135 generations so far.
+21:28:28: quiet- duplicate_free: 403 evaluations so far.
+21:28:28: verbose- duplicate_free: 20 members in population so far.
+21:28:28: verbose- shuffle_random: 16 children created.
+21:28:28: verbose- replace_uniform: Performed 2 total mutations.
+21:28:28: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:28:28: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:28:52: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:28:52: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  1 of 3 offspring were immediately rejected.
+21:28:52: verbose- average_fitness_tracker: Average fitness = 3091.99
+21:28:52: verbose- average_fitness_tracker: Pushed metric value of 3091.99 onto the convergence stack.
+21:28:52: verbose- average_fitness_tracker: Current max percentage progress is 1.266%.
+21:28:52: quiet- duplicate_free: 136 generations so far.
+21:28:52: quiet- duplicate_free: 406 evaluations so far.
+21:28:52: verbose- duplicate_free: 20 members in population so far.
+21:28:52: verbose- shuffle_random: 16 children created.
+21:28:52: verbose- replace_uniform: Performed 2 total mutations.
+21:28:52: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:28:52: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:29:15: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:29:15: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:29:15: verbose- average_fitness_tracker: Average fitness = 3098.73
+21:29:15: verbose- average_fitness_tracker: Pushed metric value of 3098.73 onto the convergence stack.
+21:29:15: verbose- average_fitness_tracker: Current max percentage progress is 1.481%.
+21:29:15: quiet- duplicate_free: 137 generations so far.
+21:29:15: quiet- duplicate_free: 409 evaluations so far.
+21:29:15: verbose- duplicate_free: 20 members in population so far.
+21:29:15: verbose- shuffle_random: 16 children created.
+21:29:15: verbose- replace_uniform: Performed 2 total mutations.
+21:29:15: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:29:15: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:29:37: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:29:37: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:29:37: verbose- average_fitness_tracker: Average fitness = 3098.73
+21:29:37: verbose- average_fitness_tracker: Pushed metric value of 3098.73 onto the convergence stack.
+21:29:37: verbose- average_fitness_tracker: Current max percentage progress is 1.481%.
+21:29:37: quiet- duplicate_free: 138 generations so far.
+21:29:37: quiet- duplicate_free: 411 evaluations so far.
+21:29:37: verbose- duplicate_free: 20 members in population so far.
+21:29:37: verbose- shuffle_random: 16 children created.
+21:29:37: verbose- replace_uniform: Performed 2 total mutations.
+21:29:37: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:29:37: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:29:58: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:29:58: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:29:58: verbose- average_fitness_tracker: Average fitness = 3098.73
+21:29:58: verbose- average_fitness_tracker: Pushed metric value of 3098.73 onto the convergence stack.
+21:29:58: verbose- average_fitness_tracker: Current max percentage progress is 1.319%.
+21:29:58: quiet- duplicate_free: 139 generations so far.
+21:29:58: quiet- duplicate_free: 413 evaluations so far.
+21:29:58: verbose- duplicate_free: 20 members in population so far.
+21:29:58: verbose- shuffle_random: 16 children created.
+21:29:58: verbose- replace_uniform: Performed 2 total mutations.
+21:29:58: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:29:58: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:29:59: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:29:59: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:29:59: verbose- average_fitness_tracker: Average fitness = 3098.73
+21:29:59: verbose- average_fitness_tracker: Pushed metric value of 3098.73 onto the convergence stack.
+21:29:59: verbose- average_fitness_tracker: Current max percentage progress is 1.319%.
+21:29:59: quiet- duplicate_free: 140 generations so far.
+21:29:59: quiet- duplicate_free: 415 evaluations so far.
+21:29:59: verbose- duplicate_free: 20 members in population so far.
+21:29:59: verbose- shuffle_random: 16 children created.
+21:29:59: verbose- replace_uniform: Performed 2 total mutations.
+21:29:59: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:29:59: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+21:30:21: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:30:21: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:30:21: verbose- average_fitness_tracker: Average fitness = 3098.73
+21:30:21: verbose- average_fitness_tracker: Pushed metric value of 3098.73 onto the convergence stack.
+21:30:21: verbose- average_fitness_tracker: Current max percentage progress is 1.062%.
+21:30:21: quiet- duplicate_free: 141 generations so far.
+21:30:21: quiet- duplicate_free: 417 evaluations so far.
+21:30:21: verbose- duplicate_free: 20 members in population so far.
+21:30:21: verbose- shuffle_random: 16 children created.
+21:30:21: verbose- replace_uniform: Performed 2 total mutations.
+21:30:21: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:30:21: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:30:44: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:30:44: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:30:44: verbose- average_fitness_tracker: Average fitness = 3098.73
+21:30:44: verbose- average_fitness_tracker: Pushed metric value of 3098.73 onto the convergence stack.
+21:30:44: verbose- average_fitness_tracker: Current max percentage progress is 1.062%.
+21:30:44: quiet- duplicate_free: 142 generations so far.
+21:30:44: quiet- duplicate_free: 419 evaluations so far.
+21:30:44: verbose- duplicate_free: 20 members in population so far.
+21:30:44: verbose- shuffle_random: 16 children created.
+21:30:44: verbose- replace_uniform: Performed 2 total mutations.
+21:30:44: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:30:44: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:31:07: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:31:07: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:31:07: verbose- average_fitness_tracker: Average fitness = 3105.2
+21:31:07: verbose- average_fitness_tracker: Pushed metric value of 3105.2 onto the convergence stack.
+21:31:07: verbose- average_fitness_tracker: Current max percentage progress is 1.056%.
+21:31:07: quiet- duplicate_free: 143 generations so far.
+21:31:07: quiet- duplicate_free: 422 evaluations so far.
+21:31:07: verbose- duplicate_free: 20 members in population so far.
+21:31:07: verbose- shuffle_random: 16 children created.
+21:31:07: verbose- replace_uniform: Performed 2 total mutations.
+21:31:07: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:31:07: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:31:28: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:31:28: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:31:28: verbose- average_fitness_tracker: Average fitness = 3105.2
+21:31:28: verbose- average_fitness_tracker: Pushed metric value of 3105.2 onto the convergence stack.
+21:31:28: verbose- average_fitness_tracker: Current max percentage progress is 1.056%.
+21:31:28: quiet- duplicate_free: 144 generations so far.
+21:31:28: quiet- duplicate_free: 424 evaluations so far.
+21:31:28: verbose- duplicate_free: 20 members in population so far.
+21:31:28: verbose- shuffle_random: 16 children created.
+21:31:28: verbose- replace_uniform: Performed 2 total mutations.
+21:31:28: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:31:28: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:31:52: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:31:52: verbose- Global_SOGA: 2 of 20 population members were not selected to continue.  1 of 3 offspring were immediately rejected.
+21:31:52: verbose- average_fitness_tracker: Average fitness = 3109.25
+21:31:52: verbose- average_fitness_tracker: Pushed metric value of 3109.25 onto the convergence stack.
+21:31:52: verbose- average_fitness_tracker: Current max percentage progress is 1.004%.
+21:31:52: quiet- duplicate_free: 145 generations so far.
+21:31:52: quiet- duplicate_free: 427 evaluations so far.
+21:31:52: verbose- duplicate_free: 20 members in population so far.
+21:31:52: verbose- shuffle_random: 16 children created.
+21:31:52: verbose- replace_uniform: Performed 2 total mutations.
+21:31:52: verbose- duplicate_free: flushed 10 duplicate offspring designs after application of the variational operators.
+21:31:52: verbose- duplicate_free: flushed 5 offspring designs that duplicate existing population members.
+21:32:15: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:32:15: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:32:15: verbose- average_fitness_tracker: Average fitness = 3114.31
+21:32:15: verbose- average_fitness_tracker: Pushed metric value of 3114.31 onto the convergence stack.
+21:32:15: verbose- average_fitness_tracker: Current max percentage progress is 1.07%.
+21:32:15: quiet- duplicate_free: 146 generations so far.
+21:32:15: quiet- duplicate_free: 430 evaluations so far.
+21:32:15: verbose- duplicate_free: 20 members in population so far.
+21:32:15: verbose- shuffle_random: 16 children created.
+21:32:15: verbose- replace_uniform: Performed 2 total mutations.
+21:32:15: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+21:32:15: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:32:41: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:32:41: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:32:41: verbose- average_fitness_tracker: Average fitness = 3117.64
+21:32:41: verbose- average_fitness_tracker: Pushed metric value of 3117.64 onto the convergence stack.
+21:32:41: verbose- average_fitness_tracker: Current max percentage progress is 1.176%.
+21:32:41: quiet- duplicate_free: 147 generations so far.
+21:32:41: quiet- duplicate_free: 433 evaluations so far.
+21:32:41: verbose- duplicate_free: 20 members in population so far.
+21:32:41: verbose- shuffle_random: 16 children created.
+21:32:41: verbose- replace_uniform: Performed 2 total mutations.
+21:32:41: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:32:41: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:33:05: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:33:05: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:33:05: verbose- average_fitness_tracker: Average fitness = 3120.35
+21:33:05: verbose- average_fitness_tracker: Pushed metric value of 3120.35 onto the convergence stack.
+21:33:05: verbose- average_fitness_tracker: Current max percentage progress is 1.262%.
+21:33:05: quiet- duplicate_free: 148 generations so far.
+21:33:05: quiet- duplicate_free: 436 evaluations so far.
+21:33:05: verbose- duplicate_free: 20 members in population so far.
+21:33:05: verbose- shuffle_random: 16 children created.
+21:33:05: verbose- replace_uniform: Performed 2 total mutations.
+21:33:05: verbose- duplicate_free: flushed 3 duplicate offspring designs after application of the variational operators.
+21:33:05: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+21:33:29: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:33:29: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:33:29: verbose- average_fitness_tracker: Average fitness = 3122.16
+21:33:29: verbose- average_fitness_tracker: Pushed metric value of 3122.16 onto the convergence stack.
+21:33:29: verbose- average_fitness_tracker: Current max percentage progress is 1.319%.
+21:33:29: quiet- duplicate_free: 149 generations so far.
+21:33:29: quiet- duplicate_free: 439 evaluations so far.
+21:33:29: verbose- duplicate_free: 20 members in population so far.
+21:33:29: verbose- shuffle_random: 16 children created.
+21:33:29: verbose- replace_uniform: Performed 2 total mutations.
+21:33:29: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:33:29: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:33:50: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:33:50: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:33:50: verbose- average_fitness_tracker: Average fitness = 3122.16
+21:33:50: verbose- average_fitness_tracker: Pushed metric value of 3122.16 onto the convergence stack.
+21:33:50: verbose- average_fitness_tracker: Current max percentage progress is 0.966%.
+21:33:50: quiet- duplicate_free: 150 generations so far.
+21:33:50: quiet- duplicate_free: 441 evaluations so far.
+21:33:50: verbose- duplicate_free: 20 members in population so far.
+21:33:50: verbose- shuffle_random: 16 children created.
+21:33:50: verbose- replace_uniform: Performed 2 total mutations.
+21:33:50: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:33:50: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:34:13: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:34:13: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:34:13: verbose- average_fitness_tracker: Average fitness = 3125.65
+21:34:13: verbose- average_fitness_tracker: Pushed metric value of 3125.65 onto the convergence stack.
+21:34:13: verbose- average_fitness_tracker: Current max percentage progress is 0.861%.
+21:34:13: quiet- duplicate_free: 151 generations so far.
+21:34:13: quiet- duplicate_free: 444 evaluations so far.
+21:34:13: verbose- duplicate_free: 20 members in population so far.
+21:34:13: verbose- shuffle_random: 16 children created.
+21:34:13: verbose- replace_uniform: Performed 2 total mutations.
+21:34:13: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:34:13: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:34:35: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:34:35: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:34:35: verbose- average_fitness_tracker: Average fitness = 3125.65
+21:34:35: verbose- average_fitness_tracker: Pushed metric value of 3125.65 onto the convergence stack.
+21:34:35: verbose- average_fitness_tracker: Current max percentage progress is 0.861%.
+21:34:35: quiet- duplicate_free: 152 generations so far.
+21:34:35: quiet- duplicate_free: 446 evaluations so far.
+21:34:35: verbose- duplicate_free: 20 members in population so far.
+21:34:35: verbose- shuffle_random: 16 children created.
+21:34:35: verbose- replace_uniform: Performed 2 total mutations.
+21:34:35: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:34:35: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:34:57: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:34:57: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:34:57: verbose- average_fitness_tracker: Average fitness = 3125.65
+21:34:57: verbose- average_fitness_tracker: Pushed metric value of 3125.65 onto the convergence stack.
+21:34:57: verbose- average_fitness_tracker: Current max percentage progress is 0.861%.
+21:34:57: quiet- duplicate_free: 153 generations so far.
+21:34:57: quiet- duplicate_free: 448 evaluations so far.
+21:34:57: verbose- duplicate_free: 20 members in population so far.
+21:34:57: verbose- shuffle_random: 16 children created.
+21:34:57: verbose- replace_uniform: Performed 2 total mutations.
+21:34:57: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:34:57: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:35:21: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:35:21: verbose- Global_SOGA: 1 of 20 population members were not selected to continue.  2 of 3 offspring were immediately rejected.
+21:35:21: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:35:21: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:35:21: verbose- average_fitness_tracker: Current max percentage progress is 0.982%.
+21:35:21: quiet- duplicate_free: 154 generations so far.
+21:35:21: quiet- duplicate_free: 451 evaluations so far.
+21:35:21: verbose- duplicate_free: 20 members in population so far.
+21:35:21: verbose- shuffle_random: 16 children created.
+21:35:21: verbose- replace_uniform: Performed 2 total mutations.
+21:35:21: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:35:21: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:35:43: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:35:43: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:35:43: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:35:43: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:35:43: verbose- average_fitness_tracker: Current max percentage progress is 0.982%.
+21:35:43: quiet- duplicate_free: 155 generations so far.
+21:35:43: quiet- duplicate_free: 453 evaluations so far.
+21:35:43: verbose- duplicate_free: 20 members in population so far.
+21:35:43: verbose- shuffle_random: 16 children created.
+21:35:43: verbose- replace_uniform: Performed 2 total mutations.
+21:35:43: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:35:43: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:36:04: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:36:04: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:36:04: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:36:04: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:36:04: verbose- average_fitness_tracker: Current max percentage progress is 0.982%.
+21:36:04: quiet- duplicate_free: 156 generations so far.
+21:36:04: quiet- duplicate_free: 455 evaluations so far.
+21:36:04: verbose- duplicate_free: 20 members in population so far.
+21:36:04: verbose- shuffle_random: 16 children created.
+21:36:04: verbose- replace_uniform: Performed 2 total mutations.
+21:36:04: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:36:04: verbose- duplicate_free: flushed 8 offspring designs that duplicate existing population members.
+21:36:26: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:36:26: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:36:26: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:36:26: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:36:26: verbose- average_fitness_tracker: Current max percentage progress is 0.775%.
+21:36:26: quiet- duplicate_free: 157 generations so far.
+21:36:26: quiet- duplicate_free: 457 evaluations so far.
+21:36:26: verbose- duplicate_free: 20 members in population so far.
+21:36:26: verbose- shuffle_random: 16 children created.
+21:36:26: verbose- replace_uniform: Performed 2 total mutations.
+21:36:26: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:36:26: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:36:48: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:36:48: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:36:48: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:36:48: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:36:48: verbose- average_fitness_tracker: Current max percentage progress is 0.775%.
+21:36:48: quiet- duplicate_free: 158 generations so far.
+21:36:48: quiet- duplicate_free: 459 evaluations so far.
+21:36:48: verbose- duplicate_free: 20 members in population so far.
+21:36:48: verbose- shuffle_random: 16 children created.
+21:36:48: verbose- replace_uniform: Performed 2 total mutations.
+21:36:48: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:36:48: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:37:13: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:37:13: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:37:13: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:37:13: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:37:13: verbose- average_fitness_tracker: Current max percentage progress is 0.645%.
+21:37:13: quiet- duplicate_free: 159 generations so far.
+21:37:13: quiet- duplicate_free: 461 evaluations so far.
+21:37:13: verbose- duplicate_free: 20 members in population so far.
+21:37:13: verbose- shuffle_random: 16 children created.
+21:37:13: verbose- replace_uniform: Performed 2 total mutations.
+21:37:13: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:37:13: verbose- duplicate_free: flushed 11 offspring designs that duplicate existing population members.
+21:37:34: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:37:34: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:37:34: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:37:34: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:37:34: verbose- average_fitness_tracker: Current max percentage progress is 0.484%.
+21:37:34: quiet- duplicate_free: 160 generations so far.
+21:37:34: quiet- duplicate_free: 463 evaluations so far.
+21:37:34: verbose- duplicate_free: 20 members in population so far.
+21:37:34: verbose- shuffle_random: 16 children created.
+21:37:34: verbose- replace_uniform: Performed 2 total mutations.
+21:37:34: verbose- duplicate_free: flushed 5 duplicate offspring designs after application of the variational operators.
+21:37:34: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:37:56: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:37:56: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:37:56: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:37:56: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:37:56: verbose- average_fitness_tracker: Current max percentage progress is 0.377%.
+21:37:56: quiet- duplicate_free: 161 generations so far.
+21:37:56: quiet- duplicate_free: 465 evaluations so far.
+21:37:56: verbose- duplicate_free: 20 members in population so far.
+21:37:56: verbose- shuffle_random: 16 children created.
+21:37:56: verbose- replace_uniform: Performed 2 total mutations.
+21:37:56: verbose- duplicate_free: flushed 7 duplicate offspring designs after application of the variational operators.
+21:37:56: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:38:19: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:38:19: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:38:19: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:38:19: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:38:19: verbose- average_fitness_tracker: Current max percentage progress is 0.291%.
+21:38:19: quiet- duplicate_free: 162 generations so far.
+21:38:19: quiet- duplicate_free: 467 evaluations so far.
+21:38:19: verbose- duplicate_free: 20 members in population so far.
+21:38:19: verbose- shuffle_random: 16 children created.
+21:38:19: verbose- replace_uniform: Performed 2 total mutations.
+21:38:19: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:38:19: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:38:41: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:38:41: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:38:41: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:38:41: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:38:41: verbose- average_fitness_tracker: Current max percentage progress is 0.233%.
+21:38:41: quiet- duplicate_free: 163 generations so far.
+21:38:41: quiet- duplicate_free: 469 evaluations so far.
+21:38:41: verbose- duplicate_free: 20 members in population so far.
+21:38:41: verbose- shuffle_random: 16 children created.
+21:38:41: verbose- replace_uniform: Performed 2 total mutations.
+21:38:41: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:38:41: verbose- duplicate_free: flushed 12 offspring designs that duplicate existing population members.
+21:38:42: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:38:42: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:38:42: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:38:42: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:38:42: verbose- average_fitness_tracker: Current max percentage progress is 0.233%.
+21:38:42: quiet- duplicate_free: 164 generations so far.
+21:38:42: quiet- duplicate_free: 471 evaluations so far.
+21:38:42: verbose- duplicate_free: 20 members in population so far.
+21:38:42: verbose- shuffle_random: 16 children created.
+21:38:42: verbose- replace_uniform: Performed 2 total mutations.
+21:38:42: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:38:42: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:39:03: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:39:03: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:39:03: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:39:03: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:39:03: verbose- average_fitness_tracker: Current max percentage progress is 0.121%.
+21:39:03: quiet- duplicate_free: 165 generations so far.
+21:39:03: quiet- duplicate_free: 473 evaluations so far.
+21:39:03: verbose- duplicate_free: 20 members in population so far.
+21:39:03: verbose- shuffle_random: 16 children created.
+21:39:03: verbose- replace_uniform: Performed 2 total mutations.
+21:39:03: verbose- duplicate_free: flushed 4 duplicate offspring designs after application of the variational operators.
+21:39:03: verbose- duplicate_free: flushed 10 offspring designs that duplicate existing population members.
+21:39:04: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:39:04: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:39:04: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:39:04: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:39:04: verbose- average_fitness_tracker: Current max percentage progress is 0.121%.
+21:39:04: quiet- duplicate_free: 166 generations so far.
+21:39:04: quiet- duplicate_free: 475 evaluations so far.
+21:39:04: verbose- duplicate_free: 20 members in population so far.
+21:39:04: verbose- shuffle_random: 16 children created.
+21:39:04: verbose- replace_uniform: Performed 2 total mutations.
+21:39:04: verbose- duplicate_free: flushed 2 duplicate offspring designs after application of the variational operators.
+21:39:04: verbose- duplicate_free: flushed 13 offspring designs that duplicate existing population members.
+21:39:27: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:39:27: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:39:27: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:39:27: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:39:27: verbose- average_fitness_tracker: Current max percentage progress is 0.121%.
+21:39:27: quiet- duplicate_free: 167 generations so far.
+21:39:27: quiet- duplicate_free: 477 evaluations so far.
+21:39:27: verbose- duplicate_free: 20 members in population so far.
+21:39:27: verbose- shuffle_random: 16 children created.
+21:39:27: verbose- replace_uniform: Performed 2 total mutations.
+21:39:27: verbose- duplicate_free: flushed 6 duplicate offspring designs after application of the variational operators.
+21:39:27: verbose- duplicate_free: flushed 9 offspring designs that duplicate existing population members.
+21:39:48: verbose- merit_function: maximum encountered fitness = 3208.67.
+21:39:48: verbose- Global_SOGA: 0 of 20 population members were not selected to continue.  2 of 2 offspring were immediately rejected.
+21:39:48: verbose- average_fitness_tracker: Average fitness = 3129.45
+21:39:48: verbose- average_fitness_tracker: Pushed metric value of 3129.45 onto the convergence stack.
+21:39:48: verbose- average_fitness_tracker: Current max percentage progress is -0%.
+21:39:48: verbose- average_fitness_tracker: Convergence attained.
+21:39:48: quiet- duplicate_free: 168 generations so far.
+21:39:48: quiet- duplicate_free: 479 evaluations so far.
+21:39:48: verbose- duplicate_free: 20 members in population so far.
+21:39:49: verbose- Global_SOGA: Reclaimed 0 optimal designs from the discards.
+21:39:49: quiet- Global_SOGA: Reclaimed 0 optimal designs that had been selected out.
+21:39:49: quiet- Global_SOGA: Ran 168 total generations.
+21:39:49: quiet- Global_SOGA: Final population size = 1
+21:39:49: verbose- Global_SOGA: Wrote designs file ".//finaldata1.dat".
+21:39:49: verbose- Global_SOGA: Wrote designs file ".//discards.dat".
+21:39:49: quiet- JEGA Front End: Global_SOGA execution took 1.42035 seconds.
+21:39:49: quiet- JEGA Front End: Execution took 1.42035 seconds.
+21:39:49: verbose- Global_SOGA: algorithm execution completed. 1 solutions found. Passing them back to DAKOTA.
+21:39:49: quiet- Global_SOGA: find optimum completed and all results have been passed back to DAKOTA.
+
+
+21:39:49: quiet- Global_SOGA: goodbye!
+
+
