@@ -28,9 +28,9 @@ def main(paramFile, objFile):
         error_handle(objFile, nlcon, "makeGeometry")
         return
     
-    status = buildUSpline(3,0)
+    status = buildUSpline(2,0)
     if status != False:
-        error_handle(objFile, nlcon.max, "buildUSpline")
+        error_handle(objFile, nlcon, "buildUSpline")
         return
     
     status = buildSimInput(bc_xyz, num_elem)
@@ -66,23 +66,24 @@ def readParamFile(paramFile):
 
 def error_handle(objFile, nlcon, callingFunction):
     f = open(objFile,"w+")
+    #nlcon = numpy.array(nlcon)
     if   callingFunction == "makeGeometry":
         f.write("ObjVal " + str(numpy.sum(nlcon)) + "\n")
         for n in range(0,len(nlcon)):
             f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     elif callingFunction == "buildUSpline":
         f.write("FAIL")
-        f.write("ObjVal " + numpy.min([0.,nlcon.min()]) + "\n")
+        f.write("ObjVal " + str(numpy.min([0.,numpy.min(nlcon)])) + "\n")
         for n in range(0,len(nlcon)):
             f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     elif callingFunction == "buildSimInput":
         f.write("FAIL")
-        f.write("ObjVal " + numpy.min([0.,nlcon.min()]) + "\n")
+        f.write("ObjVal " + str(numpy.min([0.,numpy.min(nlcon)])) + "\n")
         for n in range(0,len(nlcon)):
             f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     elif callingFunction == "assemble_LinearSystem":
         f.write("FAIL")
-        f.write("ObjVal " + numpy.min([0.,nlcon.min()]) + "\n")
+        f.write("ObjVal " + str(numpy.min([0.,numpy.min(nlcon)])) + "\n")
         for n in range(0,len(nlcon)):
             f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     elif callingFunction == "compute_Eigenvalue":
@@ -161,14 +162,30 @@ def makeGeometry(x,y):
     for i in range(0,num_active_pins):
         bc_xyz[i] = [X[i], Y[i], 0.]
         N = cubit.parse_cubit_list("node"," at " + str(X[i]) + " " + str(Y[i]) + " 0.")
-        nodeEdges = cubit.parse_cubit_list("edge", "in node " + str(N))
-        for e in range(0,len(nodeEdges)):
-            cubit.cmd("cf_crease_entities add Edge " + str(nodeEdges[e]))
+        for n in range(0,len(N)):
+            nodeEdges = cubit.parse_cubit_list("edge", "in node " + str(N[n]))
+            for e in range(0,len(nodeEdges)):
+                cubit.cmd("cf_crease_entities add Edge " + str(nodeEdges[e]))
+    
+    EinC = cubit.parse_cubit_list("edge"," in curve 1")
+    #for e in range(0,len(EinC)):
+    #    cubit.cmd("cf_crease_entities add Edge " + str(EinC[e]))
+
     
     VinC = cubit.parse_cubit_list("node"," in curve 1")
     for n in range(0,len(VinC)):
         nxyz = cubit.get_nodal_coordinates(VinC[n])
         bc_xyz.append(list(nxyz))
+        N = cubit.parse_cubit_list("node", " at " + str(nxyz[0]) + " " + str(nxyz[1]) + " 0.")
+        
+        for n in range(0,len(N)):
+            nodeEdges = cubit.parse_cubit_list("edge", "in node " + str(N[n]))
+            for e in range(0,len(nodeEdges)):
+                if nodeEdges[e] in EinC:
+                    pass
+                else:
+                    cubit.cmd("cf_crease_entities add Edge " + str(nodeEdges[e]))
+        
     
     #V = cubit.get_entities("vertex")[num_base_vertex:]
     
@@ -230,8 +247,8 @@ def buildUSpline(degree, continuity):
     return status
 
 def buildSimInput(bc_xyz, num_elem):
-    #pathToFreqInput = "/home/christopher/optimization_project/Dakota_CFS/src/cf_run_scripts/"
-    pathToFreqInput = "/home/greg/Dakota_CFS/src/cf_run_scripts/"
+    pathToFreqInput = "/home/christopher/optimization_project/Dakota_CFS/src/cf_run_scripts/"
+    #pathToFreqInput = "/home/greg/Dakota_CFS/src/cf_run_scripts/"
     XYZ = [[bc_xyz[i][0], bc_xyz[i][1], 0.] for i in range(0,len(bc_xyz))]
     str_XYZ = str(XYZ).replace(" ","")
     py_command = "python3 " + pathToFreqInput + "freqInput.py " + "mes.json " + "-p " + str_XYZ + " " + "-n " + str(num_elem)
