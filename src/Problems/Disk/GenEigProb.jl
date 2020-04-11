@@ -1,6 +1,7 @@
 import AlgebraicMultigrid
 import IterativeSolvers
 import SparseArrays
+import MAT
 
 classids = Dict("Vec"=>1211214, "Mat"=>1211216)
 ids_to_class = Dict(zip(values(classids), keys(classids)))
@@ -89,8 +90,16 @@ mFile = "mass.m"
 K,M = load_KM(kFile, mFile)
 print("FINISHED in ", string(time()-t0) ," Seconds", "\n")
 
-# Solve the General Eigenvalue Problem for the minimum eigenvalue
-eigValue = solve_GEP(K,M,true)
+doMatlab = parse(Bool, ARGS[1])
+if doMatlab == true
+    # Solve the General Eigenvalue Problem, for the minimum eigenvalue,  using Matlab
+    #   Export the matrices in binary MAT file 
+    MAT.matwrite("stiffness.mat", Dict("K"=>K))
+    MAT.matwrite("mass.mat", Dict("M"=>M))
+else
+    # Solve the General Eigenvalue Problem, for the minimum eigenvalue, using Julia
+    eigValue = solve_GEP(K,M,true)
 
-# Store the result in a text file
-writeFloatToFile("EigenValue.txt", eigValue[1])
+    # Store the result in a text file
+    writeFloatToFile("EigenValue.txt", eigValue[1])
+end
