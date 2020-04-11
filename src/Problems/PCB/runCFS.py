@@ -28,7 +28,7 @@ def main(paramFile, objFile):
         error_handle(objFile, nlcon, "makeGeometry")
         return
     
-    status = buildUSpline(2,0)
+    status = buildUSpline(2,1)
     if status != False:
         error_handle(objFile, nlcon, "buildUSpline")
         return
@@ -43,7 +43,7 @@ def main(paramFile, objFile):
         error_handle(objFile, nlcon, "assemble_LinearSystem")
         return
     
-    status = compute_Eigenvalue()
+    status = compute_Eigenvalue(True)
     if status != False:
         error_handle(objFile, nlcon, "compute_Eigenvalue")
         return
@@ -72,22 +72,22 @@ def error_handle(objFile, nlcon, callingFunction):
         for n in range(0,len(nlcon)):
             f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     elif callingFunction == "buildUSpline":
-        f.write("FAIL")
-        f.write("ObjVal " + str(numpy.min([0.,numpy.min(nlcon)])) + "\n")
+        f.write("FAIL" + "\n")
+        f.write("ObjVal " + str(1e-3 * numpy.min([0.,numpy.min(nlcon)])) + "\n")
         for n in range(0,len(nlcon)):
             f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     elif callingFunction == "buildSimInput":
-        f.write("FAIL")
-        f.write("ObjVal " + str(numpy.min([0.,numpy.min(nlcon)])) + "\n")
+        f.write("FAIL" + "\n")
+        f.write("ObjVal " + str(1e-3 * numpy.min([0.,numpy.min(nlcon)])) + "\n")
         for n in range(0,len(nlcon)):
             f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     elif callingFunction == "assemble_LinearSystem":
-        f.write("FAIL")
-        f.write("ObjVal " + str(numpy.min([0.,numpy.min(nlcon)])) + "\n")
+        f.write("FAIL" + "\n")
+        f.write("ObjVal " + str(1e-3 * numpy.min([0.,numpy.min(nlcon)])) + "\n")
         for n in range(0,len(nlcon)):
             f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
     elif callingFunction == "compute_Eigenvalue":
-        f.write("FAIL")
+        f.write("FAIL" + "\n")
         f.write("ObjVal 0.0" + "\n")
         for n in range(0,len(nlcon)):
             f.write("nlcon_" + str(n+1) + " " + str(nlcon[n]) + "\n")
@@ -114,113 +114,115 @@ def write_objvalue(objFile, nlcon):
 def makeGeometry(x,y):
     status = 0
     cubit.cmd("reset")
-    cubit.cmd('open "circleGeom.trelis"')
+    cubit.cmd('open "pcb_geom.trelis"')
     cubit.cmd("compress ids")
-    num_base_vertex = len(cubit.get_entities("vertex"))
     
     x = numpy.array(x)
     y = numpy.array(y)
-    target_surface = cubit.surface(1)
+    
+    sys.stdout.write("PIN-X = " + str(x) + "\n")
+    sys.stdout.flush()
+    
+    # Test to see if the vertex is contained on the target surface
+    target_surface = cubit.surface(2) # Target surface is id = 2
     vertex_on_surface = numpy.zeros(len(x),dtype=bool)
     for i in range(0,len(x)):
         vertex_on_surface[i] = target_surface.point_containment([x[i], y[i], 0.])
-        if vertex_on_surface[i] == True:
-            cubit.cmd("create vertex " + str(x[i]) + " " + str(y[i]) + " 0 on surface 1")
-        
+    X = x[vertex_on_surface]
+    Y = y[vertex_on_surface]
+    
+    # Compute Nonlinear Constraints    
     nlcon = computeNonlinearConstraint(x,y)
     sys.stdout.write("Nonlinear Constraints: ")
     sys.stdout.write(str(nlcon))
     sys.stdout.write("\n")
     sys.stdout.flush()
     
-    X = x[vertex_on_surface]
-    Y = y[vertex_on_surface]
     num_active_pins = len(X)
+    sys.stdout.write("#"*10 + "NUMBER OF ACTIVE PINS = " + str(num_active_pins) + "#"*10 + "\n")
+    sys.stdout.flush()
     if num_active_pins == 0:
         # No pins on board, return with nonlinear constraint values
         status = 1
         return status, [], [], nlcon
     
-    V = cubit.get_list_of_free_ref_entities("vertex")
-    for i in range(0,len(V)):
-        cubit.cmd("imprint volume all with vertex " + str(V[i]))
-    cubit.cmd("delete free vertex all")
+    # Delete the target surface -- we don't need it anymore
+    cubit.cmd("delete vol 2")
     cubit.cmd("compress ids")
-    #for i in range(0,len(V)):
-    #    cubit.cmd("nodeset 1 add vertex " + str(V[i]))
-    cubit.cmd("surface all size 0.2")
-    cubit.cmd("mesh surf all")
+    
+    # Imprint circles on the geometry surface
+    # Get initial curve ids
+    C = cubit.get_entities("curve")
+    for i in range(0, num_active_pins):
+        cubit.cmd("webcut volume all with cylinder radius 2.75 axis z center " + str(X[i]) + " " + str(Y[i]) + " 0.")
+        #cubit.cmd("create curve arc radius 2.75 center location " + str(X[i]) + " " + str(Y[i]) + " 0 normal 0 0 1 start angle 0 stop angle 360 ")
+    cubit.cmd("imprint all")
+    cubit.cmd("merge all")
+    cubit.cmd("stitch volume all")
+    cubit.cmd("compress ids")
+    #CF = cubit.get_list_of_free_ref_entities("curve")
+    #for i in range(0,len(CF)):
+    #    cubit.cmd("partition create surface all  curve " + str(CF[i]))
+    #cubit.cmd("delete free curve all")
+    cubit.cmd("compress ids")
+    
+    # Mesh the pin surfaces first
+    S = cubit.get_entities("surface")
+    for i in range(0,len(S)):
+        if cubit.surface(S[i]).area() <= (1.1 * numpy.pi * (2.75**2)):
+            cubit.cmd("surface " + str(S[i]) + " size 4")
+            cubit.cmd("surface " + str(S[i]) + " scheme circle")
+            cubit.cmd("mesh surface " + str(S[i]))
+        else:
+            board_surf_id = S[i]
+    
+    # Now mesh the board
+    cubit.cmd("surface " + str(board_surf_id) + " size 10")
+    cubit.cmd("mesh surface " + str(board_surf_id))
+    
+    # Smooth the surface mesh
     cubit.cmd("surface all smooth scheme mean ratio cpu 0.1")
     cubit.cmd("smooth surf all")
     
-    cubit.cmd("compress ids")
-    
-    V = numpy.zeros(num_active_pins, dtype=int)
-    #N = numpy.zeros(num_active_pins, dtype=int)
-    bc_xyz = [[] for i in range(0,num_active_pins)]
+    # Set the BC edges to be creased to C^0
     cubit.cmd('create group "cf_crease_entities"')
-    for i in range(0,num_active_pins):
-        bc_xyz[i] = [X[i], Y[i], 0.]
-        N = cubit.parse_cubit_list("node"," at " + str(X[i]) + " " + str(Y[i]) + " 0.")
-        for n in range(0,len(N)):
-            nodeEdges = cubit.parse_cubit_list("edge", "in node " + str(N[n]))
-            for e in range(0,len(nodeEdges)):
-                cubit.cmd("cf_crease_entities add Edge " + str(nodeEdges[e]))
+    S_BC = cubit.get_entities("surface")
+    for i in range(0, len(S_BC)):
+        if S_BC[i] == board_surf_id:
+            pass
+        else:
+            surf_edges = cubit.parse_cubit_list("edge", "in surface " + str(S_BC[i]))
+            for e in range(0,len(surf_edges)):
+                cubit.cmd("group 2 add edge " + str(surf_edges[e]))
     
-    EinC = cubit.parse_cubit_list("edge"," in curve 1")
-    #for e in range(0,len(EinC)):
-    #    cubit.cmd("cf_crease_entities add Edge " + str(EinC[e]))
-
-    
-    VinC = cubit.parse_cubit_list("node"," in curve 1")
-    for n in range(0,len(VinC)):
-        nxyz = cubit.get_nodal_coordinates(VinC[n])
-        bc_xyz.append(list(nxyz))
-        N = cubit.parse_cubit_list("node", " at " + str(nxyz[0]) + " " + str(nxyz[1]) + " 0.")
-        
-        for n in range(0,len(N)):
-            nodeEdges = cubit.parse_cubit_list("edge", "in node " + str(N[n]))
-            for e in range(0,len(nodeEdges)):
-                if nodeEdges[e] in EinC:
-                    pass
-                else:
-                    cubit.cmd("cf_crease_entities add Edge " + str(nodeEdges[e]))
-        
-    
-    #V = cubit.get_entities("vertex")[num_base_vertex:]
-    
-    #cubit.cmd('create group "cf_crease_entities"')
-    #bc_xyz = [[] for i in range(0,len(V))]
-    #for i in range(0,len(V)):
-    #    #ssID = cubit.get_next_sideset_id()
-    #    bc_xyz[i] = list(cubit.vertex(V[i]).coordinates())
-    #    cubit.parse_cubit_list("vertex", "at " + str(bc_)
-    #    N = cubit.get_vertex_node(V[i])
-    #    nodeEdges = cubit.parse_cubit_list('edge','in node ' + str(N))
-    #    for e in range(0,len(nodeEdges)):
-    #        #cubit.cmd("sideset " + str(ssID) + " add Edge " + str(nodeEdges[e]))
-    #        cubit.cmd("cf_crease_entities add Edge " + str(nodeEdges[e]))
-    #    #cubit.cmd("sideset " + str(ssID) + ' name "node_' + str(N) + '_edges"')
-    
-    cubit.cmd('save as "mesh.cub" overwrite')
+    ### Prepare function return ###
     num_elem = len(cubit.get_entities("Face"))
+    
+    # Package the pin locations for function return
+    bc_xyz = []
+    for i in range(0, len(X)):
+        bc_xyz.append([X[i], Y[i], 0.])
+    
+    # Save the cubit file
+    cubit.cmd('save as "mesh.cub" overwrite')
+    
     return status, bc_xyz, num_elem, nlcon
 
 
 def computeNonlinearConstraint(x,y):
     nlcon = numpy.zeros(len(x))
-    target_surface = cubit.surface(1)
+    target_surface = cubit.surface(2) # Target surface is id = 2
     vertex_on_surface = [False for i in range(0,len(x))]
     # First, determine whether the nonlinear constraint is satisfied
     for i in range(0,len(x)):
         vertex_on_surface[i] = target_surface.point_containment([x[i], y[i], 0.])
     # Second, determine the magnitude of the nonlinear constraint value
     #         which is the distance of the point to the closest curve
-    cid = cubit.get_entities("Curve")
+    cid = cubit.parse_cubit_list("curve", "in vol 2")
     for i in range(0,len(x)):
         dist = numpy.zeros(len(cid))
         pXYZ = numpy.array([x[i], y[i], 0.])
-        for c in range(0,1):
+        for c in range(0,len(cid)):
             C = cubit.curve(cid[c])
             cpXYZ = numpy.array(C.closest_point(pXYZ))
             dist[c] = numpy.linalg.norm(cpXYZ - pXYZ)
@@ -247,11 +249,12 @@ def buildUSpline(degree, continuity):
     return status
 
 def buildSimInput(bc_xyz, num_elem):
-    pathToFreqInput = "/home/christopher/optimization_project/Dakota_CFS/src/cf_run_scripts/"
+    #pathToFreqInput = "/home/christopher/optimization_project/Dakota_CFS/src/cf_run_scripts/"
     #pathToFreqInput = "/home/greg/Dakota_CFS/src/cf_run_scripts/"
+    pathToFreqInput = os.getcwd() + "/"
     XYZ = [[bc_xyz[i][0], bc_xyz[i][1], 0.] for i in range(0,len(bc_xyz))]
     str_XYZ = str(XYZ).replace(" ","")
-    py_command = "python3 " + pathToFreqInput + "freqInput.py " + "mes.json " + "-p " + str_XYZ + " " + "-n " + str(num_elem)
+    py_command = "python3 " + pathToFreqInput + "freqInput.py " + "mes.json " + "-p " + str_XYZ + " -n " + str(num_elem) + " -o -1" 
     sys.stdout.write(py_command + "\n")
     sys.stdout.flush()
     try:
@@ -275,18 +278,31 @@ def assemble_LinearSystem():
         sys.stdout.flush()
     return status
 
-def compute_Eigenvalue():
-    pathToJulia = "/home/christopher/cf/master/deps/srcs/julia/julia-1.3.0/bin/"
-    #pathToJulia = "/usr/local/bin/"
-    jl_command = pathToJulia + "julia " + "GenEigProb.jl"
+def compute_Eigenvalue(useMatlab):
+    #pathToJulia = "/home/christopher/cf/master/deps/srcs/julia/julia-1.3.0/bin/"
+    pathToJulia = "/usr/local/bin/"
+    jl_command = pathToJulia + "julia " + "GenEigProb.jl" + " " + str(useMatlab).lower()
     sys.stdout.write(jl_command + "\n")
     sys.stdout.flush()
     try:
         status = subprocess.check_call(jl_command, shell=True)
     except:
-        sys.stdout.write("compute_Eigenvalue FAILED" + "\n")
+        sys.stdout.write("compute_Eigenvalue -- Julia FAILED" + "\n")
         status = True
         sys.stdout.flush()
+        return status
+    
+    if useMatlab == True:
+        mat_command = 'matlab -nodisplay -batch "GenEigProb(' + str("'EigenValue.txt'") + ')"'
+        sys.stdout.write(mat_command + "\n")
+        sys.stdout.flush()
+        try:
+            status = subprocess.check_call(mat_command, shell=True)
+        except:
+            sys.stdout.write("compute_Eigenvalue -- Matlab FAILED" + "\n")
+            status = True
+            sys.stdout.flush()
+            return status
     return status
 
 if __name__ == "__main__":

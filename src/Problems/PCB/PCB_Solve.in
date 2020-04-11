@@ -12,7 +12,7 @@ environment
 method
 	id_method = "Hybrid_Sequential"
 	hybrid sequential
-	method_pointer_list = "Global_COLINY-EA" "Local_Quasi-Newton"
+	method_pointer_list = "Global_Efficient_Global" "Local_Quasi-Newton"
 	
 method
 	id_method = "Hybrid_Collaborative"
@@ -64,8 +64,8 @@ method
 		model_pointer "modelGlobal"
 		initial_samples = 20
 		x_conv_tol = 1.e-3
-		max_iterations = 50
-		use_derivatives
+		max_iterations = 100
+		#use_derivatives
 	final_solutions = 4
 	output verbose
 
@@ -85,7 +85,7 @@ method
 	id_method "Local_Quasi-Newton"
 	optpp_q_newton
 		model_pointer "modelLocal"
-		max_iterations = 250
+		max_iterations = 10
 	output verbose
 
 ##### DEFINE MODEL SPECIFICATIONS #####
@@ -106,11 +106,11 @@ model
 ##### DEFINE INDEPENDENT VARIABLES #####
 variables
 	id_variables "variables"
-	continuous_design #{num_vars}
-		initial_point #{initial_point}
-		lower_bounds  #{lower_bounds}
-		upper_bounds  #{upper_bounds}
-		descriptors   #{var_names}
+	continuous_design 8
+		initial_point +46.074326908376065 -103.08717685679015  +29.269840997447087 -6.77067218314528 +45.211549363992425 -118.75820792210499 +35.64667692829801 -100.88387876983836
+		lower_bounds  +0.0 -125.0 +0.0 -125.0 +0.0 -125.0 +0.0 -125.0
+		upper_bounds  +125.0 +0.0 +125.0 +0.0 +125.0 +0.0 +125.0 +0.0
+		descriptors   "x1" "y1" "x2" "y2" "x3" "y3" "x4" "y4"
 
 ##### DEFINE THE DAKOTA<->SIMULATION INTERFACE #####
 interface
@@ -123,11 +123,11 @@ interface
 				named "workdir/run"
 				directory_tag
 				directory_save
-				copy_files "runCFS.py" "pcb_geom.trelis" "freqInput.py" "GenEigProb.jl" "params.template" "qoi.py" "interface.py"
+				copy_files "runCFS.py" "pcb_geom.trelis" "freqInput.py" "GenEigProb.jl" "GenEigProb.m" "params.template" "qoi.py" "interface.py"
 	failure_capture 
 		recover = 0.0
-	#asynchronous
-	#	evaluation_concurrency 10
+	asynchronous
+		evaluation_concurrency 20
 
 ##### DEFINE THE RESPONSE VARIABLES #####
 responses
@@ -135,8 +135,8 @@ responses
 	objective_functions = 1
 		primary_scale_types = "value"
 		primary_scales = 1.e3
-	nonlinear_inequality_constraints = #{num_nl_ineq_const}
-	descriptors "objective" #{nl_ineq_const} 
+	nonlinear_inequality_constraints = 4
+	descriptors "objective" "nlcon_1" "nlcon_2" "nlcon_3" "nlcon_4" 
 	no_gradients
 	no_hessians
 
@@ -145,8 +145,8 @@ responses
 	objective_functions = 1
 		primary_scale_types = "value"
 		primary_scales = 1.e3
-	nonlinear_inequality_constraints = #{num_nl_ineq_const}
-	descriptors "objective" #{nl_ineq_const}
+	nonlinear_inequality_constraints = 4
+	descriptors "objective" "nlcon_1" "nlcon_2" "nlcon_3" "nlcon_4"
 	numerical_gradients
 		method_source dakota
 		interval_type central
