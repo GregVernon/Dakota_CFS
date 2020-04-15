@@ -28,7 +28,7 @@ def main(paramFile, objFile):
         error_handle(objFile, nlcon, "makeGeometry")
         return
     
-    status = buildUSpline(2,0)
+    status = buildUSpline(2,1)
     if status != False:
         error_handle(objFile, nlcon, "buildUSpline")
         return
@@ -43,7 +43,7 @@ def main(paramFile, objFile):
         error_handle(objFile, nlcon, "assemble_LinearSystem")
         return
     
-    status = compute_Eigenvalue()
+    status = compute_Eigenvalue(True)
     if status != False:
         error_handle(objFile, nlcon, "compute_Eigenvalue")
         return
@@ -247,8 +247,9 @@ def buildUSpline(degree, continuity):
     return status
 
 def buildSimInput(bc_xyz, num_elem):
-    pathToFreqInput = "/home/christopher/optimization_project/Dakota_CFS/src/cf_run_scripts/"
+    #pathToFreqInput = "/home/christopher/optimization_project/Dakota_CFS/src/cf_run_scripts/"
     #pathToFreqInput = "/home/greg/Dakota_CFS/src/cf_run_scripts/"
+    pathToFreqInput = os.getcwd() + "/"
     XYZ = [[bc_xyz[i][0], bc_xyz[i][1], 0.] for i in range(0,len(bc_xyz))]
     str_XYZ = str(XYZ).replace(" ","")
     py_command = "python3 " + pathToFreqInput + "freqInput.py " + "mes.json " + "-p " + str_XYZ + " " + "-n " + str(num_elem)
@@ -275,10 +276,10 @@ def assemble_LinearSystem():
         sys.stdout.flush()
     return status
 
-def compute_Eigenvalue():
-    pathToJulia = "/home/christopher/cf/master/deps/srcs/julia/julia-1.3.0/bin/"
-    #pathToJulia = "/usr/local/bin/"
-    jl_command = pathToJulia + "julia " + "GenEigProb.jl"
+def compute_Eigenvalue(useMatlab):
+    #pathToJulia = "/home/christopher/cf/master/deps/srcs/julia/julia-1.3.0/bin/"
+    pathToJulia = "/usr/local/bin/"
+    jl_command = pathToJulia + "julia " + "GenEigProb.jl" + " " + str(useMatlab).lower()
     sys.stdout.write(jl_command + "\n")
     sys.stdout.flush()
     try:
@@ -287,6 +288,18 @@ def compute_Eigenvalue():
         sys.stdout.write("compute_Eigenvalue FAILED" + "\n")
         status = True
         sys.stdout.flush()
+        return status
+    
+    if useMatlab == True:
+        mat_command = 'matlab -nodisplay -batch "GenEigProb(' + str("'EigenValue.txt'") + ')"'
+        sys.stdout.write(mat_command + "\n")
+        sys.stdout.flush()
+        try: 
+            status = subprocess.check_call(mat_command, shell=True)
+        except:
+            sys.stdout.write("compute_Eigenvalue -- Matlab FAILED" + "\n")
+            sys.stdout.flush()
+            return status
     return status
 
 if __name__ == "__main__":
