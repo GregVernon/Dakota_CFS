@@ -36,6 +36,7 @@ def generateSolidSimulations( input_json, input_options, input_geom ):
     thickness = input_options["thickness"]
     length = thickness
     num_elem_l = np.int(np.ceil( length * input_options["elems_per_length"] ))
+    length *= input_geom["normal"]
     const_temporal_func_id = -1
     problem_id = -1
     part_ids = []
@@ -232,11 +233,13 @@ with open( in_filename ) as json_file:
 
 #print( in_json )
 
-in_geom = {}
+in_geom = { "num_elems": 0, "pin_locations": [[]], "normal": 1 }
 for i in range(2, len(sys.argv)):
     if sys.argv[i] == "-p":
         in_geom["pin_locations"] = ast.literal_eval(sys.argv[i+1])
     if sys.argv[i] == "-n":
         in_geom["num_elems"] = ast.literal_eval(sys.argv[i+1])
+    if sys.argv[i] == "-o":
+        in_geom["normal"] = ast.literal_eval(sys.argv[i+1])
 print(in_geom)
 generateSolidSimulations( in_json, in_opts, in_geom )
