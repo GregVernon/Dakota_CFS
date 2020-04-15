@@ -1,0 +1,154 @@
+##### SPECIFY THE ENVIRONMENT #####
+environment
+	top_method_pointer = "Global_Efficient_Global"
+	tabular_data
+		tabular_data_file "tabular.data"
+	output_file "dakota.out"
+	error_file "dakota.err"
+	write_restart "dakota.rst"
+	
+
+##### DEFINE HYBRID OPTIMIZATION METHODS #####
+method
+	id_method = "Hybrid_Sequential"
+	hybrid sequential
+	method_pointer_list = "Global_COLINY-EA" "Local_Quasi-Newton"
+	
+method
+	id_method = "Hybrid_Collaborative"
+	hybrid collaborative
+	method_pointer_list = "Global_COLINY-EA" "Local_Quasi-Newton"
+
+method	
+	id_method = "Hybrid_Embedded"
+	hybrid embedded
+	global_method_pointer = "Global_COLINY-EA"
+	local_method_pointer = "Local_Quasi-Newton"
+
+##### DEFINE GLOBAL OPTIMIZATION METHODS #####
+method
+	id_method "Global_SOGA"
+	soga
+		model_pointer "modelGlobal"
+		population_size = 20
+		max_function_evaluations = 1000
+		max_iterations = 50
+		scaling
+	final_solutions = 4
+	output verbose
+
+method
+	id_method "Global_COLINY-EA"
+	coliny_ea
+		model_pointer "modelGlobal"
+		population_size = 20
+		max_function_evaluations = 40
+		max_iterations = 50
+		scaling
+	final_solutions = 4
+	output verbose
+
+method 
+	id_method "Global_COLINY-Direct"
+	coliny_direct
+		model_pointer "modelGlobal"
+		max_function_evaluations = 1000
+		max_iterations = 50
+		scaling
+	final_solutions = 4
+	output verbose
+
+method
+	id_method "Global_Efficient_Global"
+	efficient_global
+		model_pointer "modelGlobal"
+		initial_samples = 100
+		x_conv_tol = 1.e-3
+		max_iterations = 500
+		#use_derivatives
+	#final_solutions = 4
+	output verbose
+
+method
+	id_method "Global_COLINY-PatternSearch"
+	coliny_pattern_search
+		model_pointer "modelGlobal"
+		max_function_evaluations = 1000
+		initial_delta = 0.1
+		exploratory_moves = basic_pattern
+		scaling
+	final_solutions = 4
+	output verbose
+
+##### DEFINE LOCAL OPTIMIZATION METHODS #####
+method
+	id_method "Local_Quasi-Newton"
+	optpp_q_newton
+		model_pointer "modelLocal"
+		max_iterations = 250
+	output verbose
+
+##### DEFINE MODEL SPECIFICATIONS #####
+model
+	id_model "modelGlobal"
+	single
+		interface_pointer "interface"
+	variables_pointer "variables"
+	responses_pointer "responsesGlobal"
+	
+model
+	id_model "modelLocal"
+	single
+		interface_pointer "interface"
+	variables_pointer "variables"
+	responses_pointer "responsesLocal"
+
+##### DEFINE INDEPENDENT VARIABLES #####
+variables
+	id_variables "variables"
+	continuous_design 10
+		initial_point +5.58390391015513 -110.65906884428486  +110.75601715366616 -61.48142509638386 +29.93817384432414 -80.05319892349311 +94.15936124615256 -134.07620055311645 +53.148267998122975 -4.3618036915925416
+		lower_bounds  +0.0 -150.0 +0.0 -150.0 +0.0 -150.0 +0.0 -150.0 +0.0 -150.0
+		upper_bounds  +150.0 +0.0 +150.0 +0.0 +150.0 +0.0 +150.0 +0.0 +150.0 +0.0
+		descriptors   "x1" "y1" "x2" "y2" "x3" "y3" "x4" "y4" "x5" "y5"
+
+##### DEFINE THE DAKOTA<->SIMULATION INTERFACE #####
+interface
+	id_interface "interface"
+	analysis_drivers "python3 -m interface"
+		fork
+			parameters_file "params.in"
+			results_file "results.out"
+			work_directory
+				named "workdir/run"
+				directory_tag
+				directory_save
+				copy_files "runCFS.py" "pcb_geom.trelis" "freqInput.py" "GenEigProb.jl" "GenEigProb.m" "params.template" "qoi.py" "interface.py"
+	failure_capture 
+		recover = 0.0
+	asynchronous
+		evaluation_concurrency 20
+
+##### DEFINE THE RESPONSE VARIABLES #####
+responses
+	id_responses "responsesGlobal"
+	objective_functions = 1
+		primary_scale_types = "value"
+		primary_scales = 1.e3
+	nonlinear_inequality_constraints = 5
+	descriptors "objective" "nlcon_1" "nlcon_2" "nlcon_3" "nlcon_4" "nlcon_5" 
+	no_gradients
+	no_hessians
+
+responses
+	id_responses "responsesLocal"
+	objective_functions = 1
+		primary_scale_types = "value"
+		primary_scales = 1.e3
+	nonlinear_inequality_constraints = 5
+	descriptors "objective" "nlcon_1" "nlcon_2" "nlcon_3" "nlcon_4" "nlcon_5"
+	numerical_gradients
+		method_source dakota
+		interval_type central
+		fd_step_size = 1.e-4
+	no_hessians
