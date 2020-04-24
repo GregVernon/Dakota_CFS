@@ -24,7 +24,7 @@ This repository supports the open- access article available here [![DOI](https:/
 ##  Replication usage
 1) Navigate to either problem directory
 2) Run DAKOTA
-1) Interactive mode
+   1) Interactive mode
       1) `dakota -i <YourSolver.in>`
    2) Background mode
       1) `dakota -i <YourSolver.in> > dakota.log 2>&1 &`
